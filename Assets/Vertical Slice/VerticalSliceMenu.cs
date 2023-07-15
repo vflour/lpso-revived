@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class VerticalSliceMenu : MonoBehaviour
+{
+    public void Awake(){
+        Cursor.visible = false;
+        //SceneManager.LoadScene("Overworld", LoadSceneMode.Additive);
+    }
+
+    public void GoToScene(string scene){
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+    }
+}

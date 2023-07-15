@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="4" nextobjectid="12">
+ <tileset firstgid="1" source="grass.tsx"/>
+ <tileset firstgid="51" source="objects/tree2.tsx"/>
+ <tileset firstgid="52" source="objects/flower_2.tsx"/>
+ <tileset firstgid="53" source="objects/flower_1_sprite.tsx"/>
+ <tileset firstgid="54" source="objects/bush7.tsx"/>
+ <tileset firstgid="55" source="objects/bush4.tsx"/>
+ <tileset firstgid="56" source="objects/flower_3.tsx"/>
+ <tileset firstgid="57" source="objects/flower_5_sprite.tsx"/>
+ <tileset firstgid="58" source="objects/purple_cactus.tsx"/>
+ <tileset firstgid="59" source="objects/orange_cactus.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+40,28,23,16,42,23,1,28,1,10,28,
+28,10,1,10,17,1,1,10,10,10,1,
+38,17,10,42,17,28,1,1,1,28,10,
+17,40,28,17,1,44,1,1,1,10,1,
+1,17,17,42,1,48,28,1,28,1,1,
+28,10,1,10,17,45,45,1,1,1,1,
+10,28,17,38,1,48,5,1,10,1,1,
+23,42,28,17,1,28,1,1,1,10,10,
+23,10,17,1,17,1,1,1,10,1,10,
+28,10,42,10,1,42,1,10,1,10,1,
+40,1,28,17,17,1,16,1,10,1,1
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" gid="53" x="416.003" y="529.943" width="115.667" height="115.667"/>
+  <object id="2" gid="54" x="422.71" y="433.235" width="120" height="128.454"/>
+  <object id="3" gid="52" x="561.805" y="562.14" width="146" height="64.5822"/>
+  <object id="4" gid="52" x="506.616" y="352.038" width="146" height="64.5822"/>
+  <object id="5" gid="55" x="457.603" y="389.675" width="81" height="123"/>
+  <object id="7" gid="51" x="564.615" y="337.33" width="248.813" height="269.898"/>
+ </objectgroup>
+ <objectgroup id="3" name="Object Layer 2">
+  <object id="6" gid="56" x="551.314" y="550.631" width="66" height="114.102"/>
+ </objectgroup>
+</map>
