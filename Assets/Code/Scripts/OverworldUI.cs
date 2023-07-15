@@ -13,6 +13,7 @@ public class OverworldUI : MonoBehaviour
     public GameObject inventory;
     public GameObject PDA;
     public GameObject userInfoMenu;
+    public GameObject map;
 
     public GameObject xButton;
     public GameObject petButton;
@@ -29,6 +30,12 @@ public class OverworldUI : MonoBehaviour
     public Button SideInvButton;
     public GameObject SideInvArrow;
 
+    public GameObject mapXButton;
+    public GameObject mapOpenButton;
+
+    public class MapIcon
+    { public string AreaName; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +44,7 @@ public class OverworldUI : MonoBehaviour
         PDA.SetActive(false);
         messagebar.SetActive(true);
         SideInvButton.interactable = false;
+        map.SetActive(false);
 
     }
 
@@ -60,5 +68,8 @@ public class OverworldUI : MonoBehaviour
 
     public void togglePhone()
     { PDA.SetActive(!PDA.activeSelf); }
+
+    public void toggleMap()
+    { map.SetActive(!map.activeSelf); }
 
 }
