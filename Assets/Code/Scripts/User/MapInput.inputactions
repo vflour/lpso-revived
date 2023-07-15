@@ -1,0 +1,34 @@
+{
+    "name": "MapInput",
+    "maps": [
+        {
+            "name": "User",
+            "id": "b709c003-797d-4143-92b7-256862c56856",
+            "actions": [
+                {
+                    "name": "RaycastClick",
+                    "type": "Button",
+                    "id": "f0618dfc-9bc2-48f8-a3f8-842cbee5272e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=1)",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bada1988-09c0-4043-8287-b9419ff2e429",
+                    "path": "<Mouse>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RaycastClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
