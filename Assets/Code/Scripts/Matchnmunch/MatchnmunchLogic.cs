@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class MatchnmunchLogic : MonoBehaviour
 {
@@ -34,6 +36,8 @@ public class MatchnmunchLogic : MonoBehaviour
     private int selectedFood;
     private int winningFood;
 
+    public GameObject startMenu;
+    public GameObject scoreScreen;
     public GameObject LiveImage;
     public int Lives = 7;
     private float LiveImgMargin = 0.5f;
@@ -46,9 +50,32 @@ public class MatchnmunchLogic : MonoBehaviour
     private float[,] BoxHeightGoal;
     private float StartCountDown = 3;
     private float winningFoodTimer;
+    private bool gameRunning = false;
+
+    private int flatscore = 0;
+    private int nicefindscore = 0;
+    private int totalScore = 0;
+
+    public TMP_Text ScoreText;
+    public TMP_Text NiceFindText;
+    public TMP_Text GotAllText;
+    public TMP_Text KibbleWon;
+    public TMP_Text KibbleTotal;
+    public TMP_Text TotalScoreText;
+
+    private bool GotThemAll;
     // Start is called before the first frame update
     void Start()
     {
+      
+    }
+
+    public void StartGame(){
+      Debug.Log("pressed start");
+      gameRunning = true;
+      startMenu.SetActive(false);
+      GotThemAll = false;
+
       Grid = new GameObject[GridWidth,GridHeight];
       GridBox = new GameObject[GridWidth,GridHeight];
       BoxHeightGoal = new float[GridWidth,GridHeight];
@@ -96,9 +123,32 @@ public class MatchnmunchLogic : MonoBehaviour
             }
     }
 
+    void SetScore(){
+      if (GotThemAll) {
+        GotAllText.SetText("1000");
+        totalScore = 1000;
+      } else {
+        GotAllText.SetText("0");
+        totalScore = 0;
+      }
+      NiceFindText.SetText(nicefindscore.ToString());
+      totalScore += nicefindscore;
+      ScoreText.SetText(flatscore.ToString());
+      totalScore += flatscore;
+      TotalScoreText.SetText(totalScore.ToString());
+
+      int kibble = totalScore/50;
+      KibbleWon.SetText(kibble.ToString());
+      GameDataManager.Instance.AddKibble(kibble);
+      KibbleTotal.SetText(GameDataManager.Instance.kibble.ToString());
+    }
+
+
     // Update is called once per frame
     void Update()
     {
+      if (gameRunning){
+
       Vector2 MousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
       if (StartCountDown > 0)
       {
@@ -196,13 +246,18 @@ public class MatchnmunchLogic : MonoBehaviour
           if (winningFood == selectedFood){
             Instantiate(BoxFound, new Vector3(LeftStart + (SelectedX+1) * IconWidth, (SelectedY+1) * IconHeight - worldHeight / 2 - FoodMargin,0), Quaternion.identity);
             FoodFound += 1;
+            flatscore = 100;
             if (GridBox[SelectedX,SelectedY]) {
               FeedbackText.transform.position = cam.WorldToScreenPoint(new Vector3(LeftStart + (SelectedX+1) * IconWidth, (SelectedY+1) * IconHeight - worldHeight / 2 - FoodMargin,0));
               FeedbackText.enabled = true;
               winningFoodTimer = 1f;
+              nicefindscore += 100;
             }
             if (FoodFound == FoodGoal){
-              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+              gameRunning = false;
+              scoreScreen.SetActive(true);
+              SetScore();
+              GotThemAll = true;
             }
             for (int x = -1; x <= 1; x++)
               {
@@ -227,7 +282,9 @@ public class MatchnmunchLogic : MonoBehaviour
           } else {
             if (Lives == 1)
             {
-              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+              gameRunning = false;
+              scoreScreen.SetActive(true);
+              SetScore();
             } else {
               Destroy(LiveObjects[Lives-1]);
               Lives -= 1;
@@ -238,5 +295,6 @@ public class MatchnmunchLogic : MonoBehaviour
         }
       }
     }
+      }
 }
 }
