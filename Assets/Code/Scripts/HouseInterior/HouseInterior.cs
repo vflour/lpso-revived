@@ -12,7 +12,6 @@ public class GameHandler : MonoBehaviour
     public GameObject cursorTile;
     public Vector2 selection;
     public List<FurnitureData> inventory;
-
     
     public int inventoryID;
     public Camera cam;
@@ -30,6 +29,7 @@ public class GameHandler : MonoBehaviour
     void Start()
     {
         Transform temp_transform = this.transform;
+        //generate grass around the house
         for (int x = 0; x<=2; x++){
             for (int y = 0; y<=2; y++){
                 Vector2 pos = IsoMath.screenPos(x * size,y * size,xOrigin,yOrigin);
@@ -38,16 +38,19 @@ public class GameHandler : MonoBehaviour
             }
         }
 
+        //generate the first room
         rooms[0,0] = Instantiate(room_square);
         rooms[0,0].transform.position = new Vector3(0,0,-5);
         
         currentItem = Instantiate(inventory[0].objects[0]);
 
+        //adds a button for each inventory item
         for(int i = 0; i < inventory.Count-1; i++){
             addInventoryButton(i);
         }
     }
 
+    
     void addInventoryButton(int ID){
         GameObject tempButton = Instantiate(inventoryButton);
         tempButton.transform.position = new Vector3(520+ID*64,40,0);
@@ -66,7 +69,8 @@ public class GameHandler : MonoBehaviour
         Vector2 pos = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
         cursorTile.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
 
-        if (Input.GetMouseButtonDown(0)){
+        //place furniture item on mouse click (should be by dragging)
+        if (Input.GetMouseButtonDown(0) && currentItem != null){
             Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
             Debug.Log(selectedTile);
             if( selectedTile.x >= 0 && selectedTile.x < furniture.GetLength(0) &&
@@ -75,6 +79,23 @@ public class GameHandler : MonoBehaviour
                 GameObject tempFurniture = Instantiate(currentItem);
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
+                furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
+                currentItem = null;
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) && currentItem == null){
+            Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
+            Debug.Log(selectedTile);
+            if( selectedTile.x >= 0 && selectedTile.x < furniture.GetLength(0) &&
+                selectedTile.y >= 0 && selectedTile.y < furniture.GetLength(1) &&
+                furniture[(int)selectedTile.x,(int)selectedTile.y] != null){
+                GameObject oldFurniture = furniture[(int)selectedTile.x,(int)selectedTile.y];
+                GameObject tempFurniture = Instantiate(oldFurniture.GetComponent<FurnitureProperties>().nextObject);
+                tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
+                tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
+                furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
+                Destroy(oldFurniture);
             }
         }
     }

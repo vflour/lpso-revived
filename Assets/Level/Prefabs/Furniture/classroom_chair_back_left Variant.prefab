@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &141268602807368466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3888481672020999207, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_Name
+      value: classroom_chair_back_left Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.9113648
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6723323
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742538545776668643, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -3888481672020999207, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6937904850236934923}
+  m_SourcePrefab: {fileID: 7243324766535440047, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+--- !u!1 &5475450871949949131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 8fcfedbf557baf94687af320b9ba4fe6, type: 3}
+  m_PrefabInstance: {fileID: 141268602807368466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6937904850236934923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5475450871949949131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e060bffa4f2c2544b688401eaeccf4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousObject: {fileID: 3755384351982231216, guid: 4635351e21ac5684196055b895ec8f5c, type: 3}
+  nextObject: {fileID: 929539847945672069, guid: 947da1d3a1475d54ea4b66a9080686c2, type: 3}

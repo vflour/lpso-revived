@@ -10,4 +10,6 @@ public class FurnitureData : ScriptableObject
     public string itemName;
     public Sprite icon;
     public int price;
+    public string category;
+    public int rotation;
 }

@@ -5,11 +5,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3888481672020999207, guid: 4269d1a07f0a1084f98d819d96081368, type: 3}
       propertyPath: m_Name
-      value: potted_plant_2_back_left (1)
+      value: potted_plant_2_back_left (1) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8742538545776668643, guid: 4269d1a07f0a1084f98d819d96081368, type: 3}
       propertyPath: m_RootOrder
@@ -64,4 +65,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -3888481672020999207, guid: 4269d1a07f0a1084f98d819d96081368, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7169704218133483175}
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 4269d1a07f0a1084f98d819d96081368, type: 3}
+--- !u!1 &7344577930049544610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -3888481672020999207, guid: 4269d1a07f0a1084f98d819d96081368, type: 3}
+  m_PrefabInstance: {fileID: 3451015377701872251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7169704218133483175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7344577930049544610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e060bffa4f2c2544b688401eaeccf4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousObject: {fileID: 9190587126112341600, guid: 057c5fc2833a9164c8f2dd2c5bdf0eea, type: 3}
+  nextObject: {fileID: 2139357817876402367, guid: 7a155c6372361b74786cde42891b1a87, type: 3}
