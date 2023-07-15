@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="12" height="7" tilewidth="106" tileheight="54" infinite="0" nextlayerid="10" nextobjectid="16">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="wall4.tsx"/>
+ <tileset firstgid="4" source="wall3.tsx"/>
+ <tileset firstgid="5" source="wall19.tsx"/>
+ <tileset firstgid="6" source="wall12.tsx"/>
+ <tileset firstgid="7" source="wall24.tsx"/>
+ <tileset firstgid="8" source="wall25.tsx"/>
+ <tileset firstgid="9" source="wall13.tsx"/>
+ <tileset firstgid="10" source="wall16.tsx"/>
+ <tileset firstgid="11" source="wall17.5.tsx"/>
+ <tileset firstgid="12" source="wall14.tsx"/>
+ <tileset firstgid="13" source="wall15.tsx"/>
+ <layer id="1" name="Floor" width="12" height="7">
+  <data encoding="csv">
+0,0,0,0,2,2,2,2,0,0,0,0,
+0,0,0,0,2,2,2,2,0,0,0,0,
+0,0,0,0,2,2,2,2,0,0,0,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0
+</data>
+ </layer>
+ <group id="5" name="Walls">
+  <objectgroup id="6" name="Up Perspective">
+   <object id="8" gid="8" x="231.454" y="94.3394" width="158.811" height="301.553" rotation="0.0909774"/>
+   <object id="14" gid="12" x="362.937" y="28.4141" width="228" height="334.631"/>
+   <object id="13" gid="11" x="463.078" y="102.021" width="164.074" height="309.049"/>
+  </objectgroup>
+  <objectgroup id="7" name="Left Perspective">
+   <object id="5" gid="6" x="83.0865" y="300.483" width="223.5" height="328.027"/>
+   <object id="6" gid="7" x="152.312" y="178.357" width="162.929" height="303.066"/>
+  </objectgroup>
+  <objectgroup id="8" name="Right Perspective">
+   <object id="11" gid="10" x="539.494" y="179.438" width="160.333" height="305.804"/>
+   <object id="15" gid="13" x="629.302" y="298.721" width="217" height="325.954"/>
+  </objectgroup>
+  <objectgroup id="9" name="Down Perspective">
+   <object id="1" gid="3" x="442.149" y="493.517" width="531.833" height="488.192"/>
+  </objectgroup>
+ </group>
+</map>

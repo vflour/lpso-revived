@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6135164521662593059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6135164521662593053}
+  - component: {fileID: 6135164521662593058}
+  m_Layer: 0
+  m_Name: GameHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6135164521662593053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135164521662593059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.252813, y: -1.8719206, z: 0.06245024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6135164521662593058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135164521662593059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0abbf88ae96b84f4bab962bff6658baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+  - {fileID: 267876375748392035, guid: 8b4bece692f641b49a1892249e40a10f, type: 3}
+  - {fileID: 6530390770551572567, guid: 8d0e0c31de5cf46419b93b3122a3ff55, type: 3}
+  - {fileID: 5331739379607847536, guid: b2af3d518950c144c80f9fa9f59ae6d6, type: 3}
+  - {fileID: 3326632849319414890, guid: d7231809146b2944d90a0727679f1998, type: 3}
+  - {fileID: 2040856904755999701, guid: 5c997a737be81b748b0b6afd36f2afa6, type: 3}
+  - {fileID: 2955283160329626466, guid: dbefbc52bfd97d849b105021fe94b1e8, type: 3}
+  - {fileID: 1551227334904631816, guid: 9578a5d4224dc324b83d9cffcde1a4e3, type: 3}
+  - {fileID: 94508356473446235, guid: 640403ae92d3694489fae54876ca3a8d, type: 3}
+  - {fileID: 3630308365708191645, guid: 92f4bcd83bacfa5459f45589a0dd89eb, type: 3}
+  - {fileID: 6260178237442255433, guid: d01bd23a62f58584fa8eb98d98567444, type: 3}
+  - {fileID: 2534722525913688547, guid: e1914a282ed85264b8a1ff5142055a6c, type: 3}
+  cursor: {fileID: 4668347079581455379, guid: 96f7efd0d6dbf5141880c5be168a755b, type: 3}
+  tilewidth: 1
+  tileheight: 0.5
+  tilewidthp: 0
+  tileheightp: 0
+  width: 6
+  height: 10
+  xOrigin: 4.25
+  yOrigin: -2.75
+  ppu: 100
+  selection: {x: 0, y: 0}

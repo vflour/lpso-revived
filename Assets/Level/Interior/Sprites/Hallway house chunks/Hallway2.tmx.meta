@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 00ce881db71cced40bb9eff17190ca85
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 6363d3fc1b25bca42aa8787daffc550b, type: 3}
+  missingFiles:
+  - ../Big square house chunks/wall2.tsx
+  errors:
+  - 'Missing tileset asset: ../Big square house chunks/wall2.tsx'
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 26
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 1
+  customImporterClassName: 
+  internalTilesets: []

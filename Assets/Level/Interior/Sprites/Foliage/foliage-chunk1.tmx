@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="grass.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+29,28,46,28,10,41,14,12,19,14,19,
+44,19,10,19,14,12,14,14,18,28,45,
+28,48,14,44,28,48,28,44,16,28,46,
+19,29,19,28,14,14,28,3,19,14,14,
+19,12,28,3,29,48,14,28,3,3,10,
+44,10,14,12,14,29,19,14,29,50,3,
+8,3,8,3,25,8,3,15,3,15,3,
+25,47,23,45,24,25,8,48,8,24,16,
+3,47,46,16,52,52,19,16,50,12,22,
+3,47,47,16,52,52,16,18,24,18,24,
+3,3,44,3,52,52,50,42,16,19,12
+</data>
+ </layer>
+</map>

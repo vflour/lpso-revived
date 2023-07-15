@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="12" height="10" tilewidth="106" tileheight="54" infinite="0" nextlayerid="7" nextobjectid="12">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="walls1.tsx"/>
+ <tileset firstgid="4" source="walls-front1.tsx"/>
+ <tileset firstgid="5" source="wall1.tsx"/>
+ <tileset firstgid="6" source="wall2.tsx"/>
+ <tileset firstgid="7" source="wall3.tsx"/>
+ <tileset firstgid="8" source="wall4.tsx"/>
+ <tileset firstgid="9" source="wall5.tsx"/>
+ <tileset firstgid="10" source="wall6.tsx"/>
+ <tileset firstgid="11" source="wall7.tsx"/>
+ <tileset firstgid="12" source="wall8.tsx"/>
+ <tileset firstgid="13" source="wall9.tsx"/>
+ <tileset firstgid="14" source="wall10.tsx"/>
+ <tileset firstgid="15" source="door1.tsx"/>
+ <tileset firstgid="16" source="door2.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="12" height="10">
+  <data encoding="csv">
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,2,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0,
+0,2,2,2,2,2,2,2,2,2,2,0
+</data>
+ </layer>
+ <objectgroup id="5" name="Object Layer 4" locked="1">
+  <object id="5" gid="8" x="162.006" y="379.221" width="540.614" height="487.147"/>
+  <object id="6" gid="5" x="435.548" y="103.182" width="538.287" height="485.812"/>
+ </objectgroup>
+ <objectgroup id="6" name="Object Layer 5">
+  <object id="7" gid="16" x="347.138" y="26.1953" width="196.001" height="244.791"/>
+ </objectgroup>
+ <objectgroup id="4" name="Object Layer 3" locked="1">
+  <object id="8" gid="14" x="439.311" y="651.33" width="529.52" height="491.07"/>
+  <object id="10" gid="12" x="707.698" y="380.302" width="530" height="489.231"/>
+ </objectgroup>
+</map>

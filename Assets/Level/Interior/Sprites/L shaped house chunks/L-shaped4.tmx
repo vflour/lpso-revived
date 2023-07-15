@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="8" height="8" tilewidth="106" tileheight="54" infinite="0" nextlayerid="8" nextobjectid="9">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="../T shaped house chunks/wall12.tsx"/>
+ <tileset firstgid="4" source="../T shaped house chunks/wall20.tsx"/>
+ <tileset firstgid="5" source="../T shaped house chunks/wall25.tsx"/>
+ <tileset firstgid="6" source="../T shaped house chunks/wall16.tsx"/>
+ <tileset firstgid="7" source="wall28.tsx"/>
+ <tileset firstgid="8" source="wall26.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="8" height="8">
+  <data encoding="csv">
+0,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,
+0,2,2,2,2,2,2,2,
+0,0,0,0,2,2,2,2,
+0,0,0,0,2,2,2,2,
+0,0,0,0,2,2,2,2,
+0,0,0,0,0,2,2,0
+</data>
+ </layer>
+ <group id="3" name="Walls">
+  <objectgroup id="6" name="Up Perspective">
+   <object id="8" gid="8" x="315.189" y="64.2973" width="380" height="409.028"/>
+   <object id="1" gid="3" x="82.055" y="136.348" width="223.5" height="328.027"/>
+  </objectgroup>
+  <objectgroup id="2" name="Left Perspective">
+   <object id="5" gid="6" x="152.863" y="235.316" width="160.333" height="303.804"/>
+   <object id="6" gid="5" x="231.986" y="313.471" width="158.811" height="301.553" rotation="0.0909774"/>
+  </objectgroup>
+  <objectgroup id="7" name="Right Perspective">
+   <object id="7" gid="7" x="508.556" y="261.061" width="379.823" height="406.773"/>
+  </objectgroup>
+  <objectgroup id="4" name="Down Perspective">
+   <object id="2" gid="4" x="357.976" y="412.39" width="218.5" height="330.767" rotation="359.845"/>
+  </objectgroup>
+ </group>
+</map>

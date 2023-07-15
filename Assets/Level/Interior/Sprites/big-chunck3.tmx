@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="7" nextobjectid="12">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="walls-front2.tsx"/>
+ <tileset firstgid="4" source="walls.tsx"/>
+ <tileset firstgid="5" source="wall1.tsx"/>
+ <tileset firstgid="6" source="wall2.tsx"/>
+ <tileset firstgid="7" source="wall8.tsx"/>
+ <tileset firstgid="8" source="wall7.tsx"/>
+ <tileset firstgid="9" source="door2.tsx"/>
+ <tileset firstgid="10" source="door1.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+2,2,2,2,2,2,2,2,2,2,0,
+0,0,0,0,2,2,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="Object Layer 3">
+  <object id="4" gid="5" x="382.139" y="104.599" width="538.287" height="485.812"/>
+  <object id="5" gid="6" x="108.508" y="377.659" width="538" height="485.553"/>
+ </objectgroup>
+ <objectgroup id="6" name="doors">
+  <object id="9" gid="9" x="295.056" y="30.5479" width="196.001" height="244.791"/>
+  <object id="11" gid="10" x="31.1186" y="292.881" width="194.836" height="243.336"/>
+ </objectgroup>
+ <objectgroup id="5" name="Object Layer 4">
+  <object id="6" gid="7" x="655.456" y="383.595" width="530" height="489.231"/>
+  <object id="7" gid="8" x="385.352" y="651.468" width="528.875" height="488.192"/>
+ </objectgroup>
+</map>

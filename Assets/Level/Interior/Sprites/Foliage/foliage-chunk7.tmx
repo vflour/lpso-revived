@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="grass.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+45,44,43,45,18,2,44,17,28,17,44,
+49,45,20,20,25,17,18,18,45,1,43,
+20,43,45,1,48,43,28,17,29,1,29,
+18,23,48,26,17,3,44,3,20,43,40,
+37,18,45,49,14,23,14,18,1,48,18,
+43,37,48,48,18,5,49,28,48,20,1,
+14,5,23,20,29,18,28,45,1,48,28,
+23,42,20,37,28,45,14,28,45,48,1,
+20,17,28,48,1,18,5,37,48,5,14,
+42,28,43,1,17,14,29,1,18,3,42,
+14,23,17,2,43,42,17,18,14,1,18
+</data>
+ </layer>
+</map>

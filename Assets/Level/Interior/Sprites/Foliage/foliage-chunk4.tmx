@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="4" nextobjectid="21">
+ <tileset firstgid="1" source="grass.tsx"/>
+ <tileset firstgid="51" source="objects/flower_1_sprite.tsx"/>
+ <tileset firstgid="52" source="objects/bush7.tsx"/>
+ <tileset firstgid="53" source="objects/bush4.tsx"/>
+ <tileset firstgid="54" source="objects/flower_2.tsx"/>
+ <tileset firstgid="55" source="objects/flower_5_sprite.tsx"/>
+ <tileset firstgid="56" source="objects/Flower_4a.tsx"/>
+ <tileset firstgid="57" source="objects/tree2.tsx"/>
+ <tileset firstgid="58" source="objects/Flower_4b.tsx"/>
+ <tileset firstgid="59" source="objects/flower7_sprite.tsx"/>
+ <tileset firstgid="60" source="objects/orange_cactus.tsx"/>
+ <tileset firstgid="61" source="objects/purple_cactus.tsx"/>
+ <tileset firstgid="62" source="objects/flower_3.tsx"/>
+ <tileset firstgid="63" source="objects/flower_6_sprite.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+42,10,29,10,42,25,44,1,10,42,6,
+6,20,42,1,20,10,10,42,10,1,10,
+45,48,1,42,29,44,1,6,44,10,41,
+42,48,45,1,41,1,10,10,41,1,10,
+3,45,45,46,1,45,1,5,20,14,20,
+46,1,46,42,45,1,41,6,14,6,1,
+23,1,42,1,1,23,29,20,1,1,46,
+42,46,48,1,48,20,42,45,17,40,45,
+46,1,23,48,29,17,29,48,29,48,45,
+1,48,46,1,42,45,1,20,17,20,1,
+48,1,46,1,48,1,42,40,46,1,48
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" gid="51" x="147.317" y="261.184" width="121.799" height="121.799"/>
+  <object id="2" gid="52" x="135.136" y="144.371" width="111" height="118.82"/>
+  <object id="3" gid="53" x="163.735" y="68.4654" width="81" height="123"/>
+  <object id="5" gid="54" x="281.489" y="254.014" width="104.192" height="46.0886"/>
+  <object id="6" gid="54" x="241.684" y="162.312" width="107.178" height="47.4096"/>
+  <object id="7" gid="55" x="300.799" y="121.295" width="88.6537" height="88.6537"/>
+  <object id="8" gid="1073741879" x="221.678" y="80.5019" width="88.6537" height="88.6537" rotation="180"/>
+  <object id="9" gid="56" x="345.451" y="232.549" width="30.2899" height="69.6667"/>
+  <object id="10" gid="57" x="369.179" y="25.4661" width="248.813" height="269.898"/>
+  <object id="11" gid="54" x="253.166" y="39.5405" width="195.178" height="81.4096"/>
+  <object id="12" gid="52" x="344.636" y="56.8712" width="88" height="94.454"/>
+  <object id="13" gid="58" x="399.82" y="230.18" width="33" height="64.6084"/>
+  <object id="14" gid="59" x="443.878" y="45.0611" width="102.924" height="102.924"/>
+  <object id="15" gid="54" x="516.036" y="-2.53359" width="104.192" height="46.0886"/>
+  <object id="16" gid="61" x="14.3397" y="139.66" width="120" height="79.8232"/>
+  <object id="18" gid="52" x="554.287" y="169.22" width="111" height="118.82"/>
+  <object id="19" gid="53" x="522.791" y="205.409" width="81" height="123"/>
+  <object id="20" gid="63" x="403.365" y="178.666" width="45.9545" height="45.9545"/>
+ </objectgroup>
+ <objectgroup id="3" name="Object Layer 2">
+  <object id="17" gid="62" x="269.346" y="243.936" width="66" height="114.102"/>
+ </objectgroup>
+</map>
