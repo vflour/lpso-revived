@@ -12,7 +12,7 @@ public class ChatTyping : MonoBehaviour
     public AudioClip click;
 
     public Button OKButton;
-    public TMP_Text userText;
+    public TMPro.TextMeshProUGUI userText;
 
     public void Start()
     { chatBar.onValueChanged.AddListener(delegate { Typing(); }); }
@@ -27,7 +27,7 @@ public class ChatTyping : MonoBehaviour
      //im fucking confused as to why this doesnt do what i want it to do, can someone help me
     public void SendText()
     {
-        Debug.Log(userText.ToString());
-        userText.SetText("");
+        Debug.Log(userText.text.ToString());
+        userText.text = "";
     }
 }
