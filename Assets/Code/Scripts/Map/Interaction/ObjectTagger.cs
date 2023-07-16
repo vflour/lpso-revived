@@ -28,7 +28,7 @@ public class ObjectTagger : MonoBehaviour
                 var metadata = GetMetadata(property.m_Value);
                 if (metadata)
                 {
-                   ObjectTag tag = properties.gameObject.AddComponent<ObjectTag>();
+                   ObjectTag tag = properties.GetComponentInChildren<PolygonCollider2D>().gameObject.AddComponent<ObjectTag>();
                    tag.metadata = metadata;
                 }
             }

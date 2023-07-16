@@ -8,10 +8,11 @@ public class TooltipManager : MonoBehaviour
     public GameObject tooltip;
 
     private GameObject currentTooltip;
-    
+    public bool IsFocused => currentTooltip != null;
+
     public void Update()
     {
-       if (currentTooltip) 
+       if (IsFocused) 
        {
            currentTooltip.transform.position = Input.mousePosition;
        }
@@ -27,7 +28,7 @@ public class TooltipManager : MonoBehaviour
 
     public void Unfocus()
     { 
-        if(currentTooltip)
+        if(IsFocused)
         {
             Destroy(currentTooltip);
             currentTooltip = null;

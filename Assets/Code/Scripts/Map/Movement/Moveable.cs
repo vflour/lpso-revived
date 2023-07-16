@@ -44,6 +44,10 @@ public class Moveable : MonoBehaviour
         // cycle through other nodes first
         foreach (Vector3Int coordinate in path)
         {
+            // path has changed
+            if (FinalCoordinates != path[path.Count-1])
+                break;
+
             NextPosition = mapMovement.GetPosition(coordinate);
             NextCoordinates = coordinate;
 

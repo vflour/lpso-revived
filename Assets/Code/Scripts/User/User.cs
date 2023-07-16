@@ -10,6 +10,8 @@ public class User : MonoBehaviour
     public Character character;
     public UserCamera userCamera;
     public MapSpawn spawner;
+    public TooltipManager tooltipManager;
+
     private bool _spawned = false;
 
     private void Spawn()
