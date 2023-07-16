@@ -39,16 +39,16 @@ ScriptedImporter:
   spriteData:
     TessellationDetail: 0
     SpriteRect:
-      name: TextContainerGUISprite
+      name: TextContainerGUI
       originalName: 
-      pivot: {x: 0.5, y: 0.49736843}
+      pivot: {x: 0.5, y: 0.5}
       alignment: 0
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 64, y: 64, z: 64, w: 64}
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 19
+        width: 256
+        height: 242
       spriteID: c75ad1bd676ab3a4db10366acbb75773
     PhysicsOutlines: []

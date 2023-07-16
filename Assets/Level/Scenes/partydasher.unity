@@ -242,9 +242,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: GameLogic, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4635127887877832651, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: Play Again!
+      objectReference: {fileID: 0}
     - target: {fileID: 5438006979729923107, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_Name
       value: game buffer end
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438006979729923107, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748613545163985955, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: --
       objectReference: {fileID: 0}
     - target: {fileID: 8566985190411897130, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -450,6 +462,10 @@ PrefabInstance:
     - target: {fileID: 3351210929904123008, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
       propertyPath: m_text
       value: Don't let the pets miss the party!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533273696189796725, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
+      propertyPath: m_text
+      value: --
       objectReference: {fileID: 0}
     - target: {fileID: 3656366585316102794, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

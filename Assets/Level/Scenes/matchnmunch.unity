@@ -1462,10 +1462,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: game buffer
       objectReference: {fileID: 0}
+    - target: {fileID: 439946964743778375, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
+      propertyPath: m_text
+      value: Play!
+      objectReference: {fileID: 0}
     - target: {fileID: 999479657574016826, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1957954185}
+    - target: {fileID: 3533273696189796725, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
+      propertyPath: m_text
+      value: --
+      objectReference: {fileID: 0}
     - target: {fileID: 3656366585316102794, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1567,13 +1575,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 153994727}
     m_Modifications:
+    - target: {fileID: 1019949614599037690, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046506706206838960, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0 Pts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2229985231199905761, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0 Pts
+      objectReference: {fileID: 0}
     - target: {fileID: 4346844548400114817, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1957954182}
+    - target: {fileID: 4635127887877832651, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: Play Again!
+      objectReference: {fileID: 0}
     - target: {fileID: 5438006979729923107, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_Name
       value: game buffer end
+      objectReference: {fileID: 0}
+    - target: {fileID: 5438006979729923107, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5748613545163985955, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: --
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167599767217896435, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0 Pts
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317244916957765491, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0 Pts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340939659220755692, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_text
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8566985190411897130, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
