@@ -22,4 +22,8 @@ public class CatalogItemBehaviour : MonoBehaviour
     {
         
     }
+
+    public void BuyFurniture(){
+        GameDataManager.Instance.AddInventory(CatalogItemsData);
+    }
 }

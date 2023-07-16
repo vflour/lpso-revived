@@ -15,5 +15,8 @@ MonoBehaviour:
   objects:
   - {fileID: 7383319465314913168, guid: 84e77c4da1aa4f24b849883a5188124d, type: 3}
   - {fileID: 2566662121533477941, guid: 0923a58e04115bd4fb7edd64630ff444, type: 3}
-  name: Couch
+  itemName: 
   icon: {fileID: 21300000, guid: 09c0cfb7704e66145ae2e73c0ca3d1d1, type: 3}
+  price: 3200
+  category: 
+  rotation: 0

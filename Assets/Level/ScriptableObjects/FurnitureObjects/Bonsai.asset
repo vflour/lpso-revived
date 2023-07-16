@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 9166617574913726872, guid: 9ae987cfa8a254c43b3b360be5d7c50a, type: 3}
-  name: Bonssai
+  itemName: 
   icon: {fileID: 21300000, guid: 8710916eef4f3a648a47bd45bf59921d, type: 3}
+  price: 320
+  category: 
+  rotation: 0
