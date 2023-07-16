@@ -8,4 +8,7 @@ public class CloseButton : MonoBehaviour
     public void Close(){
         SceneManager.LoadScene("Vertical Slice Menu", LoadSceneMode.Single);
     }
+    public void Reset(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

@@ -49,6 +49,13 @@ public class GameLogic : MonoBehaviour
     private Vector2 goalPos;
     private Vector2 sidewalkTile;
 
+    public TMP_Text KibbleWon;
+    public TMP_Text KibbleTotal;
+    public TMP_Text TotalScoreText;
+
+    public GameObject startScreen;
+    public GameObject scoreScreen;
+    private bool gameRunning = false;
     public void toggleMute(bool muted)
     {
         if (muted)
@@ -62,8 +69,15 @@ public class GameLogic : MonoBehaviour
     }
     void Start()
     {
-        SpawnNPC();
+        
         //SpawnNPC();
+    }
+
+    public void StartGame(){
+        gameRunning = true;
+        startScreen.SetActive(false);
+        scoreScreen.SetActive(false);
+        SpawnNPC();
     }
 
     void SpawnTile(int x){
@@ -118,8 +132,19 @@ public class GameLogic : MonoBehaviour
             }
         }
     }
+
+    void SetScore(){
+      TotalScoreText.SetText(points.ToString());
+
+      int kibble = points/50;
+      KibbleWon.SetText(kibble.ToString());
+      GameDataManager.Instance.AddKibble(kibble);
+      KibbleTotal.SetText(GameDataManager.Instance.kibble.ToString());
+    }
+
     void Update()
     {
+        if (gameRunning){
         UpdateNPCs();
         if(stable && !foundPath) {
             gameTimer = gameTimer + Time.deltaTime;
@@ -159,6 +184,8 @@ public class GameLogic : MonoBehaviour
                 npcstart[i].transform.position = Vector2.MoveTowards(npcstart[i].transform.position, spawn.transform.position,1f * Time.deltaTime);
                 if(Vector2.Distance(npcstart[i].transform.position, spawn.transform.position) < 0.1f){
                     Destroy(npcstart[i]);
+                    scoreScreen.SetActive(true);
+                    SetScore();
                 }
             }
          }
@@ -272,6 +299,7 @@ public class GameLogic : MonoBehaviour
                     }
                 }
             }
+        }
         }
     }
 
