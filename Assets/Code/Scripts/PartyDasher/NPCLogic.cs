@@ -29,7 +29,7 @@ public class NPCLogic : MonoBehaviour
         }
     }
     void doTick(){
-        if(hearts.Count>=0){
+        if(hearts.Count>0){
             GameObject heart = hearts[hearts.Count-1];
             Destroy(heart);
             hearts.Remove(heart);
