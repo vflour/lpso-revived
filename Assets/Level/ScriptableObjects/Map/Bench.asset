@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bench
   m_EditorClassIdentifier: 
   behaviour: {fileID: 0}
-  text: Sit
+  text: Sit!

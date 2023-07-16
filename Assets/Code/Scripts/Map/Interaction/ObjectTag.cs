@@ -9,20 +9,23 @@ public class ObjectTag : MonoBehaviour
     // Initialize collider
     public void Start()
     {
-        if (!GetComponent<PolygonCollider2D>())
+        if (!GetComponent<CompositeCollider2D>())
         {
-            // Copy the collider imported by tile
-            var childCollider = gameObject.GetComponentInChildren<PolygonCollider2D>();
-            var newCollider = gameObject.AddComponent<PolygonCollider2D>();
-
-            newCollider.pathCount = childCollider.pathCount;
-            newCollider.points = childCollider.points;
-
+            // composite collider includes children colliders
         }    
     }
-
+    
     void OnMouseOver()
     {
-        
+        var tooltipManager = GamePlayers.Instance.localUser.tooltipManager; 
+        if (!tooltipManager.IsFocused)
+            tooltipManager.Focus(metadata.text);
+    }
+
+    void OnMouseExit()
+    {
+        var tooltipManager = GamePlayers.Instance.localUser.tooltipManager; 
+        if (tooltipManager.IsFocused)
+            tooltipManager.Unfocus();
     }
 }

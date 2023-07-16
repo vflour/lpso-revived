@@ -6,5 +6,5 @@ using UnityEngine.UI;
 public class Tooltip : MonoBehaviour
 {
     public Text text;
-    public Sprite icon;
+    public Image icon;
 }

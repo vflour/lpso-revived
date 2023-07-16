@@ -9,9 +9,7 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
-  errors:
-  - Atlas is not big enough to fit first tile. Try a larger atlas setting.
-  - Atlas size is (2048, 2048) but we need at least (2050, 1538).
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -20,6 +18,6 @@ ScriptedImporter:
   pixelsPerUnit: 100
   edgesPerEllipse: 32
   numberOfObjectsImported: 4
-  useSpriteAtlas: 1
+  useSpriteAtlas: 0
   atlasWidth: 2048
   atlasHeight: 2048
