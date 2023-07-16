@@ -17,10 +17,11 @@ public class GameHandler : MonoBehaviour
     
     public float xOrigin;
     public float yOrigin;
+    public int currentID;
 
     public GameObject currentItem;
     public GameObject inventoryButton;
-
+    public GameObject[] inventoryButtonsGUI;
     public GameObject canvas;
     public GameObject[,] furniture = new GameObject[10,10];
     public GameObject[,] level = new GameObject[10,10];
@@ -40,26 +41,33 @@ public class GameHandler : MonoBehaviour
         //generate the first room
         rooms[0,0] = Instantiate(room_square);
         rooms[0,0].transform.position = new Vector3(0,0,-5);
-        
-        currentItem = Instantiate(GameDataManager.Instance.inventory[0].objects[0]);
 
         //adds a button for each inventory item
-        for(int i = 0; i < GameDataManager.Instance.inventory.Count-1; i++){
+        SetButtons();
+    }
+
+    void SetButtons(){
+        Debug.Log(GameDataManager.Instance.inventory.Count);
+        for(int i = 0; i < inventoryButtonsGUI.Length; i++){
+            Debug.Log(i);
             addInventoryButton(i);
         }
     }
 
     
     void addInventoryButton(int ID){
-        GameObject tempButton = Instantiate(inventoryButton);
-        tempButton.transform.position = new Vector3(520+ID*64,40,0);
-        tempButton.transform.parent = canvas.transform;
-        tempButton.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[ID].icon;
-        tempButton.GetComponent<Button>().onClick.AddListener(() => {
-        Debug.Log(ID);
-        currentItem = GameDataManager.Instance.inventory[ID].objects[0];
-     });
-    }
+        
+        if(ID < GameDataManager.Instance.inventory.Count){
+            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[ID].icon;
+            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.SetActive(true);
+            inventoryButtonsGUI[ID].GetComponent<Button>().onClick.AddListener(() => {
+            Debug.Log(ID);
+            currentItem = GameDataManager.Instance.inventory[ID].objects[0];
+            currentID = ID;
+        }); }else {
+            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.SetActive(false);
+        }
+     }
 
     // Update is called once per frame
     void Update()
@@ -79,8 +87,10 @@ public class GameHandler : MonoBehaviour
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
                 furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
+                GameDataManager.Instance.inventory.Remove(GameDataManager.Instance.inventory[currentID]);
                 currentItem = null;
             }
+            SetButtons();
         }
 
         if (Input.GetMouseButtonDown(0) && currentItem == null){
