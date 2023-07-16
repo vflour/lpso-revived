@@ -11,7 +11,6 @@ public class GameHandler : MonoBehaviour
     private float size = 10f;
     public GameObject cursorTile;
     public Vector2 selection;
-    public List<FurnitureData> inventory;
     
     public int inventoryID;
     public Camera cam;
@@ -42,10 +41,10 @@ public class GameHandler : MonoBehaviour
         rooms[0,0] = Instantiate(room_square);
         rooms[0,0].transform.position = new Vector3(0,0,-5);
         
-        currentItem = Instantiate(inventory[0].objects[0]);
+        currentItem = Instantiate(GameDataManager.Instance.inventory[0].objects[0]);
 
         //adds a button for each inventory item
-        for(int i = 0; i < inventory.Count-1; i++){
+        for(int i = 0; i < GameDataManager.Instance.inventory.Count-1; i++){
             addInventoryButton(i);
         }
     }
@@ -55,10 +54,10 @@ public class GameHandler : MonoBehaviour
         GameObject tempButton = Instantiate(inventoryButton);
         tempButton.transform.position = new Vector3(520+ID*64,40,0);
         tempButton.transform.parent = canvas.transform;
-        tempButton.GetComponent<Image>().sprite = inventory[ID].icon;
+        tempButton.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[ID].icon;
         tempButton.GetComponent<Button>().onClick.AddListener(() => {
         Debug.Log(ID);
-        currentItem = inventory[ID].objects[0];
+        currentItem = GameDataManager.Instance.inventory[ID].objects[0];
      });
     }
 
@@ -102,6 +101,6 @@ public class GameHandler : MonoBehaviour
 
     void SetCurrentItem(int ID){
         Debug.Log(ID);
-        currentItem = inventory[ID].objects[0];
+        currentItem = GameDataManager.Instance.inventory[ID].objects[0];
     }
 }
