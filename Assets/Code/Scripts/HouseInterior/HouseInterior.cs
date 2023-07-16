@@ -23,8 +23,8 @@ public class GameHandler : MonoBehaviour
     public GameObject inventoryButton;
     public GameObject[] inventoryButtonsGUI;
     public GameObject canvas;
-    public GameObject[,] furniture = new GameObject[10,10];
-    public GameObject[,] level = new GameObject[10,10];
+    public GameObject[,] level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +37,15 @@ public class GameHandler : MonoBehaviour
                 tempGrass.transform.position = new Vector3(pos.x,pos.y,pos.y+3f);
             }
         }
-
+        for (int x = 0; x < 10; x++){
+            for (int y = 0; y < 10; y++){
+                if(GameDataManager.Instance.level[x,y] != null){
+                    GameObject tempFurniture = Instantiate(GameDataManager.Instance.level[x,y]);
+                    tempFurniture.transform.position = IsoMath.screenPos(x,y,xOrigin,yOrigin);
+                    tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - y;
+                }
+            }
+        }
         //generate the first room
         rooms[0,0] = Instantiate(room_square);
         rooms[0,0].transform.position = new Vector3(0,0,-5);
@@ -80,13 +88,13 @@ public class GameHandler : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentItem != null){
             Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
             Debug.Log(selectedTile);
-            if( selectedTile.x >= 0 && selectedTile.x < furniture.GetLength(0) &&
-                selectedTile.y >= 0 && selectedTile.y < furniture.GetLength(1) &&
-                furniture[(int)selectedTile.x,(int)selectedTile.y] == null){
+            if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.level.GetLength(0) &&
+                selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.level.GetLength(1) &&
+                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] == null){
                 GameObject tempFurniture = Instantiate(currentItem);
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
-                furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
+                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
                 GameDataManager.Instance.inventory.Remove(GameDataManager.Instance.inventory[currentID]);
                 currentItem = null;
             }
@@ -96,14 +104,14 @@ public class GameHandler : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentItem == null){
             Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
             Debug.Log(selectedTile);
-            if( selectedTile.x >= 0 && selectedTile.x < furniture.GetLength(0) &&
-                selectedTile.y >= 0 && selectedTile.y < furniture.GetLength(1) &&
-                furniture[(int)selectedTile.x,(int)selectedTile.y] != null){
-                GameObject oldFurniture = furniture[(int)selectedTile.x,(int)selectedTile.y];
+            if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.level.GetLength(0) &&
+                selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.level.GetLength(1) &&
+                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] != null){
+                GameObject oldFurniture = GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y];
                 GameObject tempFurniture = Instantiate(oldFurniture.GetComponent<FurnitureProperties>().nextObject);
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
-                furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
+                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
                 Destroy(oldFurniture);
             }
         }
