@@ -7,6 +7,7 @@ public class GameDataManager : MonoBehaviour
     public static GameDataManager Instance;
     public List<FurnitureData> inventory;
     public int kibble = 100;
+    public GameObject[,] level = new GameObject[10,10];
 
     private void Awake()
     {
