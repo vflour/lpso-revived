@@ -6,7 +6,7 @@
  </properties>
  <tile id="0">
   <properties>
-   <property name="Type" value="ScenicSafari"/>
+   <property name="Type" value="ScenicSafariBus"/>
   </properties>
   <image width="1100" height="1200" source="Scenic Safari alternate version.png"/>
   <objectgroup draworder="index" id="3">
