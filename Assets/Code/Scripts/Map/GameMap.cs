@@ -14,4 +14,10 @@ public class GameMap : MonoBehaviour
         Spawn = GetComponentInChildren<MapSpawn>();
         Movement = GetComponentInChildren<MapMovement>();
     }
+
+    void OnDestroy()
+    {
+        Spawn = null;
+        Movement = null;
+    }
 }

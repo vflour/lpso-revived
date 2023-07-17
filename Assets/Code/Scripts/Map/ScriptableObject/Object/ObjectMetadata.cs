@@ -35,10 +35,10 @@ public class ObjectMetadata : ScriptableObject
                         var list = metadataList.list.Concat(new ObjectMetadata[] {this}).ToArray();
                         Debug.Log(list.Length);
                         metadataList.list = list;
+                        EditorUtility.SetDirty(metadataList);
+                        AssetDatabase.SaveAssets();
+                        AssetDatabase.Refresh();
                     } 
-                    EditorUtility.SetDirty(metadataList);
-                    AssetDatabase.SaveAssets();
-                    AssetDatabase.Refresh();
                 }
             }
         }
