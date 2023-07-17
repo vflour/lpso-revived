@@ -18,12 +18,12 @@ public class TooltipManager : MonoBehaviour
        }
     }
 
-    public void Focus(string msg)
+    public void Focus(TooltipData data)
     {
         Unfocus();
         currentTooltip = Instantiate(tooltip, canvas.transform); 
         Tooltip tooltipComponent = currentTooltip.GetComponent<Tooltip>();
-        tooltipComponent.text.text = msg;
+        tooltipComponent.data = data; 
     }
 
     public void Unfocus()

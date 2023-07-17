@@ -28,8 +28,15 @@ public class ObjectTagger : MonoBehaviour
                 var metadata = GetMetadata(property.m_Value);
                 if (metadata)
                 {
-                   ObjectTag tag = properties.GetComponentInChildren<PolygonCollider2D>().gameObject.AddComponent<ObjectTag>();
-                   tag.metadata = metadata;
+                    var collider = properties.GetComponentInChildren<PolygonCollider2D>();
+                    if (!collider)
+                    {
+                        Debug.LogError($"Missing collision data for: {metadata.name}");
+                        continue;
+                    }
+                    ObjectTag tag = collider.gameObject.AddComponent<ObjectTag>();
+                   
+                    tag.metadata = metadata;
                 }
             }
         }

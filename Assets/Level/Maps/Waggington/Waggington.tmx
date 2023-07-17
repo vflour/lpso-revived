@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.1" orientation="isometric" renderorder="right-down" width="140" height="140" tilewidth="106" tileheight="54" infinite="0" nextlayerid="22" nextobjectid="708">
+<map version="1.10" tiledversion="1.10.1" orientation="isometric" renderorder="right-down" width="140" height="140" tilewidth="106" tileheight="54" infinite="0" nextlayerid="22" nextobjectid="710">
  <tileset firstgid="1" source="tiles.tsx"/>
  <tileset firstgid="702" source="W Cozy Care Center.tsx"/>
  <tileset firstgid="703" source="W LPS TV.tsx"/>
@@ -37,7 +37,7 @@
  <tileset firstgid="735" source="clapboard.tsx"/>
  <tileset firstgid="736" source="Basket.tsx"/>
  <tileset firstgid="737" source="bush1.tsx"/>
- <tileset firstgid="738" source="Laughing_labs (1).tsx"/>
+ <tileset firstgid="738" source="LaughingLabs.tsx"/>
  <tileset firstgid="739" source="bush3.tsx"/>
  <tileset firstgid="740" source="red_rope_fence.tsx"/>
  <tileset firstgid="741" source="umbrella_hammock.tsx"/>
@@ -592,7 +592,7 @@
   <object id="66" gid="715" x="2306.8" y="872.7" width="198.734" height="174.27"/>
   <object id="67" gid="718" x="3923.86" y="2740.93" width="486" height="486"/>
   <object id="71" gid="720" x="1827.74" y="2223.59" width="479.643" height="273.224"/>
-  <object id="88" type="Bench" gid="722" x="3050.72" y="2481.28" width="127.778" height="76.6667"/>
+  <object id="88" gid="722" x="3050.72" y="2481.28" width="127.778" height="76.6667"/>
   <object id="89" gid="722" x="3486.39" y="2590.38" width="127.778" height="76.6667"/>
   <object id="90" gid="722" x="2345.41" y="1663.36" width="127.778" height="76.6667"/>
   <object id="91" gid="722" x="5094.97" y="2481.41" width="127.778" height="76.6667"/>
@@ -602,7 +602,7 @@
   <object id="95" gid="722" x="4019.12" y="5604.72" width="127.778" height="76.6667"/>
   <object id="96" gid="722" x="3534.03" y="5512.42" width="127.778" height="76.6667"/>
   <object id="98" gid="1073742546" x="3717.46" y="5239.53" width="127.778" height="76.6667" rotation="180"/>
-  <object id="99" type="Bench" gid="722" x="3108.23" y="3183.88" width="127.778" height="76.6667"/>
+  <object id="99" gid="722" x="3108.23" y="3183.88" width="127.778" height="76.6667"/>
   <object id="100" gid="722" x="2236.11" y="4916.67" width="127.778" height="76.6667"/>
   <object id="101" gid="722" x="2030.89" y="4456.22" width="127.778" height="76.6667"/>
   <object id="104" gid="1073742546" x="3975.93" y="1884.63" width="127.778" height="76.6667" rotation="180"/>
@@ -903,7 +903,7 @@
   <object id="69" gid="719" x="5730.07" y="3103.93" width="463" height="463"/>
   <object id="70" gid="719" x="2105.62" y="1688.81" width="463" height="463"/>
   <object id="113" gid="723" x="1872.76" y="3185.24" width="427.667" height="433.138"/>
-  <object id="336" gid="738" x="3975" y="1490.27" width="1086.38" height="1019.89"/>
+  <object id="812" gid="738" x="3975" y="1490.27" width="1086.38" height="1019.89"/>
   <object id="616" gid="776" x="1468.73" y="5035.27" width="100.025" height="102.97"/>
   <object id="620" gid="778" x="1549.38" y="5070.41" width="403.194" height="432.373"/>
  </objectgroup>

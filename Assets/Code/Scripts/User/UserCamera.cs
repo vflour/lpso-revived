@@ -38,7 +38,7 @@ public class UserCamera : MonoBehaviour
         if (isRecentering)
         {
             // Move the camera towards the moveable
-            var desiredCameraPosition = moveable.FinalPosition + Vector3.back;
+            var desiredCameraPosition = moveable.NextPosition + Vector3.back;
             var step = speed * Time.deltaTime;
             camera.transform.position = Vector3.MoveTowards(camera.transform.position, desiredCameraPosition, speed);
             
