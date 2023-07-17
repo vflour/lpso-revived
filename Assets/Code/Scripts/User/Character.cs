@@ -8,11 +8,13 @@ public class Character : MonoBehaviour
     
     public GameObject characterModelPrefab; 
     private GameObject currentCharacterObject;
+    public Animator animator;
 
     public void Spawn(Vector3Int coordinates) 
     {
         currentCharacterObject = Instantiate(characterModelPrefab, transform);
         moveable.coordinates = coordinates;
+        animator = currentCharacterObject.GetComponent<Animator>();
     }
     
     // added here incase, might remove

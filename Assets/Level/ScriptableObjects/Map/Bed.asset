@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b282f4deeb89edcb5880cf49484623b8, type: 3}
   m_Name: Bed
   m_EditorClassIdentifier: 
-  behaviour: {fileID: 0}
+  behaviour: {fileID: 2718131898164561142, guid: 07867e7250dc9a1d490a9bf54f12065a, type: 3}
   tooltipData: {fileID: 11400000, guid: 8e0f705c2b874abc897e60ec10a11935, type: 2}

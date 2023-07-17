@@ -4,10 +4,18 @@ using UnityEngine;
 using System.Threading.Tasks;
 using System;
 
+public enum MovementState {
+    Idle,
+    Moving,
+    Resting,
+    Busy
+}
+
 public class Moveable : MonoBehaviour
 {
     public float movementSpeed = 1f;
     public MapMovement mapMovement;
+    public MovementState State { set; get; }
 
     private Vector3Int _currentCoordinates;
     public Vector3Int NextCoordinates {private set; get;}
@@ -41,18 +49,22 @@ public class Moveable : MonoBehaviour
     {
         // the final coords is the last node
         FinalCoordinates = path[path.Count-1];
+        State = MovementState.Moving;
         // cycle through other nodes first
         foreach (Vector3Int coordinate in path)
         {
             // path has changed
             if (FinalCoordinates != path[path.Count-1])
                 break;
-
+            
             NextPosition = mapMovement.GetPosition(coordinate);
             NextCoordinates = coordinate;
 
             yield return new WaitUntil(() => !IsMoving);
         }
+    
+        if (FinalCoordinates == path[path.Count-1])
+            State = MovementState.Idle;
 
     }
 
@@ -67,7 +79,7 @@ public class Moveable : MonoBehaviour
     public void FixedUpdate()
     {
 
-        if (IsMoving)
+        if (IsMoving && State == MovementState.Moving)
         {
 
             float step = movementSpeed * Time.deltaTime;

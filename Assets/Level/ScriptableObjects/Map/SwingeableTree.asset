@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b282f4deeb89edcb5880cf49484623b8, type: 3}
-  m_Name: FlowerPatch
+  m_Name: SwingeableTree
   m_EditorClassIdentifier: 
-  behaviour: {fileID: 8581980918581935296, guid: 9253e9f46e13c37cbb0eaa0b577d1ed8, type: 3}
-  tooltipData: {fileID: 11400000, guid: 0aaf91428b7e29f6d95249d587ff78ad, type: 2}
+  behaviour: {fileID: 0}
+  tooltipData: {fileID: 11400000, guid: 14d06cd4b37757debb155cbb032b68cb, type: 2}

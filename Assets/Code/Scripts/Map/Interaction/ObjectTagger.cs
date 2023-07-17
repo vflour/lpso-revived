@@ -34,8 +34,7 @@ public class ObjectTagger : MonoBehaviour
                         Debug.LogError($"Missing collision data for: {metadata.name}");
                         continue;
                     }
-                    ObjectTag tag = collider.gameObject.AddComponent<ObjectTag>();
-                   
+                    ObjectTag tag = collider.gameObject.AddComponent<ObjectTag>(); 
                     tag.metadata = metadata;
                 }
             }
