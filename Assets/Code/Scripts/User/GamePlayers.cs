@@ -7,8 +7,13 @@ public class GamePlayers : MonoBehaviour
 {
     public static User LocalUser { set; get; }
     
-    public void Awake()
+    void Awake()
     {
         LocalUser = GetComponentInChildren<User>();
+    }
+
+    void OnDestroy()
+    {
+        LocalUser = null;
     }
 }
