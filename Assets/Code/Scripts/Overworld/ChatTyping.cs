@@ -17,6 +17,14 @@ public class ChatTyping : MonoBehaviour
     public void Start()
     { chatBar.onValueChanged.AddListener(delegate { Typing(); }); }
 
+    void Update()
+    {
+        
+        if (Input.GetKeyUp(KeyCode.Return)) {
+            chatBar.Select();
+            SendText();}
+    }
+
     public void Typing()
     { chatSounds.PlayOneShot(typingSound); }
 
@@ -24,10 +32,12 @@ public class ChatTyping : MonoBehaviour
     { chatSounds.PlayOneShot(click); }
 
 
-     //im fucking confused as to why this doesnt do what i want it to do, can someone help me
+    //im fucking confused as to why this doesnt do what i want it to do, can someone help me
     public void SendText()
     {
-        Debug.Log(userText.text.ToString());
-        userText.text = "";
+        if (chatBar.text.Length > 0) {
+            Debug.Log(userText.text.ToString());
+            chatBar.text = "";
+        }
     }
 }
