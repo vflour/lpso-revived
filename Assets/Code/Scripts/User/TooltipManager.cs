@@ -12,10 +12,12 @@ public class TooltipManager : MonoBehaviour
 
     public void Update()
     {
-       if (IsFocused) 
-       {
-           currentTooltip.transform.position = Input.mousePosition;
-       }
+        if (IsFocused) 
+        {
+            var screenPoint = Input.mousePosition;
+            screenPoint.z = 100.0f;
+            currentTooltip.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+        }
     }
 
     public void Focus(TooltipData data)

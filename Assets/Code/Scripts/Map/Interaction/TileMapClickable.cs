@@ -4,7 +4,8 @@ using UnityEngine.Tilemaps;
 public class TileMapClickable : Clickable
 {
     public MapMovement mapMovement;
-
+    public TilemapClickAnimation clickAnimation;
+    
     void Start()
     {
         mapMovement = GameMap.Movement;
@@ -22,6 +23,7 @@ public class TileMapClickable : Clickable
             if (mapMovement.CanMove(cellPosition))
             {
                 mapMovement.MoveTo(userMoveable, cellPosition);
+                clickAnimation.SpawnGraphic(cellPosition);
             }
         }
     }
