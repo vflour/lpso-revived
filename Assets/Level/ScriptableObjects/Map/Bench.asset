@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Bench
   m_EditorClassIdentifier: 
   behaviour: {fileID: 0}
-  text: Sit!
+  tooltipData: {fileID: 11400000, guid: b567a33d416ba1a908d447c7668f3fcd, type: 2}

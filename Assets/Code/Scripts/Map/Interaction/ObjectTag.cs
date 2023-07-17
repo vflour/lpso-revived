@@ -6,26 +6,25 @@ public class ObjectTag : MonoBehaviour
 {
     public ObjectMetadata metadata;
 
-    // Initialize collider
-    public void Start()
-    {
-        if (!GetComponent<CompositeCollider2D>())
-        {
-            // composite collider includes children colliders
-        }    
-    }
-    
     void OnMouseOver()
     {
-        var tooltipManager = GamePlayers.Instance.localUser.tooltipManager; 
+        var tooltipManager = GamePlayers.LocalUser.tooltipManager; 
         if (!tooltipManager.IsFocused)
-            tooltipManager.Focus(metadata.text);
+            tooltipManager.Focus(metadata.tooltipData);
+        
+        var cursorManager = GamePlayers.LocalUser.cursorManager;
+        cursorManager.Type = CursorType.Interact; 
     }
 
     void OnMouseExit()
     {
-        var tooltipManager = GamePlayers.Instance.localUser.tooltipManager; 
+        var tooltipManager = GamePlayers.LocalUser.tooltipManager; 
+
         if (tooltipManager.IsFocused)
             tooltipManager.Unfocus();
+        
+        var cursorManager = GamePlayers.LocalUser.cursorManager;
+        if (cursorManager.Type == CursorType.Interact)
+            cursorManager.Type = CursorType.Idle;
     }
 }

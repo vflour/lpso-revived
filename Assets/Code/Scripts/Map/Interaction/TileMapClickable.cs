@@ -5,9 +5,14 @@ public class TileMapClickable : Clickable
 {
     public MapMovement mapMovement;
 
+    void Start()
+    {
+        mapMovement = GameMap.Movement;
+    }
+
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
     {
-        Moveable userMoveable = GamePlayers.Instance?.localUser.character.moveable;
+        Moveable userMoveable = GamePlayers.LocalUser.character.moveable;
         if (userMoveable) 
         {
             Tilemap tilemap = mapMovement.tilemap;
@@ -20,5 +25,4 @@ public class TileMapClickable : Clickable
             }
         }
     }
-
 }

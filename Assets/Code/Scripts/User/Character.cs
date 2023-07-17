@@ -8,7 +8,7 @@ public class Character : MonoBehaviour
     
     public GameObject characterModelPrefab; 
     private GameObject currentCharacterObject;
-    
+
     public void Spawn(Vector3Int coordinates) 
     {
         currentCharacterObject = Instantiate(characterModelPrefab, transform);

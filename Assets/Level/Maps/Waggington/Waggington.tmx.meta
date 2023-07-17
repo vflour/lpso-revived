@@ -12,8 +12,6 @@ ScriptedImporter:
   errors:
   - Errors detected in tileset 'tree.tsx'. Check the tileset inspector for more details.
     Your map may be broken until these are fixed.
-  - Errors detected in tileset 'Laughing_labs (1).tsx'. Check the tileset inspector
-    for more details. Your map may be broken until these are fixed.
   - Errors detected in tileset 'potted_bush.tsx'. Check the tileset inspector for
     more details. Your map may be broken until these are fixed.
   - Errors detected in tileset 'sea_star_1.tsx'. Check the tileset inspector for
@@ -73,7 +71,6 @@ ScriptedImporter:
   - Missing tile '791' on tile object ''
   - Missing tile '791' on tile object ''
   - Missing tile '791' on tile object ''
-  - Missing tile '738' on tile object ''
   - Missing tile '774' on tile object ''
   - Missing tile '774' on tile object ''
   - Missing tile '774' on tile object ''

@@ -7,10 +7,12 @@ using UnityEngine;
 /// </summary>
 public class User : MonoBehaviour
 {
+    // References to external classes for easy navigation
     public Character character;
     public UserCamera userCamera;
     public MapSpawn spawner;
     public TooltipManager tooltipManager;
+    public CursorManager cursorManager;
 
     private bool _spawned = false;
 
@@ -22,6 +24,22 @@ public class User : MonoBehaviour
         character.Spawn(spawnCoordinates);
         
         userCamera.RefreshCamera();
+    }
+    
+    void Awake()
+    {
+        character = GetComponentInChildren<Character>();
+        userCamera = GetComponentInChildren<UserCamera>();
+        tooltipManager = GetComponentInChildren<TooltipManager>();
+        cursorManager = GetComponentInChildren<CursorManager>();
+    }
+
+    void Start()
+    {
+        // Initialize external refs
+        spawner = GameMap.Spawn;
+        // the local user's movement should be the game map moveable
+        character.moveable.mapMovement = GameMap.Movement;
     }
 
     // Initialize AFTER Start is called
