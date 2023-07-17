@@ -50707,7 +50707,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveable: {fileID: 1715943496}
-  characterModelPrefab: {fileID: 8909900797007115830, guid: bc581bd146860414da3406052661265b, type: 3}
+  characterModelPrefab: {fileID: 449134443589474748, guid: 423285ca2b203bc4b861ed2d126f4ffd, type: 3}
+  animator: {fileID: 0}
 --- !u!4 &1715943498
 Transform:
   m_ObjectHideFlags: 0
