@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99686aaa8b30b81699134b5157129ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapMovement: {fileID: 0}
   characterPosition: {fileID: 3516516313911878673}
   endPosition: {fileID: 3516516313911878673}
-  animation: kitt
+  animationStateName: kitt
