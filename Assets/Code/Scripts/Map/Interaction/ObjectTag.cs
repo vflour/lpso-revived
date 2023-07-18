@@ -16,5 +16,8 @@ public class ObjectTag : MonoBehaviour
         }
         var tooltip = container.AddComponent<ObjectTooltip>();
         tooltip.metadata = metadata;
+
+        var cursorModifier = container.AddComponent<MapCursorModifier>();
+        cursorModifier.cursorType = CursorType.Interact;
     }
 }
