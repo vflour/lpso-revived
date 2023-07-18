@@ -2742,10 +2742,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _FaceDilate: 0.63
-    - _OutlineWidth: 0.5
-    - _ScaleRatioA: 0.6325111
-    - _ScaleRatioB: 0.15208332
-    - _ScaleRatioC: 0.15208332
+    - _FaceDilate: 0
+    - _OutlineWidth: 0
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     m_Colors: []
   m_BuildTextureStacks: []
