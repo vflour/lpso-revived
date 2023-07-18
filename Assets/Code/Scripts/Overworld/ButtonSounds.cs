@@ -9,6 +9,8 @@ public class ButtonSounds : MonoBehaviour
     public AudioClip pressedSound;
     public AudioClip openPDA;
 
+    public GameObject childImage;
+
     public void playHover()
     { ButtonSound.PlayOneShot(hoverSound); }
 
@@ -17,4 +19,10 @@ public class ButtonSounds : MonoBehaviour
 
     public void playPDA()
     { ButtonSound.PlayOneShot(openPDA); }
+
+    public void EnlargeImage()
+    { childImage.transform.localScale = new Vector3(1.1f, 1.1f, 0); }
+
+    public void ShrinkImage()
+    { childImage.transform.localScale = new Vector3(1, 1, 0); }
 }
