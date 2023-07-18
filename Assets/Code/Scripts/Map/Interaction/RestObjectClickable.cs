@@ -10,7 +10,7 @@ public class RestObjectClickable : ObjectClickable
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
     {
         base.handle(globalPosition, mousePosition);
-        if (_moveable) RestWhenReached();
+        if (_moveable) StartCoroutine(RestWhenReached());
     }
     
     private IEnumerator RestWhenReached()

@@ -18,10 +18,7 @@ public class BusyObjectClickable : ObjectClickable
         bool completed = false;
         var finishHandler = animator.GetComponent<AnimationFinishHandler>();
 
-        finishHandler.finishedAnimation.AddListener(() => {
-            completed = true;
-            Debug.Log("Bro");
-        });
+        finishHandler.finishedAnimation.AddListener(() => completed = true);
         PlayAnimation();
 
         yield return new WaitUntil(() => completed == true);
