@@ -1,28 +1,23 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileMapClickable : Clickable
+public class TileMapClickable : MapClickable
 {
-    public MapMovement mapMovement;
     public TilemapClickAnimation clickAnimation;
-    
-    void Start()
-    {
-        mapMovement = GameMap.Movement;
-    }
+
 
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
     {
-        Moveable userMoveable = GamePlayers.LocalUser.character.moveable;
-        if (userMoveable) 
+        if (_moveable) 
         {
+            if (!CanMove) return;
             Tilemap tilemap = mapMovement.tilemap;
             Vector3 hitPoint = globalPosition + tilemap.transform.position/2;
 
             Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
             if (mapMovement.CanMove(cellPosition))
             {
-                mapMovement.MoveTo(userMoveable, cellPosition);
+                MoveToCoordinates(cellPosition);
                 clickAnimation.SpawnGraphic(cellPosition);
             }
         }

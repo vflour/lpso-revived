@@ -11,9 +11,6 @@ public class ObjectTooltip : MonoBehaviour
         var tooltipManager = GamePlayers.LocalUser.tooltipManager; 
         if (!tooltipManager.IsFocused)
             tooltipManager.Focus(metadata.tooltipData);
-        
-        var cursorManager = GamePlayers.LocalUser.cursorManager;
-        cursorManager.Type = CursorType.Interact; 
     }
 
     void OnMouseExit()
@@ -22,9 +19,5 @@ public class ObjectTooltip : MonoBehaviour
 
         if (tooltipManager.IsFocused)
             tooltipManager.Unfocus();
-        
-        var cursorManager = GamePlayers.LocalUser.cursorManager;
-        if (cursorManager.Type == CursorType.Interact)
-            cursorManager.Type = CursorType.Idle;
     }
 }

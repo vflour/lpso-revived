@@ -3,44 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class BusyObjectClickable : Clickable
+public class BusyObjectClickable : ObjectClickable
 {
-    public Transform characterPosition;
-    public Transform endPosition;
-    public string animation;
     
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
     {
-        MapMovement mapMovement = GameMap.Movement;
-        Moveable moveable = GamePlayers.LocalUser.character.moveable;
-        if (moveable) 
-        {
-            Tilemap tilemap = mapMovement.tilemap;
-            Vector3 hitPoint = globalPosition + tilemap.transform.position/2;
-
-            Vector3Int characterCoordinates = tilemap.WorldToCell(characterPosition.position);
-            Vector3Int endCoordinates = tilemap.WorldToCell(endPosition.position);
-            
-            mapMovement.MoveTo(moveable, endCoordinates);
-            StartCoroutine(AnimateWhenReached(moveable, characterCoordinates));
-        }
+        base.handle(globalPosition, mousePosition);
+        if (_moveable) StartCoroutine(AnimateWhenReached());
     }
-    
-    private IEnumerator AnimateWhenReached(Moveable moveable, Vector3Int characterCoordinates)
+
+    private IEnumerator PlayAndWaitForAnimation()
     {
-        yield return new WaitUntil(()=>moveable.IsNavigating == false);
-        
-        moveable.State = MovementState.Busy;
-        moveable.coordinates = characterCoordinates;
-        moveable.transform.position = characterPosition.position;
+        // play, get state & wait
+        bool completed = false;
+        var finishHandler = animator.GetComponent<AnimationFinishHandler>();
 
-        var animator = GamePlayers.LocalUser.character.animator;
-        animator.Play(animation);
-        var animatorStateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        finishHandler.finishedAnimation.AddListener(() => {
+            completed = true;
+            Debug.Log("Bro");
+        });
+        PlayAnimation();
 
+        yield return new WaitUntil(() => completed == true);
+    }
 
-        yield return new WaitUntil(()=>animatorStateInfo.length == animatorStateInfo.normalizedTime);
-        Debug.Log("done");
-        moveable.State = MovementState.Idle;
+    private IEnumerator AnimateWhenReached()
+    {
+        // wait to finish moving
+        yield return WaitForMoveable();
+        if (_moveable.HasChangedDirection(endCoordinates)) yield break;
+
+        // init placement
+        PlaceMoveable(MovementState.Busy, characterPosition.position, characterCoordinates);
+        // play anim
+        yield return PlayAndWaitForAnimation();
+        // set to normal
+        _moveable.State = MovementState.Idle;
     }
 }

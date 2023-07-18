@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using UnityEditor;
 using System.Linq;
 using System.IO;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 [CreateAssetMenu]
 public class ObjectMetadata : ScriptableObject
 {
     public GameObject behaviour;
     public TooltipData tooltipData;
-    
+
+    #if UNITY_EDITOR
     // Updates the metadata list in the same directory
     void OnValidate()
     {
@@ -43,4 +47,5 @@ public class ObjectMetadata : ScriptableObject
             }
         }
     }
+    #endif
 }

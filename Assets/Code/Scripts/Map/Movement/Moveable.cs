@@ -44,27 +44,31 @@ public class Moveable : MonoBehaviour
 
     public bool IsMoving => _currentCoordinates != NextCoordinates;
     public bool IsNavigating => _currentCoordinates != FinalCoordinates;
+
+    public bool HasChangedDirection(Vector3Int coordinates)
+    {
+        return FinalCoordinates != coordinates;
+    }
     
     private IEnumerator NavigateThroughList(List<Vector3Int> path)
     {
         // the final coords is the last node
         FinalCoordinates = path[path.Count-1];
         State = MovementState.Moving;
-        // cycle through other nodes first
+
+        // cycle through all nodes
         foreach (Vector3Int coordinate in path)
-        {
-            // path has changed
-            if (FinalCoordinates != path[path.Count-1])
-                break;
-            
+        {   
+            // move to next tile
             NextPosition = mapMovement.GetPosition(coordinate);
             NextCoordinates = coordinate;
-
             yield return new WaitUntil(() => !IsMoving);
+
+            // path has changed
+            if (HasChangedDirection(path[path.Count - 1]))
+                yield break;
         }
-    
-        if (FinalCoordinates == path[path.Count-1])
-            State = MovementState.Idle;
+        State = MovementState.Idle;
 
     }
 
