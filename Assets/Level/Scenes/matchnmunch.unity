@@ -1590,7 +1590,15 @@ PrefabInstance:
     - target: {fileID: 4346844548400114817, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1957954182}
+      objectReference: {fileID: 1957954185}
+    - target: {fileID: 4346844548400114817, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Reset
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346844548400114817, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CloseButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4635127887877832651, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_text
       value: Play Again!
@@ -1601,7 +1609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5438006979729923107, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5748613545163985955, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
       propertyPath: m_text

@@ -372,8 +372,8 @@ public class GameLogic : MonoBehaviour
 
      Vector2 tilePos(float x, float y){
         Vector2 position;
-        position.x = Mathf.Ceil((x / (tilewidth/2) + y / (tileheight/2))/2 -xOrigin);
-        position.y = Mathf.Ceil((y / (tileheight/2) - x / (tilewidth/2))/2 -yOrigin);
+        position.x = Mathf.Round((x / (tilewidth/2) + y / (tileheight/2))/2 -xOrigin);
+        position.y = Mathf.Round((y / (tileheight/2) - x / (tilewidth/2))/2 -yOrigin);
         return position;
     }
 }
