@@ -22,7 +22,8 @@ public class ChatTyping : MonoBehaviour
         
         if (Input.GetKeyUp(KeyCode.Return)) {
             chatBar.Select();
-            SendText();}
+            SendText();
+        }
     }
 
     public void Typing()
@@ -31,8 +32,6 @@ public class ChatTyping : MonoBehaviour
     public void ClickSound()
     { chatSounds.PlayOneShot(click); }
 
-
-    //im fucking confused as to why this doesnt do what i want it to do, can someone help me
     public void SendText()
     {
         if (chatBar.text.Length > 0) {
