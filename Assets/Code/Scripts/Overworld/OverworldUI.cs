@@ -26,6 +26,8 @@ public class OverworldUI : MonoBehaviour
 
     public GameObject invButton;
     public GameObject closeInvButton;
+    public Button InvLeftButton;
+    public Button InvRightButton;
     public GameObject SideInv;
     public Button SideInvButton;
     public GameObject SideInvArrow;
@@ -43,8 +45,10 @@ public class OverworldUI : MonoBehaviour
         inventory.SetActive(false);
         PDA.SetActive(false);
         messagebar.SetActive(true);
-        SideInvButton.interactable = false;
         map.SetActive(false);
+        SideInvButton.interactable = false;
+        InvLeftButton.interactable = false;
+        InvRightButton.interactable = false;
 
     }
 
