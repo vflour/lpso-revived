@@ -60,11 +60,12 @@ public class GameHandler : MonoBehaviour
     }
 
     void SetButtons(){
-        Debug.Log(GameDataManager.Instance.inventory.Count);
+        GameDataManager Data = GameDataManager.Instance;
+        Debug.Log(Data.inventory.Count);
         FurnitureList.Clear();
-        for(int i = 0; i < GameDataManager.Instance.inventory.Count; i++){
-            if(GameDataManager.Instance.inventory[i].category == "furniture"){
-                FurnitureList.Add(GameDataManager.Instance.inventory[i]);
+        for(int i = 0; i < Data.inventory.Count; i++){
+            if(Data.itemList[Data.inventory[i]].category == "furniture"){
+                FurnitureList.Add(Data.itemList[Data.inventory[i]]);
             }
         }
         for(int i = 0; i < inventoryButtonsGUI.Length; i++){
@@ -109,7 +110,7 @@ public class GameHandler : MonoBehaviour
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
                 GameData.levelData[(int)selectedTile.x,(int)selectedTile.y] = currentID;
-                GameData.inventory.Remove(GameDataManager.Instance.inventory[selectedFurniture]);
+                GameData.inventory.Remove(currentID);
                 currentItem = null;
             }
             SetButtons();
@@ -134,6 +135,7 @@ public class GameHandler : MonoBehaviour
 
     void SetCurrentItem(int invSlot){
         Debug.Log(invSlot);
-        currentItem = GameDataManager.Instance.inventory[invSlot].objects[0];
+        GameDataManager Data = GameDataManager.Instance;
+        currentItem = Data.itemList[Data.inventory[invSlot]].objects[0];
     }
 }
