@@ -8,7 +8,7 @@ public class GameDataManager : MonoBehaviour
 {
     public static GameDataManager Instance;
     public List<ItemData> itemList;
-    public List<ItemData> inventory;
+    public List<int> inventory = new List<int>();
     public int kibble = 100;
     public int[,] levelData = new int[10,10];
     public int[,] rotationData = new int[10,10];
@@ -37,7 +37,7 @@ public class GameDataManager : MonoBehaviour
         BinaryFormatter bf = new BinaryFormatter(); 
 	    FileStream file = File.Create(Application.persistentDataPath  + "/MySaveData.dat"); 
 	    SaveData data = new SaveData();
-	    //data.inventory = inventory;
+	    data.inventory = inventory;
         data.rotationData = rotationData;
         data.levelData = levelData;
 	    data.kibble = kibble;
@@ -55,7 +55,9 @@ public class GameDataManager : MonoBehaviour
 		FileStream file = File.Open(Application.persistentDataPath + "/MySaveData.dat", FileMode.Open);
 		SaveData data = (SaveData)bf.Deserialize(file);
 		file.Close();
-		//inventory = data.inventory;
+        if (data.inventory != null){
+		    inventory = data.inventory;
+        }
         rotationData = data.rotationData;
         levelData = data.levelData;
 	    kibble = data.kibble;
@@ -67,14 +69,14 @@ public class GameDataManager : MonoBehaviour
 		Debug.LogError("There is no save data!");
     }
 
-    public void AddInventory(ItemData item)
+    public void AddInventory(int ID)
     {
-        GameDataManager.Instance.inventory.Add(item);
+        GameDataManager.Instance.inventory.Add(ID);
     }
     
-    public void RemoveInventory(ItemData item)
+    public void RemoveInventory(int ID)
     {
-        GameDataManager.Instance.inventory.Remove(item);
+        GameDataManager.Instance.inventory.Remove(ID);
     }
 
     public void AddKibble(int kibble)
