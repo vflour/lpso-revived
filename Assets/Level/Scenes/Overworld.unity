@@ -6309,14 +6309,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 739356288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c47bbb22a4d8be54588ce0410cc53862, type: 3}
+  m_Script: {fileID: 11500000, guid: d974ecfedb57cc4408d2588766317577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  furniture: []
-  inventory: []
-  kibble: 100
-  mnmhighscore: 0
-  pdhighscore: 0
+  Buttons:
+  - {fileID: 694279560}
+  - {fileID: 60434592}
+  - {fileID: 482293719}
+  - {fileID: 1052968834}
+  - {fileID: 414604543}
+  - {fileID: 1602750038}
+  - {fileID: 747756020}
+  - {fileID: 1116507104}
+  - {fileID: 842971360}
+  - {fileID: 40771728}
+  - {fileID: 683202940}
+  - {fileID: 805041968}
 --- !u!1 &739862438
 GameObject:
   m_ObjectHideFlags: 0
@@ -17307,7 +17315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1799469251
 RectTransform:
   m_ObjectHideFlags: 0
