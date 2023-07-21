@@ -6416,6 +6416,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kibblecount: {fileID: 211317977}
   kibblecountinv: {fileID: 2008944478}
+  scenes:
+  - houseinterior
+  - WelcomeWaggin
+  - SticksStones
+  - matchnmunch
+  - partydasher
   inventory: {fileID: 1799469250}
   PDA: {fileID: 1026498583}
   userInfoMenu: {fileID: 478658477}
@@ -6437,6 +6443,7 @@ MonoBehaviour:
   mapXButton: {fileID: 3105986504339463769}
   mapOpenButton: {fileID: 2010236915}
   travelConfirmPopup: {fileID: 1445903062}
+  SelectedLocation: 0
   mapLocations:
   - Your Pet Place
   - Welcome Waggin'
@@ -21279,23 +21286,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 739356292}
+      objectReference: {fileID: 739356289}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToScene
+      value: TravelConfirm
       objectReference: {fileID: 0}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VerticalSliceMenu, Assembly-CSharp
+      value: OverworldUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
