@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCLogic : MonoBehaviour
+public class PDasherNPC : MonoBehaviour
 {
     public float timer;
     public float gameTick;
@@ -33,8 +33,10 @@ public class NPCLogic : MonoBehaviour
             GameObject heart = hearts[hearts.Count-1];
             Destroy(heart);
             hearts.Remove(heart);
-        } else {
-            leaving = true;
+            if (hearts.Count==0)
+            {
+                leaving = true;
+            }
         }
     }
     // Update is called once per frame
