@@ -49,7 +49,7 @@ public class OverworldUI : MonoBehaviour
         SideInvButton.interactable = false;
         InvLeftButton.interactable = false;
         InvRightButton.interactable = false;
-
+        
     }
 
     void Update(){
