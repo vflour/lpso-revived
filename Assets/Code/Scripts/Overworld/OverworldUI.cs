@@ -34,6 +34,10 @@ public class OverworldUI : MonoBehaviour
 
     public GameObject mapXButton;
     public GameObject mapOpenButton;
+    public GameObject travelConfirmPopup;
+    public string[] mapLocations;
+    public Button[] mapIcons;
+    public TMPro.TextMeshProUGUI LocationName;
 
     public class MapIcon
     { public string AreaName; }
@@ -74,6 +78,20 @@ public class OverworldUI : MonoBehaviour
     { PDA.SetActive(!PDA.activeSelf); }
 
     public void toggleMap()
-    { map.SetActive(!map.activeSelf); }
+    {
+        map.SetActive(!map.activeSelf);
+        travelConfirmPopup.SetActive(false);
+    }
+
+    public void TravelTo(int buttonID)
+    {
+        travelConfirmPopup.SetActive(true);
+        LocationName.text = mapLocations[buttonID] + "?";
+    }
+
+    public void TravelCancel()
+    {
+        travelConfirmPopup.SetActive(false);
+    }
 
 }
