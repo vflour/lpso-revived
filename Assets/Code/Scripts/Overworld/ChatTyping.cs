@@ -34,8 +34,13 @@ public class ChatTyping : MonoBehaviour
 
     public void SendText()
     {
-        if (chatBar.text.Length > 0) {
+        if (chatBar.text.Length > 0)
+        {
             Debug.Log(userText.text.ToString());
+            if (chatBar.text == "motherlode")
+            {
+                GameDataManager.Instance.kibble += 10000;
+            }
             chatBar.text = "";
         }
     }

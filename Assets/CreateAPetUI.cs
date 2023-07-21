@@ -34,6 +34,10 @@ public class CreateAPetUI : MonoBehaviour
     public Image GenderImage;
     public int CurrentGender;
     public Sprite[] Gender;
+    public Button PartButton;
+    public Button ColorButton;
+    public GameObject Arrows;
+    public GameObject Colors;
     public TMP_InputField PetName;
     public TMPro.TextMeshProUGUI placeholderPetName;
     public TMPro.TextMeshProUGUI userPetName;
@@ -86,6 +90,8 @@ public class CreateAPetUI : MonoBehaviour
         Screen2.SetActive(false);
         Screen3.SetActive(true);
         confirmPopup.SetActive(false);
+        Arrows.SetActive(false);
+        Colors.SetActive(false);
     }
 
     public void PressContinue()
@@ -139,6 +145,18 @@ public class CreateAPetUI : MonoBehaviour
         GenderImage.sprite = Gender[CurrentGender];
     }
 
+    public void PressFeatureButton()
+    {
+        Colors.SetActive(false);
+        Arrows.SetActive(true);
+    }
+
+    public void PressColorButton()
+    {
+        Arrows.SetActive(false);
+        Colors.SetActive(true);
+    }
+
     public void CheckPetName()
     {
         if (PetName.text.Length > 0)
@@ -163,6 +181,6 @@ public class CreateAPetUI : MonoBehaviour
         CertScreen.SetActive(true);
         CertPetName.text = userPetName.text;
         CertPetType.text = Species[CurrentSpecies];
-        Debug.Log(System.DateTime.Now);
+        AdoptDate.text = DateTime.Now.ToLongDateString();
     }
 }
