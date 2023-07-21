@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Level/Scenes/Vertical Slice Menu.unity
-    guid: 98802a7134ee88d449699a1b4c49aa8e
+    path: Assets/Level/Scenes/Overworld.unity
+    guid: cee8c8d524bcf71459258c4353b3ba2b
   - enabled: 1
     path: Assets/Level/Scenes/partydasher.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -23,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/matchnmunch.unity
     guid: b0c5a911213b8f247a8f38200c5de1ca
-  - enabled: 1
-    path: Assets/Level/Scenes/Overworld.unity
-    guid: cee8c8d524bcf71459258c4353b3ba2b
   - enabled: 1
     path: Assets/Level/Scenes/SticksStones.unity
     guid: 4c313864f16836a4689045057c642916
