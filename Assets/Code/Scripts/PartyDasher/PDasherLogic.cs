@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameLogic : MonoBehaviour
+public class PDasherLogic : MonoBehaviour
 {
 
     public GameObject[] prefab;
@@ -125,11 +125,11 @@ public class GameLogic : MonoBehaviour
         for (int i = 0; i < npcstart.GetLength(0); i++){
             if(foundPath || !stable){
                 if (npcstart[i] != null){
-                    npcstart[i].GetComponent<NPCLogic>().waiting = true;
+                    npcstart[i].GetComponent<PDasherNPC>().waiting = true;
                 }
             } else {
                 if (npcstart[i] != null){
-                    npcstart[i].GetComponent<NPCLogic>().waiting = false;
+                    npcstart[i].GetComponent<PDasherNPC>().waiting = false;
                 }
             }
         }
@@ -182,14 +182,14 @@ public class GameLogic : MonoBehaviour
          }
 
          for(int i = 0; i < npcstart.GetLength(0); i++){
-            if(npcstart[i] != null && !npcstart[i].GetComponent<NPCLogic>().stable){
+            if(npcstart[i] != null && !npcstart[i].GetComponent<PDasherNPC>().stable){
                 npcstart[i].transform.position = Vector2.MoveTowards(npcstart[i].transform.position, screenPos(-2,i),1f * Time.deltaTime);
                 if(Vector2.Distance(npcstart[i].transform.position, screenPos(-2,i)) < 0.1f){
-                    npcstart[i].GetComponent<NPCLogic>().stable = true;
+                    npcstart[i].GetComponent<PDasherNPC>().stable = true;
                 }
             }
 
-            if(npcstart[i] != null && npcstart[i].GetComponent<NPCLogic>().leaving){
+            if(npcstart[i] != null && npcstart[i].GetComponent<PDasherNPC>().leaving){
                 npcstart[i].transform.position = Vector2.MoveTowards(npcstart[i].transform.position, spawn.transform.position,1f * Time.deltaTime);
                 if(Vector2.Distance(npcstart[i].transform.position, spawn.transform.position) < 0.1f){
                     Destroy(npcstart[i]);
@@ -239,7 +239,7 @@ public class GameLogic : MonoBehaviour
                 ResetTile(level[i, j],i,j);
                 bool CanWalk = false;
                 if (i==0){
-                    if(level[i, j].GetComponent<LogLogic>().West && npcstart[j] != null && npcstart[j].GetComponent<NPCLogic>().stable) {
+                    if(level[i, j].GetComponent<LogLogic>().West && npcstart[j] != null && npcstart[j].GetComponent<PDasherNPC>().stable) {
                         CanWalk = true;
                         level[i, j].GetComponent<LogLogic>().isStart = true;
                     } else {
@@ -278,7 +278,7 @@ public class GameLogic : MonoBehaviour
         if(foundPath){
             if (goalPath.Count > 0){
                 GameObject nextTile = goalPath[0];
-                npcstart[walkingNPC].GetComponent<NPCLogic>().clear = true;
+                npcstart[walkingNPC].GetComponent<PDasherNPC>().clear = true;
                 npcstart[walkingNPC].transform.position =  Vector2.MoveTowards(npcstart[walkingNPC].transform.position, screenPos(nextTile.GetComponent<LogLogic>().x,nextTile.GetComponent<LogLogic>().y),1f * Time.deltaTime);
                 if(Vector2.Distance(npcstart[walkingNPC].transform.position, screenPos(nextTile.GetComponent<LogLogic>().x,nextTile.GetComponent<LogLogic>().y))  < 0.1f){
                  toRemove.Add(nextTile);
@@ -302,7 +302,7 @@ public class GameLogic : MonoBehaviour
                         {
                          Destroy(toRemove[i]);
                         }
-                        addHearts(npcstart[walkingNPC].GetComponent<NPCLogic>().hearts.Count);
+                        addHearts(npcstart[walkingNPC].GetComponent<PDasherNPC>().hearts.Count);
                         toRemove.Clear();
                         Refresh();
                     }
