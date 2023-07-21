@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
+using System;
 
 public class CreateAPetUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CreateAPetUI : MonoBehaviour
     public GameObject Screen1;
     public GameObject Screen2;
     public GameObject Screen3;
+    public GameObject CertScreen;
 
     public Button Continue1;
     public int CurrentSpecies;
@@ -33,11 +35,24 @@ public class CreateAPetUI : MonoBehaviour
     public int CurrentGender;
     public Sprite[] Gender;
     public TMP_InputField PetName;
+    public TMPro.TextMeshProUGUI placeholderPetName;
+    public TMPro.TextMeshProUGUI userPetName;
+
+    public GameObject confirmPopup;
+    public Button confirmReady;
+    public Button notReady;
+    public TMP_Text CertPetName;
+    public TMP_Text CertPetType;
+    public TMP_Text AdoptDate;
+    public TMP_Text AdoptUser;
+    public Button CertContinue;
+    public Button CertSave;
 
     void Start()
     {
         Screen2.SetActive(false);
         Screen3.SetActive(false);
+        CertScreen.SetActive(false);
         CurrentSpecies = 0;
         CurrentGender = 0;
     }
@@ -70,6 +85,7 @@ public class CreateAPetUI : MonoBehaviour
         Screen1.SetActive(false);
         Screen2.SetActive(false);
         Screen3.SetActive(true);
+        confirmPopup.SetActive(false);
     }
 
     public void PressContinue()
@@ -121,5 +137,32 @@ public class CreateAPetUI : MonoBehaviour
         }
         CurrentGender += 1;
         GenderImage.sprite = Gender[CurrentGender];
+    }
+
+    public void CheckPetName()
+    {
+        if (PetName.text.Length > 0)
+        {
+            ToggleConfirm();
+        }
+        else
+        {
+            placeholderPetName.text = "Please name your pet";
+            placeholderPetName.color = new Color32(253, 33, 33, 255);
+        }
+    }
+
+    public void ToggleConfirm()
+    {
+        confirmPopup.SetActive(!confirmPopup.activeSelf);
+    }
+
+    public void ConfirmCreation()
+    {
+        ToggleConfirm();
+        CertScreen.SetActive(true);
+        CertPetName.text = userPetName.text;
+        CertPetType.text = Species[CurrentSpecies];
+        Debug.Log(System.DateTime.Now);
     }
 }
