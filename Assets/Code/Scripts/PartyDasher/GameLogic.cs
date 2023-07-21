@@ -56,9 +56,9 @@ public class GameLogic : MonoBehaviour
     public GameObject startScreen;
     public GameObject scoreScreen;
     private bool gameRunning = false;
-    public void toggleMute(bool muted)
+    public void toggleMute()
     {
-        if (muted)
+        if (AudioListener.volume == 1)
         {
             AudioListener.volume = 0;
         }
