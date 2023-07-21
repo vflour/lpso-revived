@@ -47,6 +47,7 @@ public class CatalogLogic : MonoBehaviour
             GameDataManager.Instance.inventory.Add((int)CurrentItem.ID);
             GameDataManager.Instance.kibble -= CurrentItem.price;
             MyKibble.SetText(GameDataManager.Instance.kibble.ToString());
+            tag.SetActive(false);
         }
     }
     public void CloseTag(){
