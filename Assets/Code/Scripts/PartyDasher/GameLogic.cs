@@ -19,6 +19,8 @@ public class GameLogic : MonoBehaviour
 
     public TMP_Text scoreHearts;
     public TMP_Text scorePoints;
+    public TMP_Text HighscoreText1;
+    public TMP_Text HighscoreText2;
 
     private float gameTimer;
     public float gameTickTime = 20;
@@ -69,8 +71,8 @@ public class GameLogic : MonoBehaviour
     }
     void Start()
     {
-        
-        //SpawnNPC();
+        HighscoreText1.SetText(GameDataManager.Instance.pdhighscore.ToString());
+        HighscoreText2.SetText(GameDataManager.Instance.pdhighscore.ToString());
     }
 
     public void StartGame(){
@@ -134,12 +136,19 @@ public class GameLogic : MonoBehaviour
     }
 
     void SetScore(){
+      gameRunning = false;
       TotalScoreText.SetText(points.ToString());
 
-      int kibble = points/50;
+      int kibble = points/100;
       KibbleWon.SetText(kibble.ToString());
       GameDataManager.Instance.AddKibble(kibble);
       KibbleTotal.SetText(GameDataManager.Instance.kibble.ToString());
+
+      if(points> GameDataManager.Instance.pdhighscore){
+        GameDataManager.Instance.pdhighscore = points;  
+      }
+      HighscoreText1.SetText(GameDataManager.Instance.pdhighscore.ToString());
+      HighscoreText2.SetText(GameDataManager.Instance.pdhighscore.ToString());
     }
 
     void Update()

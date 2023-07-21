@@ -12,6 +12,9 @@ public class GameDataManager : MonoBehaviour
     public int kibble = 100;
     public int[,] levelData = new int[10,10];
     public int[,] rotationData = new int[10,10];
+    
+    public int mnmhighscore = 0;
+    public int pdhighscore = 0;
 
     private void Awake()
     {
@@ -38,6 +41,8 @@ public class GameDataManager : MonoBehaviour
         data.rotationData = rotationData;
         data.levelData = levelData;
 	    data.kibble = kibble;
+        data.mnmhighscore = mnmhighscore;
+        data.pdhighscore = pdhighscore;
 	    bf.Serialize(file, data);
 	    file.Close();
 	    Debug.Log("Game data saved!");
@@ -54,6 +59,8 @@ public class GameDataManager : MonoBehaviour
         rotationData = data.rotationData;
         levelData = data.levelData;
 	    kibble = data.kibble;
+        mnmhighscore = data.mnmhighscore;
+        pdhighscore = data.pdhighscore;
 		Debug.Log("Game data loaded!");
 	}
 	else
