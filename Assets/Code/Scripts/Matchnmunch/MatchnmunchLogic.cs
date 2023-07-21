@@ -62,12 +62,15 @@ public class MatchnmunchLogic : MonoBehaviour
     public TMP_Text KibbleWon;
     public TMP_Text KibbleTotal;
     public TMP_Text TotalScoreText;
+    public TMP_Text HighscoreText1;
+    public TMP_Text HighscoreText2;
 
     private bool GotThemAll;
     // Start is called before the first frame update
     void Start()
     {
-      
+      HighscoreText1.SetText(GameDataManager.Instance.mnmhighscore.ToString());
+      HighscoreText2.SetText(GameDataManager.Instance.mnmhighscore.ToString());
     }
 
     public void StartGame(){
@@ -124,6 +127,7 @@ public class MatchnmunchLogic : MonoBehaviour
     }
 
     void SetScore(){
+      gameRunning = false;
       if (GotThemAll) {
         GotAllText.SetText("1000");
         totalScore = 1000;
@@ -141,6 +145,12 @@ public class MatchnmunchLogic : MonoBehaviour
       KibbleWon.SetText(kibble.ToString());
       GameDataManager.Instance.AddKibble(kibble);
       KibbleTotal.SetText(GameDataManager.Instance.kibble.ToString());
+
+      if(totalScore> GameDataManager.Instance.mnmhighscore){
+        GameDataManager.Instance.mnmhighscore = totalScore;  
+      }
+      HighscoreText1.SetText(GameDataManager.Instance.mnmhighscore.ToString());
+      HighscoreText2.SetText(GameDataManager.Instance.mnmhighscore.ToString());
     }
 
 

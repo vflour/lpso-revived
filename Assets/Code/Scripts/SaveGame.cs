@@ -12,4 +12,6 @@ public class SaveData
     public int[,] rotationData;
     public int[,] levelData;
 	public int kibble;
+    public int mnmhighscore = 0;
+    public int pdhighscore = 0;
 }

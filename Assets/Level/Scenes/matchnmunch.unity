@@ -730,6 +730,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &850360825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3533273696189796725, guid: 6131060c4afd6f74e830b5ce07c57b7c, type: 3}
+  m_PrefabInstance: {fileID: 2151860155335933388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &972163725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1345,8 @@ MonoBehaviour:
   KibbleWon: {fileID: 6962418245475211012}
   KibbleTotal: {fileID: 3244654475079433609}
   TotalScoreText: {fileID: 3945711318030444835}
+  HighscoreText1: {fileID: 850360825}
+  HighscoreText2: {fileID: 2037282717}
 --- !u!4 &1957954183
 Transform:
   m_ObjectHideFlags: 0
@@ -1359,6 +1372,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b8fe4c24a8d96647ac19412cb9431e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2037282717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5748613545163985955, guid: bf6779dae0099d9429a7e552c83a8d29, type: 3}
+  m_PrefabInstance: {fileID: 2465240748057394798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2099433189
