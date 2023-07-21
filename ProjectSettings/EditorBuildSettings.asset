@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/Overworld.unity
     guid: cee8c8d524bcf71459258c4353b3ba2b
   - enabled: 1
-    path: Assets/Level/Scenes/ShopCatalogue.unity
+    path: Assets/Level/Scenes/SticksStones.unity
     guid: 4c313864f16836a4689045057c642916
   - enabled: 1
     path: Assets/Level/Scenes/Waggington.unity
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level/Scenes/Whale Surfin.unity
     guid: c6471fe1ecbd48549807331c8c16d383
+  - enabled: 1
+    path: Assets/Level/Scenes/WelcomeWaggin.unity
+    guid: 042e27f198b57254dbf15f3ead8eefdc
   m_configObjects: {}

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a63dc665c7d06d3418680abce5e8fa6f, type: 3}
-  m_Name: Air
+  m_Name: Cola
   m_EditorClassIdentifier: 
   objects: []
-  ID: 0
+  ID: 7
   itemName: 
-  icon: {fileID: 0}
-  price: 0
-  category: 
+  icon: {fileID: 3286163911610860551, guid: 6e9a86d15c3538c429b8766f85cb4881, type: 3}
+  price: 30
+  category: food
   rotations: {fileID: 0}

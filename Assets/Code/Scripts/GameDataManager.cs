@@ -7,7 +7,7 @@ using System.IO;
 public class GameDataManager : MonoBehaviour
 {
     public static GameDataManager Instance;
-    public List<ItemData> furniture;
+    public List<ItemData> itemList;
     public List<ItemData> inventory;
     public int kibble = 100;
     public int[,] levelData = new int[10,10];
@@ -26,8 +26,8 @@ public class GameDataManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        for(int i = 1; i<furniture.Count; i++){
-            furniture[i].ID = i;
+        for(int i = 1; i<itemList.Count; i++){
+            itemList[i].ID = i;
         }
 
         loadGame();

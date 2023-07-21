@@ -23,6 +23,7 @@ public class GameHandler : MonoBehaviour
     public GameObject inventoryButton;
     public GameObject[] inventoryButtonsGUI;
     public GameObject canvas;
+    public List<ItemData> FurnitureList;
 
     // Start is called before the first frame update
     void Start()
@@ -37,10 +38,14 @@ public class GameHandler : MonoBehaviour
                 tempGrass.transform.position = new Vector3(pos.x,pos.y,pos.y+3f);
             }
         }
+
+        
+
         for (int x = 0; x < 10; x++){
             for (int y = 0; y < 10; y++){
+                Debug.Log("placing " + x + "/" + y);
                 if(GameData.levelData[x,y] > 0){
-                    GameObject tempFurniture = Instantiate(GameData.furniture[GameData.levelData[x,y]].objects[0]);
+                    GameObject tempFurniture = Instantiate(GameData.itemList[GameData.levelData[x,y]].objects[0]);
                     tempFurniture.transform.position = IsoMath.screenPos(x,y,xOrigin,yOrigin);
                     tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - y;
                 }
@@ -56,8 +61,15 @@ public class GameHandler : MonoBehaviour
 
     void SetButtons(){
         Debug.Log(GameDataManager.Instance.inventory.Count);
+        FurnitureList.Clear();
+        for(int i = 0; i < GameDataManager.Instance.inventory.Count; i++){
+            if(GameDataManager.Instance.inventory[i].category == "furniture"){
+                FurnitureList.Add(GameDataManager.Instance.inventory[i]);
+            }
+        }
         for(int i = 0; i < inventoryButtonsGUI.Length; i++){
             Debug.Log(i);
+            Debug.Log("Attempt to add Inventory Button " + i);
             addInventoryButton(i);
         }
     }
@@ -65,13 +77,13 @@ public class GameHandler : MonoBehaviour
     
     void addInventoryButton(int invSlot){
         
-        if(invSlot < GameDataManager.Instance.inventory.Count){
-            inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[invSlot].icon;
+        if(invSlot < FurnitureList.Count){
+            inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = FurnitureList[invSlot].icon;
             inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.SetActive(true);
             inventoryButtonsGUI[invSlot].GetComponent<Button>().onClick.AddListener(() => {
             Debug.Log(invSlot);
-            currentItem = GameDataManager.Instance.inventory[invSlot].objects[0];
-            currentID = GameDataManager.Instance.inventory[invSlot].ID;
+            currentItem = FurnitureList[invSlot].objects[0];
+            currentID = FurnitureList[invSlot].ID;
             selectedFurniture = invSlot;
         }); }else {
             inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.SetActive(false);
