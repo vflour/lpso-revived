@@ -6,7 +6,7 @@ using TMPro;
 
 public class CatalogItemBehaviour : MonoBehaviour
 {
-    public FurnitureData CatalogItemsData;
+    public ItemData CatalogItemsData;
     public TMP_Text priceText;
     public GameObject itemSprite;
 

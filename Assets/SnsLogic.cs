@@ -10,7 +10,7 @@ public class SnsLogic : MonoBehaviour
     public GameObject ItemIcon;
     public TMP_Text ItemCost;
     public GameObject tag;
-    public FurnitureData CurrentItem;
+    public ItemData CurrentItem;
     public GameObject[] Buttons;
     void Start(){
         for (int i = 0; i <Buttons.Length; i++){
@@ -21,7 +21,7 @@ public class SnsLogic : MonoBehaviour
     void addButton(int furnitureID){
         Debug.Log("Attemtping to make button " + furnitureID);
         if(furnitureID < GameDataManager.Instance.furniture.Count-1){
-            FurnitureData CatalogItemsData = GameDataManager.Instance.furniture[furnitureID+1];
+            ItemData CatalogItemsData = GameDataManager.Instance.furniture[furnitureID+1];
             Buttons[furnitureID].transform.Find("item hitbox/price box/price").GetComponent<TMP_Text>().SetText(CatalogItemsData.price.ToString());
             Buttons[furnitureID].transform.Find("item hitbox/item image").GetComponent<Image>().sprite = CatalogItemsData.icon;
             Buttons[furnitureID].transform.Find("item hitbox").GetComponent<Button>().onClick.AddListener(() => {

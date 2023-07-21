@@ -7,8 +7,8 @@ using System.IO;
 public class GameDataManager : MonoBehaviour
 {
     public static GameDataManager Instance;
-    public List<FurnitureData> furniture;
-    public List<FurnitureData> inventory;
+    public List<ItemData> furniture;
+    public List<ItemData> inventory;
     public int kibble = 100;
     public int[,] levelData = new int[10,10];
     public int[,] rotationData = new int[10,10];
@@ -67,12 +67,12 @@ public class GameDataManager : MonoBehaviour
 		Debug.LogError("There is no save data!");
     }
 
-    public void AddInventory(FurnitureData item)
+    public void AddInventory(ItemData item)
     {
         GameDataManager.Instance.inventory.Add(item);
     }
     
-    public void RemoveInventory(FurnitureData item)
+    public void RemoveInventory(ItemData item)
     {
         GameDataManager.Instance.inventory.Remove(item);
     }
