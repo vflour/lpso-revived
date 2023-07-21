@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "FurnitureData", menuName = "ScriptableObjects/FurnitureData", order = 1)]
-public class FurnitureData : ScriptableObject
+[CreateAssetMenu(fileName = "ItemData", menuName = "ScriptableObjects/ItemData", order = 1)]
+public class ItemData : ScriptableObject
 {
     public GameObject[] objects;
 
