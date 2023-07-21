@@ -14,4 +14,8 @@ public class VerticalSliceMenu : MonoBehaviour
     public void GoToScene(string scene){
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
+
+    public void AddKibble(int amount){
+        GameDataManager.Instance.kibble += amount;
+    }
 }

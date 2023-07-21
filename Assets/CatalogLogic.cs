@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SnsLogic : MonoBehaviour
+public class CatalogLogic : MonoBehaviour
 {
     public TMP_Text MyKibble;
     public GameObject ItemIcon;
@@ -12,27 +12,29 @@ public class SnsLogic : MonoBehaviour
     public GameObject tag;
     public ItemData CurrentItem;
     public GameObject[] Buttons;
+    public ItemData[] StoreInventory;
+
     void Start(){
         for (int i = 0; i <Buttons.Length; i++){
             addButton(i);
         }
     }
 
-    void addButton(int furnitureID){
-        Debug.Log("Attemtping to make button " + furnitureID);
-        if(furnitureID < GameDataManager.Instance.furniture.Count-1){
-            ItemData CatalogItemsData = GameDataManager.Instance.furniture[furnitureID+1];
-            Buttons[furnitureID].transform.Find("item hitbox/price box/price").GetComponent<TMP_Text>().SetText(CatalogItemsData.price.ToString());
-            Buttons[furnitureID].transform.Find("item hitbox/item image").GetComponent<Image>().sprite = CatalogItemsData.icon;
-            Buttons[furnitureID].transform.Find("item hitbox").GetComponent<Button>().onClick.AddListener(() => {
-                SetTag(furnitureID+1);
+    void addButton(int buttonID){
+        Debug.Log("Attemtping to make button " + buttonID);
+        if(buttonID < StoreInventory.Length){
+            ItemData CatalogItemsData = StoreInventory[buttonID];
+            Buttons[buttonID].transform.Find("item hitbox/price box/price").GetComponent<TMP_Text>().SetText(CatalogItemsData.price.ToString());
+            Buttons[buttonID].transform.Find("item hitbox/item image").GetComponent<Image>().sprite = CatalogItemsData.icon;
+            Buttons[buttonID].transform.Find("item hitbox").GetComponent<Button>().onClick.AddListener(() => {
+                SetTag(buttonID);
         });
-        Debug.Log("Button " + furnitureID+1 + " complete.");
+        Debug.Log("Button " + buttonID + " complete.");
         }
      }
 
-    public void SetTag(int FurnitureID){
-        CurrentItem = GameDataManager.Instance.furniture[FurnitureID];
+    public void SetTag(int buttonID){
+        CurrentItem = StoreInventory[buttonID];
         MyKibble.SetText(GameDataManager.Instance.kibble.ToString());
         ItemIcon.GetComponent<Image>().sprite = CurrentItem.icon;
         ItemCost.SetText(CurrentItem.price.ToString());
