@@ -40,8 +40,11 @@ public class SnsLogic : MonoBehaviour
     }
 
     public void BuyItem(){
-        GameDataManager.Instance.AddInventory(CurrentItem);
-        tag.SetActive(false);
+        if (GameDataManager.Instance.kibble >= CurrentItem.price) {
+            GameDataManager.Instance.AddInventory(CurrentItem);
+            GameDataManager.Instance.kibble -= CurrentItem.price;
+            MyKibble.SetText(GameDataManager.Instance.kibble.ToString());
+        }
     }
     public void CloseTag(){
         tag.SetActive(false);
