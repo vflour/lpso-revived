@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class VerticalSliceMenu : MonoBehaviour
+public class GameUtilities : MonoBehaviour
 {
     public void Awake(){
         Cursor.visible = false;
