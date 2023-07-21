@@ -1733,10 +1733,10 @@ RectTransform:
   - {fileID: 836466205}
   - {fileID: 1316021608}
   - {fileID: 2118989142}
-  - {fileID: 543917574}
-  - {fileID: 584585884}
-  - {fileID: 2088502625}
   - {fileID: 906186675}
+  - {fileID: 543917574}
+  - {fileID: 2088502625}
+  - {fileID: 584585884}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
