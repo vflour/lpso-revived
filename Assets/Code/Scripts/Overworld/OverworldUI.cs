@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class OverworldUI : MonoBehaviour
 {
     public TMP_Text kibblecount;
     public TMP_Text kibblecountinv;
+
+    public string[] scenes;
 
     public GameObject inventory;
     public GameObject PDA;
@@ -35,6 +38,7 @@ public class OverworldUI : MonoBehaviour
     public GameObject mapXButton;
     public GameObject mapOpenButton;
     public GameObject travelConfirmPopup;
+    public int SelectedLocation;
     public string[] mapLocations;
     public Button[] mapIcons;
     public TMPro.TextMeshProUGUI LocationName;
@@ -87,11 +91,17 @@ public class OverworldUI : MonoBehaviour
     {
         travelConfirmPopup.SetActive(true);
         LocationName.text = mapLocations[buttonID] + "?";
+        SelectedLocation = buttonID;
     }
 
     public void TravelCancel()
     {
         travelConfirmPopup.SetActive(false);
+    }
+
+    public void TravelConfirm()
+    {
+        SceneManager.LoadScene(scenes[SelectedLocation].ToString(), LoadSceneMode.Single);
     }
 
 }
