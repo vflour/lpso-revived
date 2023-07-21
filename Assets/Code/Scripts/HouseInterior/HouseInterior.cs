@@ -11,23 +11,23 @@ public class GameHandler : MonoBehaviour
     private float size = 10f;
     public GameObject cursorTile;
     public Vector2 selection;
-    
-    public int inventoryID;
+
     public Camera cam;
     
     public float xOrigin;
     public float yOrigin;
-    public int currentID;
+    public int selectedFurniture;
 
     public GameObject currentItem;
+    public int currentID;
     public GameObject inventoryButton;
     public GameObject[] inventoryButtonsGUI;
     public GameObject canvas;
-    public GameObject[,] level;
 
     // Start is called before the first frame update
     void Start()
     {
+        GameDataManager GameData = GameDataManager.Instance;
         Transform temp_transform = this.transform;
         //generate grass around the house
         for (int x = 0; x<=2; x++){
@@ -39,8 +39,8 @@ public class GameHandler : MonoBehaviour
         }
         for (int x = 0; x < 10; x++){
             for (int y = 0; y < 10; y++){
-                if(GameDataManager.Instance.level[x,y] != null){
-                    GameObject tempFurniture = Instantiate(GameDataManager.Instance.level[x,y]);
+                if(GameData.levelData[x,y] > 0){
+                    GameObject tempFurniture = Instantiate(GameData.furniture[GameData.levelData[x,y]].objects[0]);
                     tempFurniture.transform.position = IsoMath.screenPos(x,y,xOrigin,yOrigin);
                     tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - y;
                 }
@@ -63,17 +63,18 @@ public class GameHandler : MonoBehaviour
     }
 
     
-    void addInventoryButton(int ID){
+    void addInventoryButton(int invSlot){
         
-        if(ID < GameDataManager.Instance.inventory.Count){
-            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[ID].icon;
-            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.SetActive(true);
-            inventoryButtonsGUI[ID].GetComponent<Button>().onClick.AddListener(() => {
-            Debug.Log(ID);
-            currentItem = GameDataManager.Instance.inventory[ID].objects[0];
-            currentID = ID;
+        if(invSlot < GameDataManager.Instance.inventory.Count){
+            inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GameDataManager.Instance.inventory[invSlot].icon;
+            inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.SetActive(true);
+            inventoryButtonsGUI[invSlot].GetComponent<Button>().onClick.AddListener(() => {
+            Debug.Log(invSlot);
+            currentItem = GameDataManager.Instance.inventory[invSlot].objects[0];
+            currentID = GameDataManager.Instance.inventory[invSlot].ID;
+            selectedFurniture = invSlot;
         }); }else {
-            inventoryButtonsGUI[ID].transform.GetChild(0).gameObject.SetActive(false);
+            inventoryButtonsGUI[invSlot].transform.GetChild(0).gameObject.SetActive(false);
         }
      }
 
@@ -83,42 +84,44 @@ public class GameHandler : MonoBehaviour
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 pos = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
         cursorTile.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
+    	GameDataManager GameData = GameDataManager.Instance;
 
         //place furniture item on mouse click (should be by dragging)
         if (Input.GetMouseButtonDown(0) && currentItem != null){
             Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
             Debug.Log(selectedTile);
-            if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.level.GetLength(0) &&
-                selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.level.GetLength(1) &&
-                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] == null){
+            if( selectedTile.x >= 0 && selectedTile.x < GameData.levelData.GetLength(0) &&
+                selectedTile.y >= 0 && selectedTile.y < GameData.levelData.GetLength(1) &&
+                GameData.levelData[(int)selectedTile.x,(int)selectedTile.y] == 0){
                 GameObject tempFurniture = Instantiate(currentItem);
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
-                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
-                GameDataManager.Instance.inventory.Remove(GameDataManager.Instance.inventory[currentID]);
+                GameData.levelData[(int)selectedTile.x,(int)selectedTile.y] = currentID;
+                GameData.inventory.Remove(GameDataManager.Instance.inventory[selectedFurniture]);
                 currentItem = null;
             }
             SetButtons();
         }
 
-        if (Input.GetMouseButtonDown(0) && currentItem == null){
-            Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
-            Debug.Log(selectedTile);
-            if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.level.GetLength(0) &&
-                selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.level.GetLength(1) &&
-                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] != null){
-                GameObject oldFurniture = GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y];
-                GameObject tempFurniture = Instantiate(oldFurniture.GetComponent<FurnitureProperties>().nextObject);
-                tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
-                tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
-                GameDataManager.Instance.level[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
-                Destroy(oldFurniture);
-            }
-        }
+        //rotate the item on click
+        //if (Input.GetMouseButtonDown(0) && currentItem == null){
+        //    Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
+        //    Debug.Log(selectedTile);
+        //    if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.levelData.GetLength(0) &&
+        //        selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.levelData.GetLength(1) &&
+        //        GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y] != null){
+        //        GameObject oldFurniture = GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y];
+        //        GameObject tempFurniture = Instantiate(oldFurniture.GetComponent<FurnitureProperties>().nextObject);
+        //        tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
+        //        tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
+        //        GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture.invSlot;
+        //        Destroy(oldFurniture);
+        //    }
+        //}
     }
 
-    void SetCurrentItem(int ID){
-        Debug.Log(ID);
-        currentItem = GameDataManager.Instance.inventory[ID].objects[0];
+    void SetCurrentItem(int invSlot){
+        Debug.Log(invSlot);
+        currentItem = GameDataManager.Instance.inventory[invSlot].objects[0];
     }
 }

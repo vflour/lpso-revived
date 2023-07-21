@@ -1963,12 +1963,12 @@ MonoBehaviour:
   room_square: {fileID: 474187685076622899, guid: b9713f8cdb601e445b3ef0d6c4cbf734, type: 3}
   cursorTile: {fileID: 1379211429}
   selection: {x: 0, y: 0}
-  inventoryID: 0
   cam: {fileID: 2101507218}
   xOrigin: -10
   yOrigin: -10
-  currentID: 0
+  selectedFurniture: 0
   currentItem: {fileID: 4668347079581455379, guid: 96f7efd0d6dbf5141880c5be168a755b, type: 3}
+  currentID: 0
   inventoryButton: {fileID: 4293570673051873831, guid: 4c14ff52c0e20af4db0122693957a9f1, type: 3}
   inventoryButtonsGUI:
   - {fileID: 7574567956457388320}

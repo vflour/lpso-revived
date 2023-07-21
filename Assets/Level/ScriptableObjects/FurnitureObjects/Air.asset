@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a63dc665c7d06d3418680abce5e8fa6f, type: 3}
-  m_Name: Bed
+  m_Name: Air
   m_EditorClassIdentifier: 
-  objects:
-  - {fileID: 7383319465314913168, guid: 84e77c4da1aa4f24b849883a5188124d, type: 3}
-  - {fileID: 2566662121533477941, guid: 0923a58e04115bd4fb7edd64630ff444, type: 3}
-  ID: 1
+  objects: []
+  ID: 0
   itemName: 
-  icon: {fileID: 21300000, guid: 09c0cfb7704e66145ae2e73c0ca3d1d1, type: 3}
-  price: 3200
+  icon: {fileID: 0}
+  price: 0
   category: 
   rotations: {fileID: 0}

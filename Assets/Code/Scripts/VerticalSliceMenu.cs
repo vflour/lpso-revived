@@ -8,6 +8,7 @@ public class VerticalSliceMenu : MonoBehaviour
     public void Awake(){
         Cursor.visible = false;
         //SceneManager.LoadScene("Overworld", LoadSceneMode.Additive);
+        GameDataManager.Instance.saveGame();
     }
 
     public void GoToScene(string scene){

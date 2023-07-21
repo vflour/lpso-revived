@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CloseButton : MonoBehaviour
 {
     public void Close(){
+        GameDataManager.Instance.saveGame();
         SceneManager.LoadScene("Vertical Slice Menu", LoadSceneMode.Single);
     }
     public void Reset(){

@@ -7,9 +7,10 @@ public class FurnitureData : ScriptableObject
 {
     public GameObject[] objects;
 
+    public int ID;
     public string itemName;
     public Sprite icon;
     public int price;
     public string category;
-    public int rotation;
+    public GameObject rotations;
 }
