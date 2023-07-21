@@ -11,6 +11,7 @@ public class SaveData
     //public List<FurnitureData> inventory;
     public int[,] rotationData;
     public int[,] levelData;
+    public List<int> inventory;
 	public int kibble;
     public int mnmhighscore = 0;
     public int pdhighscore = 0;

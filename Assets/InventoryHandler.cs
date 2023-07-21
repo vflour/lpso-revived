@@ -17,7 +17,7 @@ public class InventoryHandler : MonoBehaviour
     void addButton(int itemID){
         Debug.Log("Attemtping to make button " + itemID);
         if(itemID < GameDataManager.Instance.inventory.Count){
-            ItemData ItemData = GameDataManager.Instance.inventory[itemID];
+            ItemData ItemData = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[itemID]];
             Buttons[itemID].GetComponent<Image>().sprite = ItemData.icon;
             Debug.Log("Button " + itemID + " complete.");
         }
