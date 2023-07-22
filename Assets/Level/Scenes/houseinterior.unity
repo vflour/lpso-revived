@@ -890,11 +890,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1982,6 +1982,7 @@ MonoBehaviour:
   - {fileID: 3048113116524847919}
   - {fileID: 3048113116858590351}
   canvas: {fileID: 1074100625}
+  FurnitureList: []
 --- !u!4 &1775664180
 Transform:
   m_ObjectHideFlags: 0
@@ -2007,7 +2008,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 37cd081a41014e84db2170251489c184, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d844c7c187fa33345af025ebfac17f72, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
