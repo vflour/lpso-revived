@@ -17,31 +17,44 @@ public class OverworldUI : MonoBehaviour
     public GameObject PDA;
     public GameObject userInfoMenu;
     public GameObject map;
+    public GameObject nothing;
 
-    public GameObject xButton;
-    public GameObject petButton;
-    public GameObject messagebutton;
+    public Button CoAPButtonUserMenu;
+    public Button ScrapbookButtonUserMenu;
+    public Button ClothesButton;
+    public Button HouseButtonUserMenu;
+    public GameObject HouseConfirm;
+    public Button CrAPButton;
+
+    public Button xButton;
+    public Button petButton;
+    public Button messagebutton;
     public GameObject messagebar;
-    public GameObject collectapetbutton;
+    public Button collectapetbutton;
 
-    public GameObject PDAButton;
-    public GameObject PowerButton;
+    public Button PDAButton;
+    public Button PowerButton;
 
-    public GameObject invButton;
-    public GameObject closeInvButton;
+    public Button ScrapbookButton;
+    public Button ScrapbookClose;
+
+    public Button invButton;
+    public Button closeInvButton;
     public Button InvLeftButton;
     public Button InvRightButton;
     public GameObject SideInv;
     public Button SideInvButton;
     public GameObject SideInvArrow;
 
-    public GameObject mapXButton;
-    public GameObject mapOpenButton;
+    public Button mapXButton;
+    public Button mapOpenButton;
     public GameObject travelConfirmPopup;
     public int SelectedLocation;
     public string[] mapLocations;
     public Button[] mapIcons;
     public TMPro.TextMeshProUGUI LocationName;
+
+    public Button nothingOk;
 
     public class MapIcon
     { public string AreaName; }
@@ -54,6 +67,7 @@ public class OverworldUI : MonoBehaviour
         PDA.SetActive(false);
         messagebar.SetActive(true);
         map.SetActive(false);
+        nothing.SetActive(false);
         SideInvButton.interactable = false;
         InvLeftButton.interactable = false;
         InvRightButton.interactable = false;
@@ -73,7 +87,11 @@ public class OverworldUI : MonoBehaviour
     { SideInv.SetActive(!SideInv.activeSelf); }
 
     public void toggleUserMenu()
-    { userInfoMenu.SetActive(!userInfoMenu.activeSelf); }
+    { userInfoMenu.SetActive(!userInfoMenu.activeSelf);
+        HouseConfirm.SetActive(false);}
+
+    public void toggleHouseConfirm()
+    { HouseConfirm.SetActive(!HouseConfirm.activeSelf); }
 
     public void toggleMessage()
     { messagebar.SetActive(!messagebar.activeSelf); }
@@ -86,6 +104,9 @@ public class OverworldUI : MonoBehaviour
         map.SetActive(!map.activeSelf);
         travelConfirmPopup.SetActive(false);
     }
+
+    public void toggleNothing()
+    { nothing.SetActive(!nothing.activeSelf); }
 
     public void TravelTo(int buttonID)
     {
