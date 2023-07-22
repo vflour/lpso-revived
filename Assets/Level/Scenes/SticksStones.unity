@@ -352,6 +352,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1441576309294299933, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549377745794872833, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4880cb6ec037a3b47bc9dbeb1f59dc09, type: 3}
+    - target: {fileID: 2549377745794872833, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711435740498646397, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2806291506377688546, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
       propertyPath: m_Pivot.x
       value: 0
