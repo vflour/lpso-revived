@@ -7,6 +7,6 @@ public class Page : ScriptableObject
 {
     public string pagename;
 
-    public GameObject[] clickables;
+    public GameObject clickables;
     public Sprite background;
 }
