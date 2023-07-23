@@ -94,11 +94,17 @@ public class PDasherLogic : MonoBehaviour
     void SpawnNPC(){
         Transform tempTransform = this.transform;
         int currentCell = (int)Random.Range(0,npcstart.GetLength(0)-1);
+        int foundAmount = 0;
+        for(int i = 0; i < npcstart.Length; i++){
+            if (npcstart[i]){
+                foundAmount++;
+            }
+        }
         if(!npcstart[currentCell]){
             GameObject currentNPC = Instantiate(npc[(int)(Random.Range(0,npc.GetLength(0)))],tempTransform);
             currentNPC.transform.position = spawn.transform.position;
             npcstart[currentCell] = currentNPC;
-        } else {
+        } else if(foundAmount < npcstart.Length-1) {
             SpawnNPC();
         }
     }
@@ -197,6 +203,13 @@ public class PDasherLogic : MonoBehaviour
                     SetScore();
                 }
             }
+
+            if(npcstart[i] != null && npcstart[i].GetComponent<PDasherNPC>().foundexit){
+                npcstart[i].transform.position = Vector2.MoveTowards(npcstart[i].transform.position, exit.transform.position,1f * Time.deltaTime);
+                if(Vector2.Distance(npcstart[i].transform.position, exit.transform.position)  < 0.5f){
+                    Destroy(npcstart[i]);
+                }
+            }
          }
          
         if (!foundPath) {
@@ -293,9 +306,7 @@ public class PDasherLogic : MonoBehaviour
                         sidewalk = true;
                     }
                 } else {
-                    npcstart[walkingNPC].transform.position = Vector2.MoveTowards(npcstart[walkingNPC].transform.position, exit.transform.position,1f * Time.deltaTime);
-                    if(Vector2.Distance(npcstart[walkingNPC].transform.position, exit.transform.position)  < 0.5f){
-                        Destroy(npcstart[walkingNPC]);
+                        npcstart[walkingNPC].GetComponent<PDasherNPC>().foundexit = true;
                         foundPath = false;
                         popSFX.Play();
                         for(int i = toRemove.Count-1; i >= 0; i--)
@@ -305,7 +316,7 @@ public class PDasherLogic : MonoBehaviour
                         addHearts(npcstart[walkingNPC].GetComponent<PDasherNPC>().hearts.Count);
                         toRemove.Clear();
                         Refresh();
-                    }
+                    //}
                 }
             }
         }

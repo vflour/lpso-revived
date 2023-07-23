@@ -14,7 +14,8 @@ public class PDasherNPC : MonoBehaviour
     public List<GameObject> hearts;
     public int maxHearts;
     public bool waiting;
-
+    public bool foundexit = false;
+    
     // Start is called before the first frame update
     void Start()
     {
