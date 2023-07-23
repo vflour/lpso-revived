@@ -8,6 +8,7 @@ public class PageDisplay : MonoBehaviour
 {
 
     public Page[] page;
+    public GameObject[] PageClickables;
 
     public TMP_Text titleText;
     public Image backgroundImage;
@@ -22,7 +23,6 @@ public class PageDisplay : MonoBehaviour
     public GameObject leftbutton;
     public GameObject rightbutton;
     public GameObject tempbutton;
-    public GameObject pet;
     public GameObject[] petScreen;
 
     // Start is called before the first frame update
@@ -46,6 +46,17 @@ public class PageDisplay : MonoBehaviour
         
         titleText.text = page[pagenumber].pagename;
         backgroundImage.sprite = page[pagenumber].background;
+        for (int i = 0; i < page.GetLength(0); i++)
+        {
+            if (i == pagenumber)
+            {
+                petScreen[pagenumber].SetActive(true);
+            }
+            else
+            {
+                petScreen[i].SetActive(false);
+            }
+        }
 
         // places page buttons at the bottom of the screen and automatically adds buttons for new pages
 
@@ -93,22 +104,6 @@ public class PageDisplay : MonoBehaviour
     {
         pagenumber -= 1;
         updatepage();
-    }
-
-    void addButton(int ID)
-    {
-        //instantiate the button and catch it in a gameobject
-        GameObject tempButton = Instantiate(pet);
-        //this code is difficult, but i can break it down: 
-        //tempButton.GetComponent<Button>() get your button
-        //.onClick.AddListener(()  add a listener, this is basically what you do in unity editor usually
-        //()=> means we give it a function between the {}
-        tempButton.GetComponent<Button>().onClick.AddListener(() => {
-            //write all the code here that you want to do with that pet
-            //ID being the ID of the button you pressed, for example
-            Debug.Log("Hi!");
-            //  petScreen[ID].setActive(true);
-        });
     }
 
 }
