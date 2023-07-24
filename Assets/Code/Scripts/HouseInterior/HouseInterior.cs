@@ -16,7 +16,10 @@ public class GameHandler : MonoBehaviour
     
     public float xOrigin;
     public float yOrigin;
+    //selected in inventory
     public int selectedFurniture;
+    //selected in room for editing
+    public Vector2 focussedFurniture;
 
     public GameObject currentItem;
     public int currentID;
@@ -24,6 +27,8 @@ public class GameHandler : MonoBehaviour
     public GameObject[] inventoryButtonsGUI;
     public GameObject canvas;
     public List<ItemData> FurnitureList;
+    public GameObject[,] furniture = new GameObject[10,10];
+    public GameObject ItemUIPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -45,9 +50,10 @@ public class GameHandler : MonoBehaviour
             for (int y = 0; y < 10; y++){
                 Debug.Log("placing " + x + "/" + y);
                 if(GameData.levelData[x,y] > 0){
-                    GameObject tempFurniture = Instantiate(GameData.itemList[GameData.levelData[x,y]].objects[0]);
+                    GameObject tempFurniture = Instantiate(GameData.itemList[GameData.levelData[x,y]].objects[GameData.rotationData[x,y]]);
                     tempFurniture.transform.position = IsoMath.screenPos(x,y,xOrigin,yOrigin);
                     tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - y;
+                    furniture[x,y] = tempFurniture;
                 }
             }
         }
@@ -96,12 +102,14 @@ public class GameHandler : MonoBehaviour
     {
         Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         Vector2 pos = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
-        cursorTile.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
-    	GameDataManager GameData = GameDataManager.Instance;
+
+        cursorTile.transform.position = IsoMath.screenPos(focussedFurniture.x,focussedFurniture.y,xOrigin,yOrigin);
+        
+        GameDataManager GameData = GameDataManager.Instance;
+        Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
 
         //place furniture item on mouse click (should be by dragging)
         if (Input.GetMouseButtonDown(0) && currentItem != null){
-            Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
             Debug.Log(selectedTile);
             if( selectedTile.x >= 0 && selectedTile.x < GameData.levelData.GetLength(0) &&
                 selectedTile.y >= 0 && selectedTile.y < GameData.levelData.GetLength(1) &&
@@ -110,27 +118,55 @@ public class GameHandler : MonoBehaviour
                 tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
                 tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
                 GameData.levelData[(int)selectedTile.x,(int)selectedTile.y] = currentID;
+                furniture[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture;
                 GameData.inventory.Remove(currentID);
                 currentItem = null;
             }
             SetButtons();
         }
 
-        //rotate the item on click
-        //if (Input.GetMouseButtonDown(0) && currentItem == null){
-        //    Vector2 selectedTile = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
-        //    Debug.Log(selectedTile);
-        //    if( selectedTile.x >= 0 && selectedTile.x < GameDataManager.Instance.levelData.GetLength(0) &&
-        //        selectedTile.y >= 0 && selectedTile.y < GameDataManager.Instance.levelData.GetLength(1) &&
-        //        GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y] != null){
-        //        GameObject oldFurniture = GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y];
-        //        GameObject tempFurniture = Instantiate(oldFurniture.GetComponent<FurnitureProperties>().nextObject);
-        //        tempFurniture.transform.position = IsoMath.screenPos(pos.x,pos.y,xOrigin,yOrigin);
-        //        tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - (int)pos.y;
-        //        GameDataManager.Instance.levelData[(int)selectedTile.x,(int)selectedTile.y] = tempFurniture.invSlot;
-        //        Destroy(oldFurniture);
-        //    }
-        //}
+        if (Input.GetMouseButtonDown(0)){
+            if( selectedTile.x >= 0 && selectedTile.x < GameData.levelData.GetLength(0) &&
+                selectedTile.y >= 0 && selectedTile.y < GameData.levelData.GetLength(1) &&
+                GameData.levelData[(int)selectedTile.x,(int)selectedTile.y] > 0){
+                focussedFurniture = selectedTile;
+                //ItemUIPanel.transform.position = IsoMath.screenPos(focussedFurniture.x,focussedFurniture.y,xOrigin,yOrigin);
+            }
+            SetButtons();
+        }
+    }
+
+    public void RemoveFurniture(){
+        Vector3 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = IsoMath.tilePos(mousePos.x,mousePos.y,xOrigin,yOrigin);
+    	GameDataManager GameData = GameDataManager.Instance;
+
+        Destroy(furniture[(int)focussedFurniture.x,(int)focussedFurniture.y]);
+        GameData.inventory.Add(GameData.levelData[(int)focussedFurniture.x,(int)focussedFurniture.y]);
+        GameData.levelData[(int)focussedFurniture.x,(int)focussedFurniture.y] = 0;
+        currentItem = null;
+        SetButtons();
+    }
+
+    public void RotateFurniture(int direction){
+    	GameDataManager GameData = GameDataManager.Instance;
+
+        Destroy(furniture[(int)focussedFurniture.x,(int)focussedFurniture.y]);
+        int x = (int)focussedFurniture.x;
+        int y = (int)focussedFurniture.y;
+        GameData.rotationData[x,y] += direction;
+        if(GameData.rotationData[x,y] >= GameData.itemList[GameData.levelData[x,y]].objects.Length){
+            GameData.rotationData[x,y] = 0;
+        }
+        if(GameData.rotationData[x,y] < 0){
+            GameData.rotationData[x,y] = GameData.itemList[GameData.levelData[x,y]].objects.Length-1;
+        }
+        GameObject tempFurniture = Instantiate(GameData.itemList[GameData.levelData[x,y]].objects[GameData.rotationData[x,y]]);
+        tempFurniture.transform.position = IsoMath.screenPos(x,y,xOrigin,yOrigin);
+        tempFurniture.GetComponent<SpriteRenderer>().sortingOrder = 20 - y;
+        furniture[x,y] = tempFurniture;
+        SetButtons();
+
     }
 
     void SetCurrentItem(int invSlot){
