@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63dc665c7d06d3418680abce5e8fa6f, type: 3}
+  m_Name: 5black chair
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 3564670667376391190, guid: 540614bf937704440ab03a21cf6fa5a8, type: 3}
+  - {fileID: 3842411941117040505, guid: 7b26e970e9171ed4ebaab2223f4f4864, type: 3}
+  - {fileID: 284349367331317996, guid: 8a7a736b7062e6b49829c30930f6deec, type: 3}
+  ID: 0
+  itemName: Black Chair
+  icon: {fileID: -5250289999932412104, guid: 1f3648f258705d44f98090429b68dca3, type: 3}
+  price: 4300
+  category: furniture
+  rotations: {fileID: 0}

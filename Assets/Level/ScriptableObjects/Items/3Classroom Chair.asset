@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 929539847945672069, guid: 947da1d3a1475d54ea4b66a9080686c2, type: 3}
+  - {fileID: 6539866359626938117, guid: 19799d8e0a757cb4da2216d3ec444f4c, type: 3}
   - {fileID: 3755384351982231216, guid: 4635351e21ac5684196055b895ec8f5c, type: 3}
-  - {fileID: 6539866359626938117, guid: 19799d8e0a757cb4da2216d3ec444f4c, type: 3}
-  - {fileID: 6539866359626938117, guid: 19799d8e0a757cb4da2216d3ec444f4c, type: 3}
+  - {fileID: 5475450871949949131, guid: 2a5779325e39b0640b25d528add317b7, type: 3}
   ID: 3
   itemName: Classroom Chair
   icon: {fileID: 21300000, guid: 16f0f90fba6c2b4418ac9f7d9a5583ce, type: 3}

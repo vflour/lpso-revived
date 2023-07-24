@@ -288,7 +288,7 @@ public class PDasherLogic : MonoBehaviour
             }
 
         }
-        if(foundPath){
+        if(foundPath && !npcstart[walkingNPC].GetComponent<PDasherNPC>().leaving){
             if (goalPath.Count > 0){
                 GameObject nextTile = goalPath[0];
                 npcstart[walkingNPC].GetComponent<PDasherNPC>().clear = true;
