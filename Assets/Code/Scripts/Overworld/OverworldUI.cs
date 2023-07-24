@@ -88,7 +88,8 @@ public class OverworldUI : MonoBehaviour
 
     public void toggleUserMenu()
     { userInfoMenu.SetActive(!userInfoMenu.activeSelf);
-        HouseConfirm.SetActive(false);}
+    inventory.SetActive(false);
+    HouseConfirm.SetActive(false);}
 
     public void toggleHouseConfirm()
     { HouseConfirm.SetActive(!HouseConfirm.activeSelf); }
@@ -97,16 +98,17 @@ public class OverworldUI : MonoBehaviour
     { messagebar.SetActive(!messagebar.activeSelf); }
 
     public void togglePhone()
-    { PDA.SetActive(!PDA.activeSelf); }
+    { PDA.SetActive(!PDA.activeSelf);
+    inventory.SetActive(false);}
 
     public void toggleMap()
-    {
-        map.SetActive(!map.activeSelf);
-        travelConfirmPopup.SetActive(false);
-    }
+    { map.SetActive(!map.activeSelf);
+    travelConfirmPopup.SetActive(false);
+    inventory.SetActive(false);}
 
     public void toggleNothing()
-    { nothing.SetActive(!nothing.activeSelf); }
+    { nothing.SetActive(!nothing.activeSelf);
+    inventory.SetActive(false); }
 
     public void TravelTo(int buttonID)
     {
