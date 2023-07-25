@@ -22,6 +22,8 @@ public class PageDisplay : MonoBehaviour
     public GameObject[] buttons;
     public GameObject leftbutton;
     public GameObject rightbutton;
+    public GameObject leftarrow;
+    public GameObject rightarrow;
     public GameObject tempbutton;
     public GameObject[] petScreen;
 
@@ -76,19 +78,23 @@ public class PageDisplay : MonoBehaviour
         if (pagenumber == 0)
         {
             leftbutton.SetActive(false);
+            leftarrow.SetActive(false);
         }
         else
         {
             leftbutton.SetActive(true);
+            leftarrow.SetActive(true);
         }
 
         if (pagenumber == page.GetLength(0) - 1)
         {
             rightbutton.SetActive(false);
+            rightarrow.SetActive(false);
         }
         else
         {
             rightbutton.SetActive(true);
+            rightarrow.SetActive(true);
         }
     }
 
