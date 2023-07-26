@@ -69,9 +69,6 @@ public class OverworldUI : MonoBehaviour
         map.SetActive(false);
         nothing.SetActive(false);
         SideInvButton.interactable = false;
-        InvLeftButton.interactable = false;
-        InvRightButton.interactable = false;
-        
     }
 
     void Update(){
