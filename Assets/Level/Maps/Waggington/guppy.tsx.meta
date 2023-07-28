@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  script: {fileID: 11500000, guid: ef3613e56763ddd47b41649b31e769be, type: 3}
   missingFiles: []
   errors:
   - Texture was imported at a smaller size. Make sure 'Max Size' on 'guppy.png' is

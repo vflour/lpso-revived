@@ -13,12 +13,24 @@ PrefabInstance:
       value: squirrelfront Variant
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.082786
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07990956
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: e2a9dec6114c3654cb41e333b72370c0, type: 3}
       propertyPath: m_LocalPosition.z

@@ -7,7 +7,7 @@ public class CloseButton : MonoBehaviour
 {
     public void Close(){
         GameDataManager.Instance.saveGame();
-        SceneManager.LoadScene("Overworld", LoadSceneMode.Single);
+        SceneManager.LoadScene("Waggington", LoadSceneMode.Single);
     }
     public void Reset(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
