@@ -9,8 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 344711186665806225}
-  - component: {fileID: 1266513902766111422}
-  - component: {fileID: 6261967411797226532}
   m_Layer: 0
   m_Name: foliage-chunk7
   m_TagString: Untagged
@@ -25,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6840214245442696155}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.855274, y: -1.3618425, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,47 +31,7 @@ Transform:
   m_Children:
   - {fileID: 4690290165516326362}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1266513902766111422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6840214245442696155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35ccd6fd7e5488346aa8f63930e4fa68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1.4
-  m_TiledVersion: 1.4.3
-  m_Orientation: 1
-  m_RenderOrder: 0
-  m_Width: 11
-  m_Height: 11
-  m_TileWidth: 106
-  m_TileHeight: 54
-  m_HexSideLength: 0
-  m_StaggerAxis: 0
-  m_StaggerIndex: 0
-  m_Infinite: 0
-  m_BackgroundColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
-  m_NextObjectId: 1
---- !u!114 &6261967411797226532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6840214245442696155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8277db771095644c97d473878abc457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Properties: []
 --- !u!1 &7754646466992246165
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,6 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7754646466992246165}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -104,7 +64,6 @@ Transform:
   m_Children:
   - {fileID: 2392892548979718264}
   m_Father: {fileID: 344711186665806225}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &9218894189404385579
 Grid:
@@ -127,8 +86,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2392892548979718264}
-  - component: {fileID: 7121580417575251929}
-  - component: {fileID: 276924849613451710}
   - component: {fileID: 2985559477061693882}
   - component: {fileID: 3178006584685069244}
   m_Layer: 0
@@ -145,47 +102,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8673162491837093118}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53, y: -0.53999996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4690290165516326362}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7121580417575251929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8673162491837093118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26d1ce9dacbb9cb42bb02439550bfa3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TiledName: Tile Layer 1
-  m_OffsetX: 0
-  m_OffsetY: 0
-  m_ParallaxX: 1
-  m_ParallaxY: 1
-  m_Opacity: 1
-  m_TintColor: {r: 1, g: 1, b: 1, a: 1}
-  m_Visible: 1
---- !u!114 &276924849613451710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8673162491837093118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8277db771095644c97d473878abc457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Properties: []
 --- !u!1839735485 &2985559477061693882
 Tilemap:
   m_ObjectHideFlags: 0
@@ -1578,7 +1502,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
