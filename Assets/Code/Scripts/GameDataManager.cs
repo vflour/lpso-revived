@@ -12,6 +12,8 @@ public class GameDataManager : MonoBehaviour
     public int kibble = 100;
     public int[,] levelData = new int[10,10];
     public int[,] rotationData = new int[10,10];
+    public Vector3 OldLocation;
+    public bool FreshSpawn = true;
     
     public int mnmhighscore = 0;
     public int pdhighscore = 0;

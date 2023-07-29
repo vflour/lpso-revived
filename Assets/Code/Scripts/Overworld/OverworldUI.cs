@@ -109,6 +109,7 @@ public class OverworldUI : MonoBehaviour
 
     public void TravelTo(int buttonID)
     {
+        Debug.Log("Attemtping to travel to " + mapLocations[buttonID]);
         travelConfirmPopup.SetActive(true);
         LocationName.text = mapLocations[buttonID] + "?";
         SelectedLocation = buttonID;

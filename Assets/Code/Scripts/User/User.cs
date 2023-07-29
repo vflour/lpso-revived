@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 /// <summary>
 /// Component used to account for user interaction and behaviour 
@@ -13,6 +14,7 @@ public class User : MonoBehaviour
     public MapSpawn spawner;
     public TooltipManager tooltipManager;
     public CursorManager cursorManager;
+    public Tilemap tilemap;
 
     private bool _spawned = false;
 
@@ -20,9 +22,15 @@ public class User : MonoBehaviour
     {
         // UserGetter.CharacterData
         // UserGetter.PreviousLocation
-        Vector3Int spawnCoordinates = spawner.GetSpawnPoint(); 
-        character.Spawn(spawnCoordinates);
-        
+        GameDataManager GameData = GameDataManager.Instance;
+        Vector3Int spawnCoordinates = spawner.GetSpawnPoint();
+        if(GameData.FreshSpawn == false){
+            character.Spawn(tilemap.WorldToCell(new Vector3Int((int)GameData.OldLocation.x,(int)GameData.OldLocation.y,(int)GameData.OldLocation.z)));
+        } else {
+            character.Spawn(spawnCoordinates);
+            GameData.FreshSpawn = false;
+        }
+
         userCamera.RefreshCamera();
     }
     

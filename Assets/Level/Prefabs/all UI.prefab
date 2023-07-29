@@ -6089,7 +6089,6 @@ RectTransform:
   m_Children:
   - {fileID: 4602525394832505519}
   - {fileID: 736514264053247808}
-  - {fileID: 6715211456923563139}
   m_Father: {fileID: 2523507559397917981}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8450,6 +8449,7 @@ RectTransform:
   m_Children:
   - {fileID: 3333941127969015635}
   - {fileID: 1880045636971917045}
+  - {fileID: 6715211456923563139}
   - {fileID: 3748706679496112329}
   - {fileID: 1095294540894965147}
   - {fileID: 6273726443130651883}
@@ -21376,51 +21376,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3748706679496112329}
+    m_TransformParent: {fileID: 2523507559397917981}
     m_Modifications:
     - target: {fileID: 1207671842836479328, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_Name
       value: confirmation prompt
       objectReference: {fileID: 0}
-    - target: {fileID: 1207671842836479328, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2684912206055228324, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_text
-      value: Here?
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelCancel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OverworldUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7222902611337605743, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7448939256600382605, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 7448939256600382605, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.17961
+      value: 83.47461
       objectReference: {fileID: 0}
     - target: {fileID: 7448939256600382605, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21457,30 +21421,6 @@ PrefabInstance:
     - target: {fileID: 7448939256600382605, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TravelConfirm
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OverworldUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7697854579374512433, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
