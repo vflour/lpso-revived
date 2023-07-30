@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using static UnityEngine.InputSystem.InputAction;
 
 public class RaycastInput : MonoBehaviour
@@ -15,11 +16,14 @@ public class RaycastInput : MonoBehaviour
         {
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 mouseOrigin = mouseWorldPosition + _mouseOffset;
-            RaycastHit2D hit = Physics2D.Raycast(mouseOrigin, _raycastDirection);
-            if (hit.collider != null)
+            if (!EventSystem.current.IsPointerOverGameObject())	// is the touch on the GUI
             {
-                Clickable clickable = hit.transform.GetComponent<Clickable>();
-                clickable?.handle(hit.point, Input.mousePosition);
+                RaycastHit2D hit = Physics2D.Raycast(mouseOrigin, _raycastDirection);
+                if (hit.collider != null)
+                {
+                    Clickable clickable = hit.transform.GetComponent<Clickable>();
+                    clickable?.handle(hit.point, Input.mousePosition);
+                }
             }
         }
 
