@@ -16,8 +16,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7710875507518568194
-Transform:
+--- !u!224 &7710875507518568194
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -31,8 +31,12 @@ Transform:
   - {fileID: 2989544046887004417}
   - {fileID: 4131035528320306374}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4876610449319288094
 GameObject:
   m_ObjectHideFlags: 0
@@ -51,8 +55,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4131035528320306374
-Transform:
+--- !u!224 &4131035528320306374
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -64,8 +68,12 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7710875507518568194}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!199 &882944498034646963
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -4934,8 +4942,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4815fdf4a46c5321487bcdffdabf7d37, type: 3}
---- !u!4 &2989544046887004417 stripped
-Transform:
+--- !u!224 &2989544046887004417 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 7710875507518568194, guid: 4815fdf4a46c5321487bcdffdabf7d37, type: 3}
   m_PrefabInstance: {fileID: 4791396878215421443}
   m_PrefabAsset: {fileID: 0}
