@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 41ec3a6853e4d7744828affb92fafc81
+timeCreated: 1466858629
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Editor/PagedRect_ScrollRectEditor.cs
+  uploadId: 338072

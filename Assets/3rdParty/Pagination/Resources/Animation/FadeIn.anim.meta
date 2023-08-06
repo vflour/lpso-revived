@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c92b2d205ac0634db08d045092733d1
+timeCreated: 1454589837
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Resources/Animation/FadeIn.anim
+  uploadId: 338072

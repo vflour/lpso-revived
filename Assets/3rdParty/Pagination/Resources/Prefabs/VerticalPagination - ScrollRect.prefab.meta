@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2ac3a36c7535cdf47828f31169b3110c
+timeCreated: 1456493665
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Resources/Prefabs/VerticalPagination - ScrollRect.prefab
+  uploadId: 338072

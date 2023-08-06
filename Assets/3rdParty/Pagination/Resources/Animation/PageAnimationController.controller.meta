@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 574d82f2400afbd4f910a224f72b7788
+timeCreated: 1454589837
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Resources/Animation/PageAnimationController.controller
+  uploadId: 338072
