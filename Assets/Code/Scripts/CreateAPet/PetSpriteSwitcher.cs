@@ -32,6 +32,8 @@ public class PetSpriteSwitcher : MonoBehaviour
 
     public void SwitchAttribute(PetAttributeType attributeType, int adder = 1)
     {
+        if (attributeType == PetAttributeType.None) return;
+
         PetSpriteAttributes attributes = SpriteAttributes;
         int maxAttributes = attributes.resolvers[attributeType].labelCount;
         
