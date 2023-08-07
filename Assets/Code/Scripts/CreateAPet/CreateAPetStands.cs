@@ -12,7 +12,7 @@ public class CreateAPetStands : MonoBehaviour
 
     private Transform GetStandHolder(string name)
     {
-        return CurrentStand.transform.Find(name).Find("PetRigPlacement");
+        return CurrentStand.transform.Find(name).Find("Render").Find("PetRigPlacement");
     }
 
     private int _previousPage = 0;
@@ -54,6 +54,9 @@ public class CreateAPetStands : MonoBehaviour
             for(int i = 0; i < value.Length; i++)
             {
                 _sprites[i] = Instantiate(value[i], _spriteHolders[i]);
+                foreach (SpriteRenderer sprite in _sprites[i].GetComponentsInChildren<SpriteRenderer>())
+                    sprite.gameObject.layer = _spriteHolders[i].gameObject.layer;
+
                 colorizer.SwitchAllPalettesToDefault(_sprites[i].GetComponent<PetSpritePalettes>(), petData[i]);
             }
         }
