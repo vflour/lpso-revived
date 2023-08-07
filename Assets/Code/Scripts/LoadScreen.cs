@@ -15,7 +15,7 @@ public class LoadScreen : MonoBehaviour
 
     IEnumerator Timer()
     {
-        float time = 5f;
+        float time = 1f;
         while (time >= 0)
         {
             time -= .1f;

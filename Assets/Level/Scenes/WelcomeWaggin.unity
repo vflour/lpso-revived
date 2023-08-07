@@ -289,6 +289,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 777344198679240521, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2041495632542851227, guid: bc72c73d6aad06540aa3170f8b3f2b78, type: 3}
       propertyPath: cam
       value: 

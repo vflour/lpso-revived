@@ -18,4 +18,7 @@ public class GameUtilities : MonoBehaviour
     public void AddKibble(int amount){
         GameDataManager.Instance.kibble += amount;
     }
+    public void SavePetLocation(GameObject player){
+        GameDataManager.Instance.OldLocation = player.transform.position;
+    }
 }
