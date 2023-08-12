@@ -50,8 +50,8 @@ ScriptedImporter:
     flipbookColumns: 0
     ignorePngGamma: 0
     cookieMode: 0
-    filterMode: 1
-    aniso: 1
+    filterMode: 0
+    aniso: 0
     mipBias: 0
     wrapU: 0
     wrapV: 0
@@ -94,7 +94,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: mouth4 open
+  - name: 'mouth4 open '
     originalName: 
     pivot: {x: 0.5036267, y: 0.9710101}
     alignment: 9
@@ -453,7 +453,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 434, y: 323}
     spritePosition: {x: 274, y: 183}
-  - name: mouth4 closed
+  - name: 'mouth4 closed '
     originalName: 
     pivot: {x: 0.50355786, y: 0.90602833}
     alignment: 9
@@ -954,7 +954,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 216, y: 958}
     spritePosition: {x: 279, y: 231}
-  - name: nose4
+  - name: 'nose4 '
     originalName: 
     pivot: {x: 0.50000167, y: 0.7692616}
     alignment: 9
@@ -1382,7 +1382,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 434, y: 399}
     spritePosition: {x: 272, y: 210}
-  - name: hair4
+  - name: 'hair4 '
     originalName: 
     pivot: {x: 0.50236887, y: 0.9586219}
     alignment: 9
@@ -1761,7 +1761,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 314, y: 212}
     spritePosition: {x: 215, y: 379}
-  - name: righteye4 open
+  - name: 'righteye4 open '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -2173,7 +2173,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 289, y: 642}
     spritePosition: {x: 120, y: 222}
-  - name: righteye4 closed
+  - name: 'righteye4 closed '
     originalName: 
     pivot: {x: 0.5000008, y: 0.6039289}
     alignment: 9
@@ -2884,7 +2884,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 289, y: 531}
     spritePosition: {x: 69, y: 263}
-  - name: lefteye4 open
+  - name: 'lefteye4 open '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -3326,7 +3326,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 289, y: 808}
     spritePosition: {x: 351, y: 222}
-  - name: lefteye4 closed
+  - name: 'lefteye4 closed '
     originalName: 
     pivot: {x: 0.49776506, y: 0.6599721}
     alignment: 9
@@ -3962,7 +3962,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 958}
     spritePosition: {x: 344, y: 263}
-  - name: righthead4
+  - name: 'righthead4 '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -4343,7 +4343,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 642}
     spritePosition: {x: 96, y: 155}
-  - name: rightear4
+  - name: 'rightear4 '
     originalName: 
     pivot: {x: 0.60823625, y: 0.32700288}
     alignment: 9
@@ -4711,7 +4711,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 314, y: 4}
     spritePosition: {x: 103, y: 358}
-  - name: lefthead4
+  - name: 'lefthead4 '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -5092,7 +5092,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 323}
     spritePosition: {x: 242, y: 153}
-  - name: leftear4
+  - name: 'leftear4 '
     originalName: 
     pivot: {x: 0.3402229, y: 0.3481859}
     alignment: 9
@@ -5510,7 +5510,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 289, y: 323}
     spritePosition: {x: 378, y: 358}
-  - name: middlehead4
+  - name: 'middlehead4 '
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -6102,21 +6102,21 @@ ScriptedImporter:
       parentGroup: 0
       order: 0
     - spritePosition:
-        x: 69
-        y: 263
-        width: 204
-        height: 57
-      spriteId: 39912011bae80fe47b9e71ac6a8f4cdc
-      bones: 06000000
-      parentGroup: 0
-      order: 0
-    - spritePosition:
         x: 351
         y: 222
         width: 144
         height: 158
       spriteId: df30acbc488a5da46b8b451527df1fc7
       bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 69
+        y: 263
+        width: 204
+        height: 57
+      spriteId: 39912011bae80fe47b9e71ac6a8f4cdc
+      bones: 06000000
       parentGroup: 0
       order: 0
     - spritePosition:
@@ -6190,7 +6190,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
@@ -6212,10 +6212,10 @@ ScriptedImporter:
   documentPivot: {x: 0.5, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  layerMappingOption: 2
+  layerMappingOption: 0
   generatePhysicsShape: 0
   paperDollMode: 0
-  keepDupilcateSpriteName: 1
+  keepDupilcateSpriteName: 0
   padding: 4
   spriteSizeExpand: 0
   skeletonAssetReferenceID: 634ed2532a67ad54183421980a62fae0
@@ -6230,137 +6230,137 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: adc881a4e33b6ad4095585ea698f0e76
-    layerID: 16
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
   - name: mouth4 open
-    spriteName: mouth4 open
+    spriteName: 'mouth4 open '
     isGroup: 0
     parentIndex: 0
     spriteID: ca1efdb0004286842937642f9c6b6b27
-    layerID: 15
+    layerID: 0
     mosaicPosition: {x: 434, y: 323}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: mouth4 closed
-    spriteName: mouth4 closed
+    spriteName: 'mouth4 closed '
     isGroup: 0
     parentIndex: 0
     spriteID: 529d71f5f6d1bf64896776f3a3b9f9ec
-    layerID: 14
+    layerID: 0
     mosaicPosition: {x: 216, y: 958}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: nose4
-    spriteName: nose4
+    spriteName: 'nose4 '
     isGroup: 0
     parentIndex: 0
     spriteID: 002feb5b62213684f9523236f39c8021
-    layerID: 13
+    layerID: 0
     mosaicPosition: {x: 434, y: 399}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: hair4
-    spriteName: hair4
+    spriteName: 'hair4 '
     isGroup: 0
     parentIndex: 0
     spriteID: 4e848f0a95f042045800034f54102b3a
-    layerID: 12
+    layerID: 0
     mosaicPosition: {x: 314, y: 212}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: righteye4 open
-    spriteName: righteye4 open
+    spriteName: 'righteye4 open '
     isGroup: 0
     parentIndex: 0
     spriteID: c03132d834b62c644936150393211e3c
-    layerID: 11
+    layerID: 0
     mosaicPosition: {x: 289, y: 642}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: righteye4 closed
-    spriteName: righteye4 closed
-    isGroup: 0
-    parentIndex: 0
-    spriteID: 39912011bae80fe47b9e71ac6a8f4cdc
-    layerID: 10
-    mosaicPosition: {x: 289, y: 531}
-    flatten: 0
-    isImported: 1
-    isVisible: 1
   - name: lefteye4 open
-    spriteName: lefteye4 open
+    spriteName: 'lefteye4 open '
     isGroup: 0
     parentIndex: 0
     spriteID: df30acbc488a5da46b8b451527df1fc7
-    layerID: 9
+    layerID: 0
     mosaicPosition: {x: 289, y: 808}
     flatten: 0
     isImported: 1
     isVisible: 1
+  - name: righteye4 closed
+    spriteName: 'righteye4 closed '
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 39912011bae80fe47b9e71ac6a8f4cdc
+    layerID: 0
+    mosaicPosition: {x: 289, y: 531}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: lefteye4 closed
-    spriteName: lefteye4 closed
+    spriteName: 'lefteye4 closed '
     isGroup: 0
     parentIndex: 0
     spriteID: a3e98935341530a49b3b51c55e99a8ec
-    layerID: 8
+    layerID: 0
     mosaicPosition: {x: 4, y: 958}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: righthead4
-    spriteName: righthead4
+    spriteName: 'righthead4 '
     isGroup: 0
     parentIndex: 0
     spriteID: a43f2f39f72cfc74491e7f3a3c2b164c
-    layerID: 7
+    layerID: 0
     mosaicPosition: {x: 4, y: 642}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: rightear4
-    spriteName: rightear4
+    spriteName: 'rightear4 '
     isGroup: 0
     parentIndex: 0
     spriteID: dafe7024aec018a41861d659aced3489
-    layerID: 6
+    layerID: 0
     mosaicPosition: {x: 314, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: lefthead4
-    spriteName: lefthead4
+    spriteName: 'lefthead4 '
     isGroup: 0
     parentIndex: 0
     spriteID: c906bb13fe43d45458cac4262a6649f7
-    layerID: 5
+    layerID: 0
     mosaicPosition: {x: 4, y: 323}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: leftear4
-    spriteName: leftear4
+    spriteName: 'leftear4 '
     isGroup: 0
     parentIndex: 0
     spriteID: 5c8f45aec1cd4034cb48ceb8ce795b90
-    layerID: 4
+    layerID: 0
     mosaicPosition: {x: 289, y: 323}
     flatten: 0
     isImported: 1
     isVisible: 1
   - name: middlehead4
-    spriteName: middlehead4
+    spriteName: 'middlehead4 '
     isGroup: 0
     parentIndex: 0
     spriteID: ff637dc8102857f42a0c756ea97cef62
-    layerID: 3
+    layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
@@ -6369,7 +6369,7 @@ ScriptedImporter:
   rigPSDLayers: []
   sharedRigPSDLayers: []
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638273890492488120
   spriteSizeExpandChanged: 0
   generateGOHierarchy: 1
   textureAssetName: 
