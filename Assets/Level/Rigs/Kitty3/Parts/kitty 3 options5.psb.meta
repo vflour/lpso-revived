@@ -29,7 +29,7 @@ ScriptedImporter:
     vTOnly: 0
     ignoreMipmapLimit: 0
     nPOTScale: 1
-    sRGBTexture: 1
+    sRGBTexture: 0
     spriteMode: 2
     spriteExtrude: 1
     spriteMeshType: 1
@@ -50,7 +50,7 @@ ScriptedImporter:
     flipbookColumns: 0
     ignorePngGamma: 0
     cookieMode: 0
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 0
@@ -2327,7 +2327,7 @@ ScriptedImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     forceMaximumCompressionQuality_BC6H_BC7: 0
     crunchedCompression: 0
@@ -2349,7 +2349,7 @@ ScriptedImporter:
   documentPivot: {x: 0.5, y: 0}
   documentAlignment: 7
   importHiddenLayers: 0
-  layerMappingOption: 2
+  layerMappingOption: 0
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
@@ -2367,7 +2367,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 4b2c9aed40099cf46b30128312068fa9
-    layerID: 7
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -2377,7 +2377,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: f1df9390ddb715540b755b3d72fad4f6
-    layerID: 6
+    layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
@@ -2387,7 +2387,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 1949faee8372c0b4693d6cccd0748f7c
-    layerID: 5
+    layerID: 0
     mosaicPosition: {x: 4, y: 366}
     flatten: 0
     isImported: 1
@@ -2397,7 +2397,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: d00c03857e6b27441a5df14aa892579a
-    layerID: 4
+    layerID: 0
     mosaicPosition: {x: 4, y: 159}
     flatten: 0
     isImported: 1
@@ -2407,7 +2407,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 3c8df8116ca60e64b8a496de34dc51d0
-    layerID: 3
+    layerID: 0
     mosaicPosition: {x: 4, y: 314}
     flatten: 0
     isImported: 1
@@ -2416,7 +2416,7 @@ ScriptedImporter:
   rigPSDLayers: []
   sharedRigPSDLayers: []
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638273890530287770
   spriteSizeExpandChanged: 0
   generateGOHierarchy: 1
   textureAssetName: 

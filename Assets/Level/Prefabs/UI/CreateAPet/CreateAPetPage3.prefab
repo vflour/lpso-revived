@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 481907483552174865}
   - component: {fileID: 8656989443965589272}
   - component: {fileID: 5869443575520104625}
+  - component: {fileID: 1791668492685557147}
+  - component: {fileID: 7338013445460212136}
   m_Layer: 5
   m_Name: Create button
   m_TagString: Untagged
@@ -296,6 +298,42 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1791668492685557147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193134430593149982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"PetName","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TMP_InputField,
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences:
+    - {fileID: 5930695259995097163}
+--- !u!114 &7338013445460212136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193134430593149982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":326.0,"y":-47.07196},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-400.0,"y":-133.0},"guid":"25dc1de6-0b4b-4e23-b8b3-4ff51cb3d070","$version":"A","$type":"Unity.VisualScripting.OnButtonClick","$id":"10"},{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{},"position":{"x":346.0,"y":-103.0},"guid":"6d6392b5-b028-4c22-bcea-5c32072562da","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"12"},{"type":"UnityEngine.GameObject","value":{"$content":1,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-407.0,"y":-4.0},"guid":"56680b66-7087-410c-bb02-ae318d59b871","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"15"},{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"In","label":null,"summary":null,"hideLabel":true}],"controlOutputDefinitions":[{"key":"Out","label":null,"summary":null,"hideLabel":true}],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Update
+      Pet Name","summary":null,"pan":{"x":0.5555725,"y":195.2223},"zoom":0.9,"elements":[{"defaultValues":{},"position":{"x":-433.0,"y":28.0},"guid":"4fbc6260-cef9-46d5-afba-df5167098a51","$version":"A","$type":"Unity.VisualScripting.GraphInput","$id":"29"},{"defaultValues":{},"position":{"x":524.0,"y":134.0},"guid":"cce42bf9-b217-461b-a8bb-30c0ea9a23aa","$version":"A","$type":"Unity.VisualScripting.GraphOutput","$id":"31"},{"member":{"name":"sprites","parameterTypes":null,"targetType":"PetCreator","targetTypeName":"PetCreator","$version":"A"},"defaultValues":{"target":null},"position":{"x":-65.0,"y":70.0},"guid":"96aa81c6-f268-47ed-b3a6-adb1c41652c1","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"33"},{"member":{"name":"currentPet","parameterTypes":null,"targetType":"CreateAPetSprites","targetTypeName":"CreateAPetSprites","$version":"A"},"defaultValues":{"target":null},"position":{"x":90.0,"y":71.0},"guid":"f7d22049-c6f9-4746-a693-8527b726f81c","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"36"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PetCreator","$type":"System.String"}},"position":{"x":-252.0,"y":70.0},"guid":"d63cd2a4-ac18-4292-88a5-f84c2bf22295","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"39"},{"chainable":false,"member":{"name":"name","parameterTypes":null,"targetType":"Pet","targetTypeName":"Pet","$version":"A"},"defaultValues":{"input":{"$content":"","$type":"System.String"}},"position":{"x":332.0,"y":132.0},"guid":"c9e490cb-c288-4b35-84b0-296ae8c8fb59","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"41"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"PetName","$type":"System.String"},"object":null},"position":{"x":-92.0,"y":227.0},"guid":"f8baa096-6e12-4d78-9745-e1317695c34b","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"44"},{"member":{"name":"text","parameterTypes":null,"targetType":"TMPro.TMP_InputField","targetTypeName":"TMPro.TMP_InputField","$version":"A"},"defaultValues":{"target":null},"position":{"x":135.0,"y":245.0},"guid":"5e93e3aa-aaf6-4c22-b179-fd978216fb6c","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"46"},{"sourceUnit":{"$ref":"29"},"sourceKey":"In","destinationUnit":{"$ref":"41"},"destinationKey":"assign","guid":"2350c5bb-6ee9-4187-afd4-fb4fa626f209","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"41"},"sourceKey":"assigned","destinationUnit":{"$ref":"31"},"destinationKey":"Out","guid":"d4ab656f-18ea-4a2c-84da-027c2ce0cb4e","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"39"},"sourceKey":"value","destinationUnit":{"$ref":"33"},"destinationKey":"target","guid":"671282f5-62cc-4575-ae40-f6585e05dfbc","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"value","destinationUnit":{"$ref":"36"},"destinationKey":"target","guid":"b6bbe292-b91a-436f-ade2-4dd6c4fed7ed","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"36"},"sourceKey":"value","destinationUnit":{"$ref":"41"},"destinationKey":"target","guid":"809a8484-74b6-4fd6-a536-3005c6b58b49","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"46"},"sourceKey":"value","destinationUnit":{"$ref":"41"},"destinationKey":"input","guid":"24ce8e7d-e9d3-45b8-bbcc-f65a5f1e14a7","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"44"},"sourceKey":"value","destinationUnit":{"$ref":"46"},"destinationKey":"target","guid":"1a0d46f1-4353-4a9b-9f0d-52550229c912","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}},"defaultValues":{},"position":{"x":-132.0,"y":-136.0},"guid":"91ec113c-edc8-434d-8783-32e739baaf73","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"17"},{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"Input","label":null,"summary":null,"hideLabel":true}],"controlOutputDefinitions":[{"key":"Out","label":null,"summary":null,"hideLabel":true}],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"AddPetToGameData","summary":null,"pan":{"x":204.0,"y":-8.624802},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":-572.0,"y":-112.0},"guid":"c9518e0f-0e2d-4276-9a02-b68e3090c389","$version":"A","$type":"Unity.VisualScripting.GraphInput","$id":"69"},{"defaultValues":{},"position":{"x":34.0,"y":-120.0},"guid":"876df24a-2f85-42e0-b5c8-8a97f1cc95e6","$version":"A","$type":"Unity.VisualScripting.AddListItem","$id":"71"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PetCreator","$type":"System.String"}},"position":{"x":-573.0,"y":-236.0},"guid":"d48eabeb-ecc3-4968-987c-ae2d83545889","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"73"},{"member":{"name":"currentPetIndex","parameterTypes":null,"targetType":"GameDataManager","targetTypeName":"GameDataManager","$version":"A"},"defaultValues":{"target":null},"position":{"x":-30.0,"y":115.0},"guid":"9c349c87-f417-4e45-8744-e0fd5557eef8","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"75"},{"defaultValues":{"index":{"$content":0,"$type":"System.Int32"}},"position":{"x":260.0,"y":-150.0},"guid":"fb0c3c46-0fb1-4194-93cd-8cd2e6e20617","$version":"A","$type":"Unity.VisualScripting.SetListItem","$id":"78"},{"defaultValues":{},"position":{"x":-120.0,"y":-83.0},"guid":"4328e105-799e-42d9-94fe-415987e591eb","$version":"A","$type":"Unity.VisualScripting.Null","$id":"80"},{"member":{"name":"Instance","parameterTypes":null,"targetType":"GameDataManager","targetTypeName":"GameDataManager","$version":"A"},"defaultValues":{},"position":{"x":-420.0,"y":44.0},"guid":"adbdb990-b002-4a20-9136-3d509f0d7999","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"82"},{"defaultValues":{},"position":{"x":474.0,"y":-132.0},"guid":"2d79b6a3-415c-4aaa-9414-5a8f4aa9b2f5","$version":"A","$type":"Unity.VisualScripting.GraphOutput","$id":"85"},{"member":{"name":"currentPet","parameterTypes":null,"targetType":"CreateAPetSprites","targetTypeName":"CreateAPetSprites","$version":"A"},"defaultValues":{"target":null},"position":{"x":-223.0,"y":-231.0},"guid":"b40cd0d5-9cc0-46c8-a42f-5c87e1aaa294","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"87"},{"member":{"name":"sprites","parameterTypes":null,"targetType":"PetCreator","targetTypeName":"PetCreator","$version":"A"},"defaultValues":{"target":null},"position":{"x":-389.0,"y":-233.0},"guid":"95a74130-4166-41ec-800f-bac61db2bf90","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"90"},{"member":{"name":"pets","parameterTypes":null,"targetType":"GameDataManager","targetTypeName":"GameDataManager","$version":"A"},"defaultValues":{"target":null},"position":{"x":-213.0,"y":46.0},"guid":"e1c8d7cd-52d1-4b4f-92db-d08cb378d5b7","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"93"},{"sourceUnit":{"$ref":"71"},"sourceKey":"exit","destinationUnit":{"$ref":"78"},"destinationKey":"enter","guid":"70448574-536e-4ad3-9607-919461ea15d1","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"69"},"sourceKey":"Input","destinationUnit":{"$ref":"71"},"destinationKey":"enter","guid":"5f883bb5-5d92-46e1-9606-1a669cd54954","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"78"},"sourceKey":"exit","destinationUnit":{"$ref":"85"},"destinationKey":"Out","guid":"b85d5ab0-0a36-4243-b9bc-7ffc362c6914","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"82"},"sourceKey":"value","destinationUnit":{"$ref":"93"},"destinationKey":"target","guid":"6e82e1ad-1fb2-488c-9149-bf2ff1d29fb2","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"82"},"sourceKey":"value","destinationUnit":{"$ref":"75"},"destinationKey":"target","guid":"68947ee4-e3ee-4203-8ff2-86f4a7c86a53","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"80"},"sourceKey":"null","destinationUnit":{"$ref":"71"},"destinationKey":"item","guid":"11d80957-a214-4996-a028-6c97376fbf06","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"90"},"sourceKey":"value","destinationUnit":{"$ref":"87"},"destinationKey":"target","guid":"8f8fe619-7446-4d2a-bf04-2d3d9bbc2393","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"73"},"sourceKey":"value","destinationUnit":{"$ref":"90"},"destinationKey":"target","guid":"34efe451-496c-4bf4-b65e-8b699c3d5b92","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"75"},"sourceKey":"value","destinationUnit":{"$ref":"78"},"destinationKey":"index","guid":"f5d1ddfc-bb86-44f6-be8a-e288afa09c74","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"93"},"sourceKey":"value","destinationUnit":{"$ref":"78"},"destinationKey":"list","guid":"33e314fa-4406-4d67-b410-f210beb5de55","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"93"},"sourceKey":"value","destinationUnit":{"$ref":"71"},"destinationKey":"listInput","guid":"4661223f-7495-4472-aaea-a36eaf421705","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"87"},"sourceKey":"value","destinationUnit":{"$ref":"78"},"destinationKey":"item","guid":"3a4f6f27-94cc-4cf2-a8f3-cbb7cee217f2","$type":"Unity.VisualScripting.ValueConnection"},{"position":{"xMin":632.0,"yMin":-117.0,"xMax":732.0,"yMax":-17.0},"title":"TODO","body":"Change
+      this to add the pet instead","colorTheme":"Classic","guid":"c5c99592-5c6d-40fe-9ba1-3c220367790a","$type":"Unity.VisualScripting.StickyNote"}],"$version":"A"}},"defaultValues":{},"position":{"x":68.0,"y":-18.0},"guid":"cd9cacbb-e308-40c7-be7f-a7d808e0af1a","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"57"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"17"},"destinationKey":"In","guid":"95087ed0-c487-4b45-b181-9130b083e6b6","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"17"},"sourceKey":"Out","destinationUnit":{"$ref":"57"},"destinationKey":"Input","guid":"8a42dc2b-1963-4412-8f0c-c6a46e6113d2","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"57"},"sourceKey":"Out","destinationUnit":{"$ref":"12"},"destinationKey":"Enter","guid":"e4355478-ebbb-4635-a716-09d3ce178660","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"output","destinationUnit":{"$ref":"12"},"destinationKey":"View","guid":"88ddcbbd-e4e0-48fa-8afe-14b31429ed75","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: cfaa5660206f999378e83b84ff267e6d, type: 2}
+    - {fileID: 5383303574987387727, guid: 04bc97b2bd8ea38bc97a303dfa2bbbef, type: 3}
 --- !u!1 &817953883672869400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4805058381193048041
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1514,6 +1552,8 @@ GameObject:
   - component: {fileID: 8366576207472711742}
   - component: {fileID: 9051499756027519407}
   - component: {fileID: 3378697602831565531}
+  - component: {fileID: 8748214221489907713}
+  - component: {fileID: 9137635256471483066}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1637,6 +1677,36 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8748214221489907713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320622049204679047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!114 &9137635256471483066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6320622049204679047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-128.0,"y":74.004},"zoom":1.0,"elements":[],"$version":"A"}}}'
+    _objectReferences: []
 --- !u!1 &6413915153769801799
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,10 +2718,12 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SwitchType","value":{"$content":"Head","$type":"PetAttributeType"},"typeHandle":{"Identification":"PetAttributeType,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Text","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 8822261580271332122}
+    - {fileID: 1655886300982181311}
 --- !u!114 &3664882160434557738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2918,10 +2990,12 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SwitchType","value":{"$content":"Hair","$type":"PetAttributeType"},"typeHandle":{"Identification":"PetAttributeType,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Text","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 8343716324303108372}
+    - {fileID: 5802844175947057926}
 --- !u!114 &8201934147751928614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4178,13 +4252,15 @@ MonoBehaviour:
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"typeHandle":{"Identification":"System.Collections.Generic.List`1[[UnityEngine.Sprite,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"},{"name":"Icon","value":{"$content":4,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.UI.Image,
-      UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":5,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 21300000, guid: a2424328ca6eb57468829755b6c3fc5f, type: 3}
     - {fileID: 21300000, guid: f4c48e1ca70d2e8469718e6115175f64, type: 3}
     - {fileID: 21300000, guid: a020ff76320c2d144aa5950fb579bbb0, type: 3}
     - {fileID: 3269518522580423445}
+    - {fileID: 5802844175947057926}
 --- !u!114 &6451499551808271152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4850,7 +4926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":125.0,"y":22.0},"zoom":1.0,"elements":[{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{"Show":{"$content":true,"$type":"System.Boolean"}},"position":{"x":337.0,"y":-67.0},"guid":"728c380b-456e-4d01-a9f1-beca29c5baaf","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"10"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-290.0,"y":-58.0},"guid":"4941250e-ac9f-41df-b896-9ff4d67cef94","$version":"A","$type":"Unity.VisualScripting.OnButtonClick","$id":"13"},{"nest":{"source":"Macro","macro":1,"embed":null},"defaultValues":{},"position":{"x":66.0,"y":-61.0},"guid":"7558a858-f0ca-48ca-8622-5737cf310c80","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"15"},{"type":"PetAttributeType","value":{"$content":"None","$type":"PetAttributeType"},"defaultValues":{},"position":{"x":-138.0,"y":72.0},"guid":"54039d7b-fdc2-4807-89a5-163e072073f8","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"18"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"In","guid":"d5dcb842-4f2a-4492-8382-d219f2150834","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"Out","destinationUnit":{"$ref":"10"},"destinationKey":"In","guid":"8facdf2d-5ff5-493d-9a4e-81f4e221d693","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"18"},"sourceKey":"output","destinationUnit":{"$ref":"15"},"destinationKey":"Switch","guid":"ad0567bb-2772-4cd3-9299-b966fdbd1ae6","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":269.0,"y":23.0},"zoom":1.0,"elements":[{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{"Show":{"$content":true,"$type":"System.Boolean"}},"position":{"x":337.0,"y":-67.0},"guid":"728c380b-456e-4d01-a9f1-beca29c5baaf","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"10"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-290.0,"y":-58.0},"guid":"4941250e-ac9f-41df-b896-9ff4d67cef94","$version":"A","$type":"Unity.VisualScripting.OnButtonClick","$id":"13"},{"nest":{"source":"Macro","macro":1,"embed":null},"defaultValues":{},"position":{"x":66.0,"y":-61.0},"guid":"7558a858-f0ca-48ca-8622-5737cf310c80","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"15"},{"type":"PetAttributeType","value":{"$content":"None","$type":"PetAttributeType"},"defaultValues":{},"position":{"x":-138.0,"y":72.0},"guid":"54039d7b-fdc2-4807-89a5-163e072073f8","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"18"},{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"In","label":null,"summary":null,"hideLabel":true}],"controlOutputDefinitions":[{"key":"Out","label":null,"summary":null,"hideLabel":true}],"valueInputDefinitions":[{"hasDefaultValue":true,"defaultValue":{"$content":false,"$type":"System.Boolean"},"_type":"System.Boolean","key":"Toggled","label":null,"summary":null,"hideLabel":false}],"valueOutputDefinitions":[],"title":"ToggleArrows","summary":null,"pan":{"x":-88.0,"y":25.0},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":-277.0,"y":-83.0},"guid":"f95d59cb-25df-46ff-ac64-8511948b27be","$version":"A","$type":"Unity.VisualScripting.GraphInput","$id":"33"},{"defaultValues":{},"position":{"x":180.0,"y":-60.0},"guid":"f06702ba-8ebf-4c16-980a-3c0298f504fc","$version":"A","$type":"Unity.VisualScripting.GraphOutput","$id":"35"},{"chainable":false,"parameterNames":["value"],"member":{"name":"SetActive","parameterTypes":["System.Boolean"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"target":null,"%value":{"$content":false,"$type":"System.Boolean"}},"position":{"x":-58.0,"y":-109.0},"guid":"db7c63b3-8ae8-4bee-998e-4793672afc89","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"37"},{"specifyFallback":false,"kind":"Object","defaultValues":{"name":{"$content":"ArrowButtons","$type":"System.String"},"object":null},"position":{"x":-83.0,"y":49.0},"guid":"9dbf9895-27a3-4fa8-ad20-41dc1f58b951","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"41"},{"sourceUnit":{"$ref":"37"},"sourceKey":"exit","destinationUnit":{"$ref":"35"},"destinationKey":"Out","guid":"e4ad8e43-c65b-4def-84c5-55da14a2ac8c","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"In","destinationUnit":{"$ref":"37"},"destinationKey":"enter","guid":"348d492d-42da-4b4c-a3b8-db1891175b2a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"41"},"sourceKey":"value","destinationUnit":{"$ref":"37"},"destinationKey":"target","guid":"2e63c14d-3ef1-4290-81a8-7c57a6ae490c","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"Toggled","destinationUnit":{"$ref":"37"},"destinationKey":"%value","guid":"257f9c73-67d9-405c-87bb-eed645bb2581","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}},"defaultValues":{"Toggled":{"$content":false,"$type":"System.Boolean"}},"position":{"x":552.0,"y":-63.0},"guid":"9f1b61e9-82f3-4033-97b5-187e6a77c27c","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"20"},{"sourceUnit":{"$ref":"13"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"In","guid":"d5dcb842-4f2a-4492-8382-d219f2150834","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"Out","destinationUnit":{"$ref":"10"},"destinationKey":"In","guid":"8facdf2d-5ff5-493d-9a4e-81f4e221d693","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"Out","destinationUnit":{"$ref":"20"},"destinationKey":"In","guid":"8a3ecb8b-3676-4e66-af9a-5a42242e8b16","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"18"},"sourceKey":"output","destinationUnit":{"$ref":"15"},"destinationKey":"Switch","guid":"ad0567bb-2772-4cd3-9299-b966fdbd1ae6","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
     _objectReferences:
     - {fileID: 11400000, guid: 820ec4a34f56c370a9fe57d29159fef7, type: 2}
     - {fileID: 11400000, guid: 4c8fca557734d3658b0c4ce62082f2cc, type: 2}
@@ -4868,9 +4944,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
+    - {fileID: 5802844175947057926}
 --- !u!224 &4939835976515181572 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8395774674415627436, guid: bd4fefab8d88c666ea81d31b238e19fa, type: 3}
@@ -5080,10 +5158,12 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SwitchType","value":{"$content":"Mouth","$type":"PetAttributeType"},"typeHandle":{"Identification":"PetAttributeType,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Text","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 4777142935160303218}
+    - {fileID: 5802844175947057926}
 --- !u!114 &3088176021711215567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5320,10 +5400,12 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SwitchType","value":{"$content":"Eyes","$type":"PetAttributeType"},"typeHandle":{"Identification":"PetAttributeType,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Text","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 4828086740827169524}
+    - {fileID: 5802844175947057926}
 --- !u!114 &6743424589168713900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5560,10 +5642,12 @@ MonoBehaviour:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SwitchType","value":{"$content":"Ears","$type":"PetAttributeType"},"typeHandle":{"Identification":"PetAttributeType,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ColorPalettes","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Text","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ArrowButtons","value":{"$content":2,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3964000891216512062}
     - {fileID: 4886068337333869766}
+    - {fileID: 5802844175947057926}
 --- !u!114 &9063353207291347963
 MonoBehaviour:
   m_ObjectHideFlags: 0

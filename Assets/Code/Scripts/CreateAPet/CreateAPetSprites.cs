@@ -9,6 +9,7 @@ public class CreateAPetSprites : MonoBehaviour
     public PetDatabase database;
     public CreateAPetPages pages;
     public PetCreator petCreator;
+    public CreateAPetArrows arrows;
     
     public Pet currentPet = new Pet();
     public PetData SpeciesData => database[currentPet.species];
@@ -57,12 +58,12 @@ public class CreateAPetSprites : MonoBehaviour
     public void UpdateSprites(int page)
     {
 
-        petCreator.free = true;
+        arrows.free = true;
         GameObject[] sprites = GetPageSprites(page);
         
         if (page < 3) 
         {
-            int index = petCreator.DirectionIndex;
+            int index = arrows.DirectionIndex;
             int spriteCount = sprites.Length;
 
             int furtherLeft = (index - 2 + spriteCount) % spriteCount;
@@ -79,13 +80,18 @@ public class CreateAPetSprites : MonoBehaviour
                 sprites[right],
                 sprites[furtherRight]
             };
-            
-            
 
         } else 
         {
             stands.sprites = sprites;
         } 
+    }
+    
+    public void ResetSpriteData()
+    {
+        string species = currentPet.species;
+        int subSpecies = currentPet.subSpecies; 
+        currentPet = new Pet { species = species, subSpecies = subSpecies, colors = petCreator.colorizer.GetDefaultPalettes(SpeciesData) };
     }
 
     public void UpdateSprites()

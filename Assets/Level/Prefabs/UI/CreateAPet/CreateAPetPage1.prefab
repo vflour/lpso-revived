@@ -1609,7 +1609,8 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SpeciesText","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
       Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ChoiceText","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Direction","value":{"$content":"Right","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 9020732759223507046}
     - {fileID: 670395675668929986}
@@ -1626,9 +1627,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":85.44537,"y":-10.32219},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-284.0,"y":-89.0},"guid":"328c7a4e-10aa-4af4-9018-7ff3c37aaa22","$version":"A","$type":"Unity.VisualScripting.OnButtonClick","$id":"10"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PetCreator","$type":"System.String"}},"position":{"x":-282.0,"y":54.0},"guid":"0f1148fe-51b6-4c8e-b602-9862ecb6acb2","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"12"},{"chainable":false,"parameterNames":[],"member":{"name":"MoveRight","parameterTypes":[],"targetType":"PetCreator","targetTypeName":"PetCreator","$version":"A"},"defaultValues":{"target":null},"position":{"x":-45.0,"y":-54.0},"guid":"cfcd849c-7811-4d7c-9bc6-0096acd17cf3","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"14"},{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{},"position":{"x":119.0,"y":-52.0},"guid":"07c5d7b2-af7a-482f-86fb-d0fc90582412","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"18"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"932f9b24-e91b-4a4f-b519-76cbec85e23a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"exit","destinationUnit":{"$ref":"18"},"destinationKey":"In","guid":"668b2ac9-788a-4b94-b4cf-e98bbdbcd9a6","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"target","guid":"5609fabd-0087-4160-95d8-c9654e0b059c","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: d1559cf533cc005aaa90de96ff89b64e, type: 2}
+    - {fileID: 11400000, guid: d8d91f972f9dd94f9929063c7d655aec, type: 2}
 --- !u!224 &4676893309301135097 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4987267192517276444, guid: e67d292dd2e957547b852b1d8c2189a1, type: 3}
@@ -1806,7 +1807,8 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"SpeciesText","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
       Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"ChoiceText","value":{"$content":1,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"TMPro.TextMeshProUGUI,
-      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Direction","value":{"$content":"Left","$type":"System.String"},"typeHandle":{"Identification":"System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 9020732759223507046}
     - {fileID: 670395675668929986}
@@ -1823,6 +1825,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-277.0,"y":-94.0},"guid":"478b5a26-d93f-4b51-a0f4-f58b2115f2f9","$version":"A","$type":"Unity.VisualScripting.OnButtonClick","$id":"10"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PetCreator","$type":"System.String"}},"position":{"x":-275.0,"y":49.0},"guid":"5a5f5623-ff65-44e9-a327-415f39d4eabf","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"12"},{"chainable":false,"parameterNames":[],"member":{"name":"MoveLeft","parameterTypes":[],"targetType":"PetCreator","targetTypeName":"PetCreator","$version":"A"},"defaultValues":{"target":null},"position":{"x":-45.0,"y":-75.0},"guid":"2d1ac198-3363-4890-a1f2-509eb4d6fbf7","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"14"},{"nest":{"source":"Macro","macro":0,"embed":null},"defaultValues":{},"position":{"x":144.0,"y":-73.0},"guid":"265d4cfb-e660-45e8-9f9e-73c3576505ff","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"18"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"14"},"destinationKey":"enter","guid":"9715abfb-8244-4a47-9eb8-a1fc196a823a","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"14"},"sourceKey":"exit","destinationUnit":{"$ref":"18"},"destinationKey":"In","guid":"7c345c48-c87e-45da-9cb0-ee0eb544e1ef","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"value","destinationUnit":{"$ref":"14"},"destinationKey":"target","guid":"271b323f-ad35-47da-9155-7af83e2f1dda","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
-    - {fileID: 11400000, guid: d1559cf533cc005aaa90de96ff89b64e, type: 2}
+    - {fileID: 11400000, guid: d8d91f972f9dd94f9929063c7d655aec, type: 2}

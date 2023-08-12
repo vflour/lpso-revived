@@ -5,11 +5,16 @@ using System;
 
 public class PetSpritePalettes : MonoBehaviour
 {
-    public SpritePaletteDict spritePalettes;
+    private SatSpriteRenderer[] renderers;
 
-    public void UpdatePalette(PetPaletteType paletteType, PaletteColor color)
+    void Awake()
     {
-        foreach (SpriteRenderer sprite in spritePalettes[paletteType])
+        renderers = gameObject.GetComponentsInChildren<SatSpriteRenderer>();
+    }
+
+    public void UpdatePalette(PetPaletteType paletteType, PetPaletteDict color)
+    {
+        foreach (SatSpriteRenderer sprite in renderers)
         {
             sprite.GetComponent<SatSpriteRenderer>().PaletteColor = color;
         }

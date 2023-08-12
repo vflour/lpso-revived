@@ -7,6 +7,8 @@ using System.IO;
 public class GameDataManager : MonoBehaviour
 {
     public static GameDataManager Instance;
+
+    public bool Loaded {get; private set;}
     public List<ItemData> itemList;
     public List<int> inventory = new List<int>();
     public int kibble = 100;
@@ -14,7 +16,10 @@ public class GameDataManager : MonoBehaviour
     public int[,] rotationData = new int[10,10];
     public Vector3 OldLocation;
     public bool FreshSpawn = true;
-    
+    public List<Pet> pets = new List<Pet>();
+    public int currentPetIndex = 0;    
+    public Pet CurrentPet => pets[currentPetIndex];
+
     public int mnmhighscore = 0;
     public int pdhighscore = 0;
 
@@ -35,7 +40,8 @@ public class GameDataManager : MonoBehaviour
         loadGame();
     }
     
-    public void saveGame(){
+    public void saveGame()
+    {
         BinaryFormatter bf = new BinaryFormatter(); 
 	    FileStream file = File.Create(Application.persistentDataPath  + "/MySaveData.dat"); 
 	    SaveData data = new SaveData();
@@ -43,6 +49,9 @@ public class GameDataManager : MonoBehaviour
         data.rotationData = rotationData;
         data.levelData = levelData;
 	    data.kibble = kibble;
+        data.pets = pets;
+        data.currentPetIndex = currentPetIndex;
+
         data.mnmhighscore = mnmhighscore;
         data.pdhighscore = pdhighscore;
 	    bf.Serialize(file, data);
@@ -50,27 +59,31 @@ public class GameDataManager : MonoBehaviour
 	    Debug.Log("Game data saved!");
     }
 
-    public void loadGame(){
+    public void loadGame()
+    {
         if (File.Exists(Application.persistentDataPath + "/MySaveData.dat"))
 	    {
-		BinaryFormatter bf = new BinaryFormatter();
-		FileStream file = File.Open(Application.persistentDataPath + "/MySaveData.dat", FileMode.Open);
-		SaveData data = (SaveData)bf.Deserialize(file);
-		file.Close();
-        if (data.inventory != null){
-		    inventory = data.inventory;
-        }
-        rotationData = data.rotationData;
-        levelData = data.levelData;
-	    kibble = data.kibble;
-        mnmhighscore = data.mnmhighscore;
-        pdhighscore = data.pdhighscore;
-		Debug.Log("Game data loaded!");
-	}
-	else
-		Debug.LogError("There is no save data!");
+		    BinaryFormatter bf = new BinaryFormatter();
+		    FileStream file = File.Open(Application.persistentDataPath + "/MySaveData.dat", FileMode.Open);
+		    SaveData data = (SaveData)bf.Deserialize(file);
+		    file.Close();
+            if (data.inventory != null){
+		        inventory = data.inventory;
+            }
+            rotationData = data.rotationData;
+            levelData = data.levelData;
+	        kibble = data.kibble;
+            pets = data.pets ?? pets;
+            currentPetIndex = data.currentPetIndex;
+            mnmhighscore = data.mnmhighscore;
+            pdhighscore = data.pdhighscore;
+            Loaded = true;
+		    Debug.Log("Game data loaded!");
+	    }
+	    else
+		    Debug.LogError("There is no save data!");
     }
-
+    
     public void AddInventory(int ID)
     {
         GameDataManager.Instance.inventory.Add(ID);

@@ -14,8 +14,4 @@ public class PetData : ScriptableObject
 public class ColorStorage : SerializableDictionary.Storage<List<PaletteColor>> {}
 [Serializable]
 public class PaletteColorsDict : SerializableDictionary<PetPaletteType, List<PaletteColor>, ColorStorage> {}
-[Serializable]
-public struct PaletteColor {
-    public Color color;
-    public float saturationMultiplier;
-}
+

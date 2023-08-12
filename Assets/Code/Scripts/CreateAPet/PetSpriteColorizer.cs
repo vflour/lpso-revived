@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PetPaletteType;
 
 public class PetSpriteColorizer : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PetSpriteColorizer : MonoBehaviour
 
     public PetSpritePalettes SpritePalettes => stands.sprites[0].GetComponent<PetSpritePalettes>();
 
-    public void SwitchPalette(PetPaletteType paletteType, PaletteColor color)
+    public void SwitchPalette(PetPaletteType paletteType, PetPaletteDict color)
     {
         SwitchPalette(paletteType, color, SpritePalettes);
     }
@@ -16,6 +17,15 @@ public class PetSpriteColorizer : MonoBehaviour
     private PaletteColor GetDefaultPalette(PetPaletteType paletteType, PetData petData)
     {
         return petData.palette[paletteType][0];
+    }
+
+    public PetPaletteDict GetDefaultPalettes(PetData petData)
+    {
+        return new PetPaletteDict {
+            [Coat] = GetDefaultPalette(Coat, petData),        
+            [Patch] = GetDefaultPalette(Patch, petData),        
+            [Eye] = GetDefaultPalette(Eye, petData),        
+        };
     }
 
     public void SwitchAllPalettesToDefault(PetSpritePalettes palettes, PetData petData)
@@ -27,10 +37,10 @@ public class PetSpriteColorizer : MonoBehaviour
 
     public void SwitchPaletteToDefault(PetSpritePalettes palettes, PetData petData, PetPaletteType paletteType)
     {
-        SwitchPalette(paletteType, GetDefaultPalette(paletteType, petData), palettes); 
+        SwitchPalette(paletteType, GetDefaultPalettes(petData), palettes); 
     }
 
-    public void SwitchPalette(PetPaletteType paletteType, PaletteColor color, PetSpritePalettes palettes)
+    public void SwitchPalette(PetPaletteType paletteType, PetPaletteDict color, PetSpritePalettes palettes)
     {
         palettes.UpdatePalette(paletteType, color);
     }

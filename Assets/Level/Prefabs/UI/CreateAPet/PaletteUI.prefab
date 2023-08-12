@@ -2074,6 +2074,7 @@ MonoBehaviour:
   sprites: {fileID: 0}
   colorizer: {fileID: 0}
   pagedRect: {fileID: 9008304464461261400}
+  powderSprite: {fileID: 7225981487497441564}
   paletteType: 0
   buttonPrefab: {fileID: 8040709069599011674}
   maxPerPage: 8
@@ -3214,6 +3215,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6819879578110968090, guid: 0158fc6d92f4a8b4fac66a43d2552b6b, type: 3}
   m_PrefabInstance: {fileID: 6144890626907149383}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &940444474522493893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6361941625446987650, guid: 0158fc6d92f4a8b4fac66a43d2552b6b, type: 3}
+  m_PrefabInstance: {fileID: 6144890626907149383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8040709069599011674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4238273434625795869, guid: 0158fc6d92f4a8b4fac66a43d2552b6b, type: 3}
@@ -3231,11 +3237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a78a02321dc2e2599597def7cac131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paletteType: 0
-  color:
+  _color:
     color: {r: 0, g: 0, b: 0, a: 0}
     saturationMultiplier: 0
-  colorizer: {fileID: 0}
+  generator: {fileID: 0}
+  selected: {fileID: 940444474522493893}
 --- !u!1001 &7985036507316202669
 PrefabInstance:
   m_ObjectHideFlags: 0

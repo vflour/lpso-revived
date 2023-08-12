@@ -55,9 +55,9 @@ public class PetSpriteSwitcher : MonoBehaviour
 
     public void SelectAttributeButton(PetAttributeType attributeType)
     {
-        
+        bool hasChanged = selectedAttribute == attributeType; 
         selectedAttribute = attributeType;
-        if (selectedAttribute == attributeType || attributeType == PetAttributeType.Gender)
+        if (hasChanged || attributeType == PetAttributeType.Gender)
         {
             SwitchAttribute(attributeType);
         }

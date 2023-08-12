@@ -18,6 +18,7 @@ public class BusyObjectClickable : ObjectClickable
         bool completed = false;
         var finishHandler = animator.GetComponent<AnimationFinishHandler>();
 
+        // todo: Timeout after 5-10s and throw and error
         finishHandler.finishedAnimation.AddListener(() => completed = true);
         PlayAnimation();
 

@@ -13,6 +13,10 @@ public class SaveData
     public int[,] levelData;
     public List<int> inventory;
 	public int kibble;
+    public List<Pet> pets;
+    public int currentPetIndex;
+
     public int mnmhighscore = 0;
     public int pdhighscore = 0;
+    
 }
