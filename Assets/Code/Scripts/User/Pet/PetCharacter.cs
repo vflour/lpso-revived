@@ -29,7 +29,6 @@ public class PetCharacter : MonoBehaviour
 
     public void DrawSprite(PetAttributeType petAttributeType)
     {
-        Debug.Log(petAttributeType);
         DrawSprite(petAttributeType, pet.attributes[petAttributeType]);
     }
 
