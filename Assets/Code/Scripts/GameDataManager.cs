@@ -77,11 +77,12 @@ public class GameDataManager : MonoBehaviour
             currentPetIndex = data.currentPetIndex;
             mnmhighscore = data.mnmhighscore;
             pdhighscore = data.pdhighscore;
-            Loaded = true;
 		    Debug.Log("Game data loaded!");
 	    }
 	    else
 		    Debug.LogError("There is no save data!");
+
+        Loaded = true;
     }
     
     public void AddInventory(int ID)
