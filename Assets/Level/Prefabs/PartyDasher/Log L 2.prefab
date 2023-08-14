@@ -24,6 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3326632849319414890}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,7 +32,6 @@ Transform:
   m_Children:
   - {fileID: 3796393139357472196}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &66660388
 MonoBehaviour:
@@ -53,11 +53,15 @@ MonoBehaviour:
   Walkable: 0
   isPath: 0
   isStart: 0
-  breadcrumb: {fileID: 0}
-  crumbNorth: 0
-  crumbEast: 0
-  crumbSouth: 0
-  crumbWest: 0
+  foundPath: 0
+  tempPath: 0
+  isEnd: 0
+  x: 0
+  y: 0
+  stable: 0
+  breadcrumb:
+  - {fileID: 0}
+  nextTiles: []
   NormalColor: {r: 1, g: 1, b: 1, a: 1}
   WalkableColor: {r: 1, g: 1, b: 0, a: 1}
   PathColor: {r: 1, g: 0.44313726, b: 0, a: 1}
@@ -67,8 +71,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 3034031887344370123}
     m_Modifications:
+    - target: {fileID: -7871556540511652807, guid: 599cf1e9400f7274b82f9a689bdb8c10, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -3888481672020999207, guid: 599cf1e9400f7274b82f9a689bdb8c10, type: 3}
       propertyPath: m_Name
       value: log_bend_down
@@ -126,6 +135,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 7243324766535440047, guid: 599cf1e9400f7274b82f9a689bdb8c10, type: 3}
 --- !u!4 &3796393139357472196 stripped
 Transform:

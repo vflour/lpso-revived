@@ -12,6 +12,8 @@ public class PDasherNPC : MonoBehaviour
     public bool clear;
     public GameObject heartSprite;
     public List<GameObject> hearts;
+    public Transform heartContainer;
+
     public int maxHearts;
     public bool waiting;
     public bool foundexit = false;
@@ -22,11 +24,10 @@ public class PDasherNPC : MonoBehaviour
         hearts = new List<GameObject>();
 
         for(int i=0;i < maxHearts;i++){ 
-            Transform tempTransform = this.transform;
-            GameObject tempHeart = Instantiate(heartSprite,tempTransform);
+            GameObject tempHeart = Instantiate(heartSprite,heartContainer);
             hearts.Add(tempHeart);
             float offset = (float)i; 
-            hearts[hearts.Count-1].transform.position = new Vector2(offset/8-6.5f,+3);
+            hearts[i].transform.localPosition = new Vector2(offset/8, 0);
         }
     }
     void doTick(){
