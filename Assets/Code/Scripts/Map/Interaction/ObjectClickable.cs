@@ -17,9 +17,14 @@ public class ObjectClickable : MapClickable
     public override void Start()
     {
         base.Start(); 
-        // assumes non-player
         Character character = GamePlayers.LocalUser.character; 
-        character.Spawned.AddListener(() => animator = character.animator);
+        animator = character.animator;
+
+        // assumes non-player
+        character.Spawned.AddListener(() => {
+            Debug.Log("Girl what the fuck");
+            animator = character.animator;
+        });
     }
 
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
