@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameUtilities : MonoBehaviour
 {
-    public void Awake(){
+    public void Start(){
         Cursor.visible = false;
         //SceneManager.LoadScene("Overworld", LoadSceneMode.Additive);
         GameDataManager.Instance.loadGame();
