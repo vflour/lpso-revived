@@ -8,6 +8,7 @@ public class CreateAPetStands : MonoBehaviour
     public CreateAPetPages pages;
     public PetSpriteColorizer colorizer;
 
+    public GameObject PetSprite => sprites[0];
     public PetData[] petData;
 
     private Transform GetStandHolder(string name)

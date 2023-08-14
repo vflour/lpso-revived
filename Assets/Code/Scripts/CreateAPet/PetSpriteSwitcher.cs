@@ -7,6 +7,8 @@ using Unity.VisualScripting;
 public class PetSpriteSwitcher : MonoBehaviour
 {
     private PetAttributeType _selectedAttribute = PetAttributeType.None;
+    public PetChangeAnimator changeAnimator;
+    
     public PetAttributeType selectedAttribute 
     { 
         get { return _selectedAttribute; }
@@ -43,6 +45,8 @@ public class PetSpriteSwitcher : MonoBehaviour
         int attributeValue = (sprites.currentPet.attributes[attributeType] + adder + maxAttributes) % maxAttributes;
         sprites.currentPet.attributes[attributeType] = attributeValue;
         
+        changeAnimator.PlayChangePetAnimation();
+
         // Gender isn't a sprite
         if (attributeType != PetAttributeType.Gender)
            attributes.Resolve(attributeType, attributeValue);

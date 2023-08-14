@@ -7,13 +7,10 @@ public class PetSpriteColorizer : MonoBehaviour
 {
     public CreateAPetStands stands;
 
+    public PetChangeAnimator changeAnimator;
+
     public PetSpritePalettes SpritePalettes => stands.sprites[0].GetComponent<PetSpritePalettes>();
-
-    public void SwitchPalette(PetPaletteType paletteType, PetPaletteDict color)
-    {
-        SwitchPalette(paletteType, color, SpritePalettes);
-    }
-
+   
     private PaletteColor GetDefaultPalette(PetPaletteType paletteType, PetData petData)
     {
         return petData.palette[paletteType][0];
@@ -38,6 +35,11 @@ public class PetSpriteColorizer : MonoBehaviour
     public void SwitchPaletteToDefault(PetSpritePalettes palettes, PetData petData, PetPaletteType paletteType)
     {
         SwitchPalette(paletteType, GetDefaultPalettes(petData), palettes); 
+    }
+ 
+    public void SwitchPalette(PetPaletteType paletteType, PetPaletteDict color)
+    {
+        SwitchPalette(paletteType, color, SpritePalettes);
     }
 
     public void SwitchPalette(PetPaletteType paletteType, PetPaletteDict color, PetSpritePalettes palettes)

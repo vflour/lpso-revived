@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Linq;
+using UnityEngine.U2D.Animation;
 
 [Serializable]
 public class AttributeResolvers 
 {
     public int labelCount;
-    public UnityEngine.U2D.Animation.SpriteResolver[] resolvers;
+    public SpriteResolver[] resolvers;
 }
 
 public class PetSpriteAttributes : MonoBehaviour

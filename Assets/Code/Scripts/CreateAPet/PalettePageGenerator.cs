@@ -57,6 +57,7 @@ public class PalettePageGenerator : MonoBehaviour
     public void UpdatePetColor(PaletteColor color)
     {
         UpdateColor(color);
+        colorizer.changeAnimator.PlayChangePetAnimation(); // this is absolutely stupid
         sprites.currentPet.colors[paletteType] = color;
         colorizer.SwitchPalette(paletteType, sprites.currentPet.colors);
     }
