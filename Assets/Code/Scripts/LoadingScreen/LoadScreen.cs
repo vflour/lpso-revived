@@ -10,7 +10,7 @@ public class LoadScreen : MonoBehaviour
     private float _loadProgress = 0;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         StartCoroutine(Timer());
     }
