@@ -14,11 +14,12 @@ public class ObjectClickable : MapClickable
     protected Vector3Int characterCoordinates => mapMovement.tilemap.WorldToCell(characterPosition.position);
     protected Vector3Int endCoordinates => mapMovement.tilemap.WorldToCell(endPosition.position);
 
-    public virtual void Start()
+    public override void Start()
     {
         base.Start(); 
         // assumes non-player
-        animator = _moveable.GetComponent<Character>().animator;
+        Character character = GamePlayers.LocalUser.character; 
+        character.Spawned.AddListener(() => animator = character.animator);
     }
 
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
