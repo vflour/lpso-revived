@@ -15,7 +15,6 @@ public class InventoryHandler : MonoBehaviour
     }
 
     void addButton(int itemID){
-        Debug.Log("Attempting to make button " + itemID);
         GameDataManager Data = GameDataManager.Instance;
         if(itemID < GameDataManager.Instance.inventory.Count){
             ItemData ItemData = Data.itemList[Data.inventory[Data.inventory.Count - itemID -1]];
