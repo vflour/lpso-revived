@@ -3,6 +3,8 @@ using System.Xml.Linq;
 using SuperTiled2Unity.Editor.Geometry;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEditor;
+using System.Text.RegularExpressions;
 
 namespace SuperTiled2Unity.Editor
 {
@@ -245,6 +247,7 @@ namespace SuperTiled2Unity.Editor
 
             // Our pivot object will contain the tileset orientation and offset
             var goPivot = new GameObject();
+
             goPivot.name = string.Format("{0} (Pivot)", superObject.m_TiledName);
             goPivot.transform.localPosition = tileOffset + pivotOffset;
             goTRS.AddChildWithUniqueName(goPivot);
@@ -261,11 +264,29 @@ namespace SuperTiled2Unity.Editor
             goCF.transform.localScale = new Vector3(flip_h ? -1 : 1, flip_v ? -1 : 1, 1);
 
             var fromCenter = -translateCenter;
+            
+            // scuffed hacky stuff
+            // sets sprite pivots from OG png
+            var goOffset = fromCenter;
+            var colliderOffset = Vector3.zero;
+            var tiledSpritePath = AssetDatabase.GetAssetPath(tile.m_Sprite);
+            var originalSprite = AssetDatabase.LoadAssetAtPath<Sprite>(
+                    Regex.Replace(tiledSpritePath, ".tsx$", ".png")
+            );
+            if (originalSprite) 
+            {
+                Vector3 pivot = new Vector3(originalSprite.pivot.x/tile.m_Width, originalSprite.pivot.y/tile.m_Height, 0);
+                Vector3 pScale = translateCenter*2;
+
+                tile.m_Sprite = originalSprite;
+                goOffset = fromCenter + new Vector3(pivot.x*pScale.x, pivot.y*pScale.y);
+                colliderOffset = -goOffset + fromCenter;
+            }
 
             // Add another child, putting our coordinates back into the proper place
             var goTile = new GameObject(superObject.m_TiledName);
             goCF.AddChildWithUniqueName(goTile);
-            goTile.transform.localPosition = fromCenter;
+            goTile.transform.localPosition = goOffset;
             goTile.transform.localRotation = Quaternion.Euler(0, 0, 0);
             goTile.transform.localScale = Vector3.one;
 
@@ -277,7 +298,7 @@ namespace SuperTiled2Unity.Editor
                 renderer.color = superObject.CalculateColor();
                 Importer.AssignMaterial(renderer, m_ObjectLayer.m_TiledName);
                 Importer.AssignSpriteSorting(renderer);
-
+                
                 // Add the animator if needed
                 if (!tile.m_AnimationSprites.IsEmpty())
                 {
@@ -291,6 +312,11 @@ namespace SuperTiled2Unity.Editor
             {
                 // Add any colliders that were set up on the tile in the collision editor
                 tile.AddCollidersForTileObject(goTile, Importer.SuperImportContext);
+                
+                // TODO: move this hacky stuff somewhere else
+                var collider = goTile.GetComponentInChildren<SuperColliderComponent>();
+                if (collider)
+                    collider.transform.localPosition = colliderOffset;
             }
 
             // Store a reference to our tile object

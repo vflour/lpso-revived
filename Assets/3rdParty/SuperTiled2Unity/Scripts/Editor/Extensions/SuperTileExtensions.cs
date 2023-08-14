@@ -19,5 +19,6 @@ namespace SuperTiled2Unity.Editor
                 }
             }
         }
+
     }
 }

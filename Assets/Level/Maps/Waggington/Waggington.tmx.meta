@@ -7,25 +7,9 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: 1e68041a9b573884e93ffc85f312b61c, type: 3}
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles: []
   errors:
-  - Errors detected in tileset 'tree.tsx'. Check the tileset inspector for more details.
-    Your map may be broken until these are fixed.
-  - Errors detected in tileset 'potted_bush.tsx'. Check the tileset inspector for
-    more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'sea_star_1.tsx'. Check the tileset inspector for
-    more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'grass_tuft_1.tsx'. Check the tileset inspector for
-    more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'Grasspatch2.tsx'. Check the tileset inspector for
-    more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'house_sign.tsx'. Check the tileset inspector for
-    more details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'Roots.tsx'. Check the tileset inspector for more
-    details. Your map may be broken until these are fixed.
-  - Errors detected in tileset 'guppy.tsx'. Check the tileset inspector for more
-    details. Your map may be broken until these are fixed.
   - Missing tile '770' on tile object ''
   - Missing tile '728' on tile object ''
   - Missing tile '774' on tile object ''

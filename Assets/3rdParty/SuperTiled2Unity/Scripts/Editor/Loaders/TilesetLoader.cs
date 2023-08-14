@@ -133,10 +133,10 @@ namespace SuperTiled2Unity.Editor
             if (tex2d.width < textureWidth || tex2d.height < textureHeight)
             {
                 // Texture was not imported into Unity correctly
-                var max = Mathf.Max(textureWidth, textureHeight);
-                m_Importer.ReportError("Texture was imported at a smaller size. Make sure 'Max Size' on '{0}' is at least '{1}'", textureAssetPath, max);
-                m_TilesetScript.m_HasErrors = true;
-                return;
+                //var max = Mathf.Max(textureWidth, textureHeight);
+                //m_Importer.ReportError("Texture was imported at a smaller size. Make sure 'Max Size' on '{0}' is at least '{1}'", textureAssetPath, max);
+                //m_TilesetScript.m_HasErrors = true;
+                //return;
             }
 
             for (int i = 0; i < m_TilesetScript.m_TileCount; i++)
@@ -198,13 +198,13 @@ namespace SuperTiled2Unity.Editor
                     if (tex2d.width < textureWidth || tex2d.height < textureHeight)
                     {
                         // Texture was not imported into Unity correctly
-                        var max = Mathf.Max(textureWidth, textureHeight);
-                        m_Importer.ReportError("Texture was imported at a smaller size. Make sure 'Max Size' on '{0}' is at least '{1}'", textureAssetPath, max);
-                        m_TilesetScript.m_HasErrors = true;
-                        return;
+                        //var max = Mathf.Max(textureWidth, textureHeight);
+                        //m_Importer.ReportError("Texture was imported at a smaller size. Make sure 'Max Size' on '{0}' is at least '{1}'", textureAssetPath, max);
+                        //m_TilesetScript.m_HasErrors = true;
+                        //return;
                     }
 
-                    var rcSource = new Rect(0, 0, tex2d.width, tex2d.height);
+                    var rcSource = new Rect(0, 0, textureWidth, textureHeight);
                     atlas.AddTile(tileIndex, tex2d, rcSource);
                 }
             }

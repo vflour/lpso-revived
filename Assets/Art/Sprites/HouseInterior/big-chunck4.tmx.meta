@@ -7,7 +7,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: 1e68041a9b573884e93ffc85f312b61c, type: 3}
+  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
   missingFiles:
   - walls3.tsx
   errors:

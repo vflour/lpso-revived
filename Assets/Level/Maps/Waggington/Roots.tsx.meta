@@ -7,11 +7,14 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: ef3613e56763ddd47b41649b31e769be, type: 3}
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
   errors:
-  - Texture was imported at a smaller size. Make sure 'Max Size' on 'Roots.png' is
-    at least '2196'
+  - Atlas is not big enough to fit first tile. Try a larger atlas setting.
+  - Atlas size is (2048, 2048) but we need at least (2198, 1348).
+  - Unknown error encountered. Please report as bug. Stack track is in the console
+    output.
+  - Could not create sprite (0, 0, 2196, 1346) from a 2048x1255 texture.
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -19,7 +22,7 @@ ScriptedImporter:
   importerVersion: 13
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 2
+  numberOfObjectsImported: 0
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
