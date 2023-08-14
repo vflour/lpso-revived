@@ -42,7 +42,10 @@ public class CursorManager : MonoBehaviour
         // cursors are stored as sprites
         // since they like, need particle physics
         var cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        _currentCursor.transform.position = new Vector3(cursorPosition.x, cursorPosition.y, 1); 
+        var oldPosition = _currentCursor.transform.position;
+        var targetPosition = new Vector3(cursorPosition.x, cursorPosition.y, 1); 
+        
+        var newPosition = (oldPosition - targetPosition).magnitude < 0.15f ? Vector3.Lerp(oldPosition, targetPosition, 10*Time.deltaTime) : targetPosition;
+        _currentCursor.transform.position = newPosition;
     }
-    
 }
