@@ -14,9 +14,9 @@ public class ObjectClickable : MapClickable
     protected Vector3Int characterCoordinates => mapMovement.tilemap.WorldToCell(characterPosition.position);
     protected Vector3Int endCoordinates => mapMovement.tilemap.WorldToCell(endPosition.position);
 
-    void Start()
+    public virtual void Start()
     {
-        base.Awake();
+        base.Start(); 
         // assumes non-player
         animator = _moveable.GetComponent<Character>().animator;
     }

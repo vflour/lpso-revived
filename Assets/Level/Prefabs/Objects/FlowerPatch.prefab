@@ -134,6 +134,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapMovement: {fileID: 0}
   animator: {fileID: 0}
-  animationStateName: FlowerSn
+  animationStateName: ChangeHead
   characterPosition: {fileID: 3516516313911878673}
   endPosition: {fileID: 3516516313911878673}

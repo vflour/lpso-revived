@@ -14,6 +14,10 @@ public abstract class MapClickable: Clickable
     public virtual void Awake()
     {
         mapMovement = GameMap.Movement;
+    }
+
+    public virtual void Start()
+    {
         _moveable = GamePlayers.LocalUser.character.moveable;
     }
 

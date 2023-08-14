@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 public class BusyObjectClickable : ObjectClickable
 {
     
+    public const float ANIM_TIMEOUT = 5.0f;
+    
     public override void handle(Vector3 globalPosition, Vector3 mousePosition)
     {
         base.handle(globalPosition, mousePosition);
@@ -14,15 +16,20 @@ public class BusyObjectClickable : ObjectClickable
 
     private IEnumerator PlayAndWaitForAnimation()
     {
+        System.Diagnostics.Stopwatch stopWatch = new System.Diagnostics.Stopwatch();
         // play, get state & wait
         bool completed = false;
         var finishHandler = animator.GetComponent<AnimationFinishHandler>();
 
-        // todo: Timeout after 5-10s and throw and error
         finishHandler.finishedAnimation.AddListener(() => completed = true);
         PlayAnimation();
+        
+        stopWatch.Start();
+        yield return new WaitUntil(() => completed == true || stopWatch.Elapsed.Seconds > ANIM_TIMEOUT );
+        stopWatch.Stop();
 
-        yield return new WaitUntil(() => completed == true);
+        if (ANIM_TIMEOUT < stopWatch.Elapsed.Seconds)
+            Debug.LogError("Busy obj animation timed out");
     }
 
     private IEnumerator AnimateWhenReached()
