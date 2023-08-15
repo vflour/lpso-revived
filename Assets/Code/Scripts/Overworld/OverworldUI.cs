@@ -54,6 +54,7 @@ public class OverworldUI : MonoBehaviour
     public Button[] mapIcons;
     public TMPro.TextMeshProUGUI LocationName;
 
+    public GameObject player;
     public Button nothingOk;
 
     public class MapIcon
@@ -122,6 +123,7 @@ public class OverworldUI : MonoBehaviour
 
     public void TravelConfirm()
     {
+        GameDataManager.Instance.OldLocation = player.transform.position;
         SceneManager.LoadScene(scenes[SelectedLocation].ToString(), LoadSceneMode.Single);
     }
 

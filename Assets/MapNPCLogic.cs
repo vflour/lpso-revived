@@ -23,7 +23,6 @@ public class MapNPCLogic : MonoBehaviour
              if(hit.collider == this.GetComponent<BoxCollider2D>())
             {
                 Debug.Log("Clicked on NPC");
-                GameData.OldLocation = player.transform.position;
                 uiReference.GetComponent<OverworldUI>().TravelTo(scene);
             }
          }

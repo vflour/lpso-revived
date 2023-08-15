@@ -18,7 +18,7 @@ public class User : MonoBehaviour
 
     private bool _spawned = false;
 
-    private void Spawn()
+    public void Spawn()
     {
         // UserGetter.CharacterData
         // UserGetter.PreviousLocation
@@ -49,16 +49,4 @@ public class User : MonoBehaviour
         // the local user's movement should be the game map moveable
         character.moveable.mapMovement = GameMap.Movement;
     }
-
-    // Initialize AFTER Start is called
-    void Update()
-    {
-        if (!_spawned) 
-        {
-            _spawned = true;
-            // Might simplify if redundant
-            Spawn();
-        }
-    }
-
 }

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MapSpawn : MonoBehaviour
 {
     public MapNodeList mapNodeList;
 
     private List<MapNode> _spawnList = new List<MapNode>();
+
+    public UnityEvent SpawnReady;
 
     void Start()
     {
@@ -19,6 +22,7 @@ public class MapSpawn : MonoBehaviour
                 _spawnList.Add(node);
             }
         }
+        SpawnReady.Invoke();
     }
 
     public Vector3Int GetSpawnPoint()
