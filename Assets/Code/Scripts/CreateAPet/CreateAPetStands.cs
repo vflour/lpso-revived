@@ -55,10 +55,11 @@ public class CreateAPetStands : MonoBehaviour
             for(int i = 0; i < value.Length; i++)
             {
                 _sprites[i] = Instantiate(value[i], _spriteHolders[i]);
+                colorizer.SwitchAllPalettesToDefault(_sprites[i].GetComponent<PetSpritePalettes>(), petData[i]);
+                
                 foreach (SpriteRenderer sprite in _sprites[i].GetComponentsInChildren<SpriteRenderer>())
                     sprite.gameObject.layer = _spriteHolders[i].gameObject.layer;
 
-                colorizer.SwitchAllPalettesToDefault(_sprites[i].GetComponent<PetSpritePalettes>(), petData[i]);
             }
         }
     }
