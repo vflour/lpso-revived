@@ -7,7 +7,7 @@ public class UserCamera : MonoBehaviour
     public float speed;
     public new Camera camera;
     public Moveable moveable;
-    public const float BOUNDS_FRACTION = 0.30f; 
+    public const float BOUNDS_FRACTION = 0.25f; 
     private bool isRecentering = false;
     
     public bool InCameraBounds {
@@ -22,7 +22,7 @@ public class UserCamera : MonoBehaviour
             float endX = startX + width;
             float endY = startY + height;
 
-            var moveableScreenPosition = camera.WorldToScreenPoint(moveable.FinalPosition);
+            var moveableScreenPosition = camera.WorldToScreenPoint(moveable.NextPosition);
             return  moveableScreenPosition.x > startX &&
                     moveableScreenPosition.y > startY &&
                     moveableScreenPosition.x < endX   &&
