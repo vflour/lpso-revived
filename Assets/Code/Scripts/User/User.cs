@@ -24,13 +24,13 @@ public class User : MonoBehaviour
         // UserGetter.PreviousLocation
         GameDataManager GameData = GameDataManager.Instance;
         Vector3Int spawnCoordinates = spawner.GetSpawnPoint();
+
         if(GameData.FreshSpawn == false){
             character.Spawn(tilemap.WorldToCell(new Vector3Int((int)GameData.OldLocation.x,(int)GameData.OldLocation.y,(int)GameData.OldLocation.z)));
         } else {
             character.Spawn(spawnCoordinates);
             GameData.FreshSpawn = false;
         }
-
         userCamera.RefreshCamera();
     }
     
