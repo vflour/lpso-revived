@@ -6068,6 +6068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3748706679496112329}
+  - component: {fileID: 3815397436446081634}
   m_Layer: 5
   m_Name: map
   m_TagString: Untagged
@@ -6096,6 +6097,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1.295, y: 0}
   m_SizeDelta: {x: 1917.4, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &3815397436446081634
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239649155756503860}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &3253533011761787348
 GameObject:
   m_ObjectHideFlags: 0
@@ -8449,12 +8462,12 @@ RectTransform:
   m_Children:
   - {fileID: 3333941127969015635}
   - {fileID: 1880045636971917045}
-  - {fileID: 6715211456923563139}
   - {fileID: 3748706679496112329}
   - {fileID: 1095294540894965147}
   - {fileID: 6273726443130651883}
   - {fileID: 1177449797090306506}
   - {fileID: 6344081747554224411}
+  - {fileID: 6715211456923563139}
   - {fileID: 363307866767000348}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19804,6 +19817,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100394615129788280, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100394615129788280, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136658345455268044, guid: 52a2c4f0ce3a14d4aa3e170bac4c30e6, type: 3}

@@ -40,13 +40,12 @@ public class PetSpriteSwitcher : MonoBehaviour
         int maxAttributes = attributes.resolvers[attributeType].labelCount;
         
         // Switch attrib index, use modulo to go back around
-        
-        AttributeSelected.Invoke();
         int attributeValue = (sprites.currentPet.attributes[attributeType] + adder + maxAttributes) % maxAttributes;
         sprites.currentPet.attributes[attributeType] = attributeValue;
         
         changeAnimator.PlayChangePetAnimation();
 
+        AttributeSelected.Invoke();
         // Gender isn't a sprite
         if (attributeType != PetAttributeType.Gender)
            attributes.Resolve(attributeType, attributeValue);
@@ -63,7 +62,7 @@ public class PetSpriteSwitcher : MonoBehaviour
         selectedAttribute = attributeType;
         if (hasChanged || attributeType == PetAttributeType.Gender)
         {
-            SwitchAttribute(attributeType);
+            SwitchAttribute(attributeType + 1);
         }
     }
 

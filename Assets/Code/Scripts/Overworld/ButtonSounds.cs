@@ -25,8 +25,8 @@ public class ButtonSounds : MonoBehaviour
     { ButtonSound.PlayOneShot(openUserMenu); }
 
     public void EnlargeImage()
-    { childImage.transform.localScale = new Vector3(1.1f, 1.1f, 0); }
+    { childImage.transform.localScale = new Vector3(1.1f, 1.1f, 1); }
 
     public void ShrinkImage()
-    { childImage.transform.localScale = new Vector3(1, 1, 0); }
+    { childImage.transform.localScale = new Vector3(1, 1, 1); }
 }
