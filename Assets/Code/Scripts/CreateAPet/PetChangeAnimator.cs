@@ -14,4 +14,9 @@ public class PetChangeAnimator : MonoBehaviour
         standsAnimator.SetTrigger("ShowParticles");
     }
 
+    public void PlayStillAnimation()
+    {
+        stands.PetSprite.GetComponent<Animator>().Play("Still", 0, 0);
+    }
+
 }
