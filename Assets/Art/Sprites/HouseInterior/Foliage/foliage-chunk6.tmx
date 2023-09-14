@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="11" height="11" tilewidth="106" tileheight="54" infinite="0" nextlayerid="4" nextobjectid="12">
+ <tileset firstgid="1" source="grass.tsx"/>
+ <tileset firstgid="51" source="objects/purple_cactus.tsx"/>
+ <tileset firstgid="52" source="objects/bush7.tsx"/>
+ <tileset firstgid="53" source="objects/bush4.tsx"/>
+ <tileset firstgid="54" source="objects/flower_2.tsx"/>
+ <tileset firstgid="55" source="objects/bush3.tsx"/>
+ <tileset firstgid="56" source="objects/orange_cactus.tsx"/>
+ <tileset firstgid="57" source="objects/PurpleFlower.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="11" height="11">
+  <data encoding="csv">
+44,17,42,40,45,45,40,42,16,1,40,
+44,1,6,1,6,16,25,1,46,40,42,
+48,42,40,1,37,37,1,16,25,1,1,
+45,17,1,48,48,25,42,1,45,17,6,
+17,45,17,42,48,25,16,46,25,1,16,
+48,42,6,17,46,44,1,17,45,25,1,
+44,1,45,25,1,1,17,42,48,44,46,
+6,40,1,46,17,25,6,45,46,1,1,
+48,42,1,48,1,28,17,48,1,40,42,
+17,28,46,1,45,1,42,17,48,48,1,
+1,42,1,42,40,1,17,1,17,6,40
+</data>
+ </layer>
+ <objectgroup id="2" name="Object Layer 1">
+  <object id="1" gid="51" x="314.933" y="437.849" width="120" height="79.8232"/>
+  <object id="2" gid="52" x="296.143" y="301.825" width="92.0868" height="98.5743"/>
+  <object id="3" gid="53" x="303.91" y="356.486" width="47.1553" height="71.6062"/>
+  <object id="11" gid="51" x="32.801" y="223.981" width="120" height="79.8232"/>
+ </objectgroup>
+ <objectgroup id="3" name="Object Layer 2">
+  <object id="4" gid="54" x="321.852" y="235.812" width="145.078" height="60.7429"/>
+  <object id="5" gid="54" x="197.998" y="399.484" width="102.283" height="42.8251"/>
+  <object id="6" gid="55" x="180.432" y="324.679" width="144.667" height="124.872"/>
+  <object id="7" gid="56" x="144.226" y="119.774" width="94" height="85.8685"/>
+  <object id="8" gid="56" x="205.226" y="126.774" width="94" height="85.8685"/>
+  <object id="9" gid="57" x="252.664" y="145.336" width="31.9844" height="53.1688"/>
+  <object id="10" gid="54" x="50.5314" y="107.133" width="145.078" height="60.7429"/>
+ </objectgroup>
+</map>

@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - CollisionMap
   - Water
   - UI
-  - 
+  - NPC
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 2255860789
+    locked: 0
+  - name: UI
+    uniqueID: 891706579
     locked: 0

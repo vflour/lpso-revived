@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: a30fd1d6f674cc441b0b12119a0e6a9c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 1e68041a9b573884e93ffc85f312b61c, type: 3}
+  missingFiles: []
+  errors:
+  - Errors detected in tileset 'Posh-pet-pad-tileset.tsx'. Check the tileset inspector
+    for more details. Your map may be broken until these are fixed.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 26
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 2
+  tilesAsObjects: 0
+  sortingMode: 0
+  isIsometric: 1
+  customImporterClassName: 
+  internalTilesets: []

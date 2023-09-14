@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: a9be35d7d1bf6c7428706907bb177060
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: ef3613e56763ddd47b41649b31e769be, type: 3}
+  missingFiles: []
+  errors:
+  - Atlas is not big enough to fit first tile. Try a larger atlas setting.
+  - Atlas size is (2048, 2048) but we need at least (2050, 1538).
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 4
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048

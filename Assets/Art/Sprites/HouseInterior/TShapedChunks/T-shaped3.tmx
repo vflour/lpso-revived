@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="isometric" renderorder="right-down" width="7" height="12" tilewidth="106" tileheight="54" infinite="0" nextlayerid="9" nextobjectid="23">
+ <tileset firstgid="1" source="Posh-pet-pad-tileset.tsx"/>
+ <tileset firstgid="3" source="wall3.tsx"/>
+ <tileset firstgid="4" source="../Big square house chunks/wall2.tsx"/>
+ <tileset firstgid="5" source="wall12.tsx"/>
+ <tileset firstgid="6" source="wall11.tsx"/>
+ <tileset firstgid="7" source="wall16.tsx"/>
+ <tileset firstgid="8" source="wall16.1.tsx"/>
+ <tileset firstgid="9" source="wall17.tsx"/>
+ <tileset firstgid="10" source="wall24.tsx"/>
+ <tileset firstgid="11" source="wall25.tsx"/>
+ <tileset firstgid="12" source="wall13.tsx"/>
+ <tileset firstgid="13" source="wall18.tsx"/>
+ <tileset firstgid="14" source="wall20.tsx"/>
+ <tileset firstgid="15" source="wall14.tsx"/>
+ <layer id="1" name="Floor" width="7" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,
+0,0,0,2,2,2,2,
+0,0,0,2,2,2,2,
+0,0,0,2,2,2,2,
+2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,
+2,2,2,2,2,2,2,
+0,0,0,2,2,2,2,
+0,0,0,2,2,2,2,
+0,0,0,2,2,2,2,
+0,0,0,0,0,0,0
+</data>
+ </layer>
+ <group id="4" name="Walls">
+  <objectgroup id="5" name="Up Perspective">
+   <object id="3" gid="5" x="30.4324" y="357.234" width="223.5" height="328.027"/>
+   <object id="9" gid="10" x="99.3059" y="234.03" width="162.929" height="303.066"/>
+   <object id="13" gid="7" x="104.39" y="457.541" width="160.333" height="303.804"/>
+  </objectgroup>
+  <objectgroup id="6" name="Left Perspective">
+   <object id="12" gid="11" x="183.513" y="535.696" width="158.811" height="301.553" rotation="0.0909774"/>
+   <object id="21" gid="14" x="309.996" y="629.37" width="218.5" height="330.767" rotation="359.845"/>
+  </objectgroup>
+  <objectgroup id="7" name="Right Perspective">
+   <object id="10" gid="11" x="178.278" y="150.932" width="158.811" height="301.553" rotation="0.0909774"/>
+   <object id="22" gid="15" x="310.258" y="85.0933" width="228" height="334.631"/>
+  </objectgroup>
+  <objectgroup id="8" name="Down Perspective">
+   <object id="1" gid="3" x="498.794" y="436.706" width="532.542" height="491.577"/>
+  </objectgroup>
+ </group>
+</map>
