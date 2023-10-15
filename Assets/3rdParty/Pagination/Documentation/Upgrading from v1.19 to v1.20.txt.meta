@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fe4e99cd001da8743ba7c1fa46faef5c
+timeCreated: 1473349493
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Documentation/Upgrading from v1.19 to v1.20.txt
+  uploadId: 338072

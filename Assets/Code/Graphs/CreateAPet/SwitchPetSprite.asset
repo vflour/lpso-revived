@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e66c6366d904e98bc83428217d4fd7, type: 3}
+  m_Name: SwitchPetSprite
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"graph":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"In","label":null,"summary":null,"hideLabel":true}],"controlOutputDefinitions":[{"key":"Out","label":null,"summary":null,"hideLabel":true}],"valueInputDefinitions":[{"hasDefaultValue":false,"defaultValue":{"$content":"None","$type":"PetAttributeType"},"_type":"PetAttributeType","key":"Switch","label":null,"summary":null,"hideLabel":false}],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":-51.79047,"y":101.6393},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":-642.0,"y":-84.0},"guid":"24ef7daa-5e71-430f-a607-d71ed3163981","$version":"A","$type":"Unity.VisualScripting.GraphInput","$id":"12"},{"defaultValues":{},"position":{"x":204.0,"y":-101.0},"guid":"9b084afe-73f6-4a35-a03d-0fb1371aea1d","$version":"A","$type":"Unity.VisualScripting.GraphOutput","$id":"14"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PetCreator","$type":"System.String"}},"position":{"x":-536.0,"y":144.0},"guid":"710c85bf-253b-445e-a1dd-0eecbfaa5cb5","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"16"},{"member":{"name":"switcher","parameterTypes":null,"targetType":"PetCreator","targetTypeName":"PetCreator","$version":"A"},"defaultValues":{"target":null},"position":{"x":-305.0,"y":53.0},"guid":"7f9e992a-761c-47d0-9e5d-fbb337157023","$version":"A","$type":"Unity.VisualScripting.GetMember","$id":"18"},{"chainable":false,"parameterNames":["attributeType"],"member":{"name":"SelectAttributeButton","parameterTypes":["PetAttributeType"],"targetType":"PetSpriteSwitcher","targetTypeName":"PetSpriteSwitcher","$version":"A"},"defaultValues":{"target":null,"%attributeType":{"$content":"None","$type":"PetAttributeType"}},"position":{"x":-91.0,"y":-58.0},"guid":"b6e7b83d-7fcf-4a12-b288-e72b4071b581","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"21"},{"sourceUnit":{"$ref":"12"},"sourceKey":"In","destinationUnit":{"$ref":"21"},"destinationKey":"enter","guid":"a9f7816c-45d8-4b3a-85e5-4783e9962b7f","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"21"},"sourceKey":"exit","destinationUnit":{"$ref":"14"},"destinationKey":"Out","guid":"5643ed11-a92b-4b70-9786-c9d146d188e3","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"16"},"sourceKey":"value","destinationUnit":{"$ref":"18"},"destinationKey":"target","guid":"0653eeb9-5866-4c08-9e49-a4f76695cd34","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"18"},"sourceKey":"value","destinationUnit":{"$ref":"21"},"destinationKey":"target","guid":"e034adf7-cd2c-41ea-bf07-879346c75732","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"12"},"sourceKey":"Switch","destinationUnit":{"$ref":"21"},"destinationKey":"%attributeType","guid":"63e3d90b-8acf-4d43-a099-a1b4c1bd3d52","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}'
+    _objectReferences: []

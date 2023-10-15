@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 58007796b9f725148a60a71acd1d03e2
+timeCreated: 1454502374
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Documentation/Change List.txt
+  uploadId: 338072

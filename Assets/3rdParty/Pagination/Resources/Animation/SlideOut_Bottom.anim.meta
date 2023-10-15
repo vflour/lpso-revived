@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f99f40096f26fe34085f015ae3396db7
+timeCreated: 1454589837
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 54552
+  packageName: PagedRect - Paging, Galleries, and Menus for Unity UI
+  packageVersion: 1.54
+  assetPath: Assets/UI/Pagination/Resources/Animation/SlideOut_Bottom.anim
+  uploadId: 338072

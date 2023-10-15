@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: 2a97388ce0f4bfa409246a71b7a1f7a7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles: []
+  errors:
+  - Atlas is not big enough to fit first tile. Try a larger atlas setting.
+  - Atlas size is (2048, 2048) but we need at least (2278, 2186).
+  - Unknown error encountered. Please report as bug. Stack track is in the console
+    output.
+  - Could not create sprite (0, 0, 2276, 2184) from a 2048x1965 texture.
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 100
+  edgesPerEllipse: 32
+  numberOfObjectsImported: 0
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
