@@ -201,7 +201,7 @@ SpriteRenderer:
   m_Size: {x: 8.28, y: 4.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &24708765
@@ -51853,7 +51853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveable: {fileID: 1715943496}
-  characterModelPrefab: {fileID: 2241328525606987375, guid: 5e841e35dc7d11d4084a569f3eb92071, type: 3}
+  characterModelPrefab: {fileID: 8471878272028999495, guid: 23f33ed8a871a6847bb89766a61aebc3, type: 3}
   currentCharacterObject: {fileID: 0}
   animator: {fileID: 0}
   characterParent: {fileID: 732420139}
