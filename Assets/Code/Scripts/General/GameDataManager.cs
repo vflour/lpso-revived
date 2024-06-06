@@ -7,7 +7,15 @@ using System.IO;
 public class GameDataManager : MonoBehaviour
 {
     public static GameDataManager Instance;
+    public UserData userData = new UserData();
 
+    public void LoginUser(string username, string guid)
+    {
+        userData.publicData.username = username;
+        userData.guid = guid;
+    }
+
+    // todo: deprecated?
     public bool Loaded {get; private set;}
     public List<ItemData> itemList;
     public List<int> inventory = new List<int>();

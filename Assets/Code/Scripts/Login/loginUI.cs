@@ -27,19 +27,16 @@ public class loginUI : MonoBehaviour
 
     public void CheckUsername()
     {
-        if (usernameField.text.Length > 0)
-        {
-            LoginSuccess();
-        }
-        else
+        if (usernameField.text.Length <= 0)
         {
             placeholderUsername.text = "Please enter a username";
             placeholderUsername.color = new Color32(253, 33, 33, 255);
         }
     }
 
-    public void LoginSuccess()
+    public void LoginSuccess(string guid, string username)
     {
+        GameDataManager.Instance.LoginUser(guid, username);
         SceneManager.LoadScene("CreateAPet");
     }
 
