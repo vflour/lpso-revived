@@ -449,7 +449,9 @@ MonoBehaviour:
   pressedSound: {fileID: 8300000, guid: 6338b47d8be3ca444b0ceaa71a232210, type: 3}
   openPDA: {fileID: 0}
   openUserMenu: {fileID: 0}
+  defaultScale: {x: 0, y: 0, z: 0}
   childImage: {fileID: 0}
+  ignoreChild: 1
 --- !u!114 &7568895341220960089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,6 +1456,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723559116638185486}
     m_Modifications:
+    - target: {fileID: 1268932279439411893, guid: e67d292dd2e957547b852b1d8c2189a1, type: 3}
+      propertyPath: childImage
+      value: 
+      objectReference: {fileID: 2790432679244353911}
     - target: {fileID: 2408510435929054526, guid: e67d292dd2e957547b852b1d8c2189a1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 570.581
@@ -1643,6 +1649,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 723559116638185486}
     m_Modifications:
+    - target: {fileID: 1268932279439411893, guid: e67d292dd2e957547b852b1d8c2189a1, type: 3}
+      propertyPath: childImage
+      value: 
+      objectReference: {fileID: 4954561721661816434}
     - target: {fileID: 2408510435929054526, guid: e67d292dd2e957547b852b1d8c2189a1, type: 3}
       propertyPath: m_SizeDelta.x
       value: 570.581

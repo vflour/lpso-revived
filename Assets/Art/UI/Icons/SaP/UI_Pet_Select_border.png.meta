@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Pet_Select_border_0: 8726832122611412738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

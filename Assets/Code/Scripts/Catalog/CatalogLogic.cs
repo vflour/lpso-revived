@@ -44,8 +44,8 @@ public class CatalogLogic : MonoBehaviour
     public void BuyItem(){
         if (GameDataManager.Instance.kibble >= CurrentItem.price) {
             Debug.Log(CurrentItem.ID);
-            GameDataManager.Instance.inventory.Add((int)CurrentItem.ID);
-            GameDataManager.Instance.kibble -= CurrentItem.price;
+            GameDataManager.Instance.AddInventory(CurrentItem.ID);
+            GameDataManager.Instance.SubtractKibble(CurrentItem.price);
             MyKibble.SetText(GameDataManager.Instance.kibble.ToString());
             BuyTag.SetActive(false);
         }

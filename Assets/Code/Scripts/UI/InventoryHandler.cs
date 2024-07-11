@@ -11,39 +11,18 @@ public class InventoryHandler : MonoBehaviour
     public TMPro.TextMeshProUGUI[] inventoryItemStackAmount;
     public int itemCount;
     public int finalPageItemCount;
-    public int pageCount;
+    public int pageCount = 1;
     public int maxPageCount;
     public TMPro.TextMeshProUGUI pageCountDisplay;
     public Button pageLeft;
     public Button pageRight;
     public ItemData itemData;
 
-    public float invOpenPosition;
-    public float invClosePosition;
-    public GameObject invCloseRef;
-
+    public OverworldUI owUI;
 
     void Awake()
     {
-        for (int i = 0; i < Buttons.Length; i++)
-        {
-            //addButton(i);
-        }
         pageCount = 1;
-        invOpenPosition = gameObject.transform.position.x;
-        invClosePosition = invCloseRef.transform.position.x;
-        Destroy(invCloseRef);
-        gameObject.transform.position = new Vector3(invClosePosition, gameObject.transform.position.y, 0);
-    }
-
-    public void swoopIn()
-    {
-        LeanTween.moveX(gameObject, invOpenPosition, 0.2f).setEase(LeanTweenType.easeOutQuad);
-    }
-
-    public void swoopOut()
-    {
-        LeanTween.moveX(gameObject, invClosePosition, 0.2f).setEase(LeanTweenType.easeOutQuad);
     }
 
     void addButton(int itemID)
@@ -102,7 +81,8 @@ public class InventoryHandler : MonoBehaviour
             {
                 for (int i = 0; i < finalPageItemCount; i++)
                 {
-                    Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) / 12) + i) - 1]].icon;
+                    Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) - 12) + i)]].icon;
+                    inventoryItemStackAmount[i].text = GameDataManager.Instance.invItemCounts[(((pageCount * 12) - 12) + i)].ToString();
                     if (inventoryItemStackAmount[i].text == "1")
                     {
                         inventoryItemStackAmount[i].text = "";
@@ -117,8 +97,9 @@ public class InventoryHandler : MonoBehaviour
             {
                 for (int i = 0; i < ItemSlotBg.Length; i++)
                 {
-                    Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) / 12) + i) - 1]].icon;
+                    Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) - 12) + i)]].icon;
                     ItemSlotBg[i].SetActive(true);
+                    inventoryItemStackAmount[i].text = GameDataManager.Instance.invItemCounts[(((pageCount * 12) - 12) + i)].ToString();
                     if (inventoryItemStackAmount[i].text == "1")
                     {
                         inventoryItemStackAmount[i].text = "";
@@ -130,7 +111,8 @@ public class InventoryHandler : MonoBehaviour
         {
             for (int i = 0; i < ItemSlotBg.Length; i++)
             {
-                Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) / 12) + i) - 1]].icon;
+                Buttons[i].GetComponent<Image>().sprite = GameDataManager.Instance.itemList[GameDataManager.Instance.inventory[(((pageCount * 12) - 12) + i)]].icon;
+                inventoryItemStackAmount[i].text = GameDataManager.Instance.invItemCounts[(((pageCount * 12) - 12) + i)].ToString();
                 if (inventoryItemStackAmount[i].text == "1")
                 {
                     inventoryItemStackAmount[i].text = "";

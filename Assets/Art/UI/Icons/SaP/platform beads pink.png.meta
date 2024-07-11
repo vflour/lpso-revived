@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      platform beads pink_0: 924467747797217909
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

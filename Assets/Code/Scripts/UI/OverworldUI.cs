@@ -16,7 +16,7 @@ public class OverworldUI : MonoBehaviour
 
     public string[] scenes;
     [SerializeField] Button[] mainUIButtons;
-    [SerializeField] GameObject[] mainUI;
+    public GameObject[] mainUI;
     int currentUI;
     [Header("UI GameObjects")]
     public GameObject petUI;
@@ -31,6 +31,8 @@ public class OverworldUI : MonoBehaviour
 
     public Image petBarIcon;
 
+    public GameObject GemDiving;
+
 
     [Header("Pink Pet Case")]
     [SerializeField] GameObject SideInv;
@@ -43,6 +45,8 @@ public class OverworldUI : MonoBehaviour
     [SerializeField] Button[] mapIcons;
     [SerializeField] TMPro.TextMeshProUGUI LocationName;
 
+    [Header("General")]
+    public TextPopup textPopup;
     public GameObject player;
 
     // temporary testing list
@@ -108,15 +112,16 @@ public class OverworldUI : MonoBehaviour
         }
         else if (buttonID == 5)
         {
+            invHandler.pageCount = 1;
             invHandler.inventoryUpdate();
-            if (inventory.activeSelf)
-            {
-                invHandler.swoopOut();
-            }
-            else
-            {
-                invHandler.swoopIn();
-            }
+            // if (inventory.activeSelf)
+            // {
+            //    invHandler.swoopOut();
+            // }
+            //else
+            // {
+            //    invHandler.swoopIn();
+            // }
         }
         if (buttonID != 5)
         {
@@ -127,6 +132,10 @@ public class OverworldUI : MonoBehaviour
     // TODO: add side inventory logic
 
 
+    public void Popup(string str)
+    {
+        textPopup.SpawnText(player.transform.position.x, player.transform.position.y, str, textPopup.ArialBlack, textPopup.ABGreen, 40, 0.2f, 0.5f, 1, 5);
+    }
 
     public void TravelTo(int buttonID)
     {

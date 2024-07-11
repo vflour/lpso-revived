@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      platform beads purple_0: -4591676728140708873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

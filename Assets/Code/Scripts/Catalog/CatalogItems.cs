@@ -228,14 +228,15 @@ public class CatalogItems : MonoBehaviour
         BuyTag.SetActive(true);
     }
 
+
     public void BuyItem()
     {
         if (GameDataManager.Instance.kibble >= CurrentItem.price)
         {
             Debug.Log(CurrentItem.ID);
-            GameDataManager.Instance.inventory.Add((int)CurrentItem.ID);
-            GameDataManager.Instance.kibble -= CurrentItem.price;
-            MyKibble.SetText($"{GameDataManager.Instance.kibble:n0}");
+            GameDataManager.Instance.AddInventory(CurrentItem.ID);
+            GameDataManager.Instance.SubtractKibble(CurrentItem.price);
+            MyKibble.SetText(GameDataManager.Instance.kibble.ToString());
             BuyTag.SetActive(false);
         }
     }

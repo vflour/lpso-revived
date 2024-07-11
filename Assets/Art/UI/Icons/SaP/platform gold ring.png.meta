@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      platform gold ring_0: 2974830761983859426
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

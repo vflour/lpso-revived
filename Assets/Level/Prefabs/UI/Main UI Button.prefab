@@ -36,7 +36,6 @@ RectTransform:
   m_Children:
   - {fileID: 8503776223481151991}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -236,6 +235,11 @@ MonoBehaviour:
   ButtonSound: {fileID: 8274355645376431279}
   hoverSound: {fileID: 8300000, guid: 15a55e703d508ba4ab16a0e25bd35d05, type: 3}
   pressedSound: {fileID: 8300000, guid: 6338b47d8be3ca444b0ceaa71a232210, type: 3}
+  openPDA: {fileID: 0}
+  openUserMenu: {fileID: 0}
+  defaultScale: {x: 0, y: 0, z: 0}
+  childImage: {fileID: 0}
+  ignoreChild: 0
 --- !u!114 &4285602777184048639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +316,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2256694217660476501}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

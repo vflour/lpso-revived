@@ -757,6 +757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 132516920420355919, guid: 23b8cae95268f0b4a8f9a2c36d085fd2, type: 3}
+      propertyPath: currentPetIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3785976846473623917, guid: 23b8cae95268f0b4a8f9a2c36d085fd2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9494501
@@ -2565,6 +2569,20 @@ MonoBehaviour:
     name: 
     species: 
     subSpecies: 0
+    favFood1: 0
+    favFood2: 0
+    favFood3: 0
+    luckyLevel: 1
+    luckyExp: 0
+    luckyLvlUp: 0
+    luckMaxLvlReached: 0
+    gemLevel: 1
+    gemExp: 0
+    gemLvlUp: 0
+    gemMaxLvlReached: 0
+    foodLevel: 95
+    funLevel: 95
+    comfortLevel: 95
 --- !u!114 &1935490285
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -249,7 +249,9 @@ MonoBehaviour:
   pressedSound: {fileID: 8300000, guid: 6338b47d8be3ca444b0ceaa71a232210, type: 3}
   openPDA: {fileID: 0}
   openUserMenu: {fileID: 0}
+  defaultScale: {x: 0, y: 0, z: 0}
   childImage: {fileID: 0}
+  ignoreChild: 1
 --- !u!114 &1235638159122596112
 MonoBehaviour:
   m_ObjectHideFlags: 0

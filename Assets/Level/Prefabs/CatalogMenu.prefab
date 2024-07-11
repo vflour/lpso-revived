@@ -261,7 +261,9 @@ MonoBehaviour:
   pressedSound: {fileID: 8300000, guid: 6338b47d8be3ca444b0ceaa71a232210, type: 3}
   openPDA: {fileID: 8300000, guid: fd7b4294917c9554d8b4d4eab833391d, type: 3}
   openUserMenu: {fileID: 0}
+  defaultScale: {x: 0, y: 0, z: 0}
   childImage: {fileID: 0}
+  ignoreChild: 1
 --- !u!114 &3396509084611694138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2753,7 +2755,6 @@ MonoBehaviour:
   ItemCost: {fileID: 1873453417359280529}
   pageTitle: {fileID: 3185768240211218501}
   BuyTag: {fileID: 1441576309294299933}
-  CurrentItem: {fileID: 0}
   ItemDisplay:
   - {fileID: 2698559722382979477}
   - {fileID: 8806067668934177979}
@@ -2807,14 +2808,8 @@ MonoBehaviour:
   - Food
   arrowRight: {fileID: 3716921881967081496}
   arrowLeft: {fileID: 1892328146686664653}
-  currentTab: 0
-  pageCount: 1
-  maxPageCount: 1
-  finalPageItemCount: 0
   pageNumberLeftText: {fileID: 2841134621159793532}
-  pageNumberLeft: 0
   pageNumberRightText: {fileID: 6512744192320697459}
-  pageNumberRight: 0
   itemBgMember: {fileID: 21300000, guid: b4ae0a50c68a85849b32314f228341a1, type: 3}
   itemBgNonmember: {fileID: 21300000, guid: e868c55db222c90409e63837607ad58e, type: 3}
 --- !u!82 &6536666403504724073

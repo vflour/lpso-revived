@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MunchItem : MonoBehaviour
 {
     public int ItemNumber;
-    // Start is called before the first frame update
-    void Start()
-    {
+    public bool REdge = false;
+    public bool LEdge = false;
+    public bool TEdge = false;
+    public bool BEdge = false;
 
-    }
+    public GameObject lid;
+    public bool selected = false;
+    public bool revealed = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public MatchnmunchLogic logic;
 }

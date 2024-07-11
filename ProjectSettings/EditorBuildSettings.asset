@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Level/Scenes/houseinterior.unity
     guid: c49e1ccd89e45cb4a868131a004299f0
   - enabled: 1
+    path: Assets/Level/Scenes/MnM.unity
+    guid: 3b73f9a2ca557d742be0e648bfb88e64
+  - enabled: 0
     path: Assets/Level/Scenes/matchnmunch.unity
     guid: b0c5a911213b8f247a8f38200c5de1ca
   - enabled: 1

@@ -13,11 +13,12 @@ public class SaveData
     public int[,] levelData;
     public string displayName;
     public List<int> inventory;
+    public List<int> invItemCounts;
 	public int kibble;
     public List<Pet> pets;
     public int currentPetIndex;
 
     public int mnmhighscore = 0;
     public int pdhighscore = 0;
-    
+    public int fshnhighscore = 0;
 }

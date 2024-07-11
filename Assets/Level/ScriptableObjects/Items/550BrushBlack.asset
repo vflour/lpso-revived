@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63dc665c7d06d3418680abce5e8fa6f, type: 3}
+  m_Name: 550BrushBlack
+  m_EditorClassIdentifier: 
+  objects: []
+  ID: 551
+  itemName: Dark Brush
+  itemDesc: Staying well-kept in style
+  icon: {fileID: -6626838436324877022, guid: a8860f528a3a0074fa9f331385704ba3, type: 3}
+  price: 3035
+  category: 
+  rotations: {fileID: 0}
+  membersOnly: 1
+  ItemCategory: 4
+  ItemCategoryText: 15
+  restricted: 0

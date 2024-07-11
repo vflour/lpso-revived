@@ -99,7 +99,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 615c64ee6f2e7d24ea1add33b04e03e0, type: 2}
   - {fileID: 11400000, guid: 8e7ddd6ac2c3832439970761a20a5446, type: 2}
   - {fileID: 11400000, guid: 3ccd4941249042c4eb16644c5e538d68, type: 2}
+  - {fileID: 11400000, guid: fa4a39b97b3ad124c8b5d42263f7f823, type: 2}
+  - {fileID: 11400000, guid: ac8033060ef020548aac78f4e3a44e6e, type: 2}
+  - {fileID: 11400000, guid: de323d7ac5d5871448685a6d0a09342a, type: 2}
+  displayName: 
   inventory: 
+  invItemCounts: 
   kibble: 100
   OldLocation: {x: 0, y: 0, z: 0}
   FreshSpawn: 1
@@ -107,3 +112,4 @@ MonoBehaviour:
   currentPetIndex: 0
   mnmhighscore: 0
   pdhighscore: 0
+  fshnhighscore: 0
