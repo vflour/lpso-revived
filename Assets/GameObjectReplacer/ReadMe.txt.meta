@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c2a7f20c25b0d5b43badf74c3084d166
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 21655
+  packageName: GameObject Replacer
+  packageVersion: 1.1
+  assetPath: Assets/GameObjectReplacer/ReadMe.txt
+  uploadId: 89525

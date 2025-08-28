@@ -201,7 +201,7 @@ SpriteRenderer:
   m_Size: {x: 8.28, y: 4.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &24708765
@@ -51853,24 +51853,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveable: {fileID: 1715943496}
-  characterModelPrefab: {fileID: 2241328525606987375, guid: 5e841e35dc7d11d4084a569f3eb92071, type: 3}
+  characterModelPrefab: {fileID: 3465925713567448359, guid: b5c1d95ff5b652b469be1f3ed8ea8680, type: 3}
   currentCharacterObject: {fileID: 0}
   animator: {fileID: 0}
   characterParent: {fileID: 732420139}
   Spawned:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1715943500}
-        m_TargetAssemblyTypeName: CharacterLoader, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 1
+      - m_Target: {fileID: 1715943495}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!4 &1715943498
 Transform:

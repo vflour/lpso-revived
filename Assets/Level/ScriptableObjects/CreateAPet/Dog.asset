@@ -13,7 +13,27 @@ MonoBehaviour:
   m_Name: Dog
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 2241328525606987375, guid: 5e841e35dc7d11d4084a569f3eb92071, type: 3}
+  - {fileID: 7931125589885333508, guid: 37b386af14b555d73a644fd771eca522, type: 3}
+  - {fileID: 7931125589885333508, guid: 37b386af14b555d73a644fd771eca522, type: 3}
+  - {fileID: 7931125589885333508, guid: 37b386af14b555d73a644fd771eca522, type: 3}
   palette:
-    m_keys: 
-    m_values: []
+    m_keys: 000000000100000002000000
+    m_values:
+    - data:
+      - color:
+          r: 0.922
+          g: 0.408
+          b: 0.188
+        saturationMultiplier: 0.851
+    - data:
+      - color:
+          r: 0.922
+          g: 0.408
+          b: 0.188
+        saturationMultiplier: 0.851
+    - data:
+      - color:
+          r: 0.922
+          g: 0.408
+          b: 0.188
+        saturationMultiplier: 0.851
