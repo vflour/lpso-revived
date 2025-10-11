@@ -1366,7 +1366,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1376,7 +1376,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1386,7 +1386,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1512,12 +1512,12 @@ ScriptedImporter:
         boneIndex3: 0
     - position: {x: 81.11, y: 95.11}
       boneWeight:
-        weight0: 0.53
-        weight1: 0.47000003
+        weight0: 1
+        weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
-        boneIndex1: 6
+        boneIndex0: 6
+        boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
     - position: {x: 73.387, y: 81.263}
@@ -1526,7 +1526,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1536,7 +1536,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1546,7 +1546,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1556,7 +1556,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1566,7 +1566,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1576,7 +1576,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1586,7 +1586,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1596,7 +1596,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1606,7 +1606,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1616,7 +1616,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1626,7 +1626,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1706,7 +1706,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1716,7 +1716,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1726,7 +1726,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1746,7 +1746,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 6
+        boneIndex0: 7
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1766,7 +1766,7 @@ ScriptedImporter:
         weight1: 0
         weight2: 0
         weight3: 0
-        boneIndex0: 7
+        boneIndex0: 6
         boneIndex1: 0
         boneIndex2: 0
         boneIndex3: 0
@@ -1781,7 +1781,7 @@ ScriptedImporter:
         boneIndex2: 0
         boneIndex3: 0
     spritePhysicsOutline: []
-    indices: 00000000230000000100000000000000240000002300000001000000260000000200000001000000230000002600000002000000270000000300000002000000260000002700000003000000070000000400000003000000080000000700000003000000270000000800000004000000060000000500000004000000070000000600000008000000270000000900000009000000270000000a0000000a0000000f0000000b0000000a000000100000000f0000000a00000028000000100000000a00000027000000280000000b0000000e0000000c0000000b0000000f0000000e0000000c0000000e0000000d000000100000002800000011000000110000002900000012000000110000002800000029000000120000001900000013000000120000001a0000001900000012000000290000001a0000001300000018000000140000001300000019000000180000001400000018000000150000001500000018000000160000001600000018000000170000001a0000001e0000001b0000001a0000001f0000001e0000001a000000290000001f0000001b0000001d0000001c0000001b0000001e0000001d0000001f0000002900000020000000200000002500000021000000200000002900000025000000210000002600000022000000210000002500000026000000220000002600000023000000250000002700000026000000250000002800000027000000250000002900000028000000
+    indices: 000000002300000001000000120000001a0000001900000012000000290000001a0000001300000018000000140000001300000019000000180000001400000018000000150000001500000018000000160000001600000018000000170000001a0000001e0000001b0000001a0000001f0000001e0000001a000000290000001f0000001b0000001d0000001c0000001b0000001e0000001d0000001f000000290000002000000020000000250000002100000020000000290000002500000021000000260000002200000021000000250000002600000022000000260000002300000025000000270000002600000012000000190000001300000025000000280000002700000011000000280000002900000010000000280000001100000000000000240000002300000001000000260000000200000001000000230000002600000002000000270000000300000002000000260000002700000003000000070000000400000003000000080000000700000003000000270000000800000004000000060000000500000004000000070000000600000008000000270000000900000009000000270000000a0000000a0000000f0000000b0000000a000000100000000f0000000a00000028000000100000000a00000027000000280000000b0000000e0000000c0000000b0000000f0000000e0000000c0000000e0000000d000000110000002900000012000000250000002900000028000000
     edges:
     - {x: 0, y: 1}
     - {x: 0, y: 36}
@@ -1893,8 +1893,8 @@ ScriptedImporter:
     - name: eye right top_4
       guid: 9d0b7a495c35716419c728af552f1b96
       position: {x: 72.49006, y: 0.000036259156, z: 0}
-      rotation: {x: 0, y: 0, z: 0.61462486, w: 0.78881955}
-      length: 62.199223
+      rotation: {x: 0, y: 0, z: 0.614625, w: 0.78881955}
+      length: 62.199226
       parentId: 5
       color:
         serializedVersion: 2
@@ -1902,7 +1902,7 @@ ScriptedImporter:
     - name: eye right tweak
       guid: 67cb27a9ac1b0014b903235ab5620ebd
       position: {x: 32.444923, y: -122.956924, z: 0}
-      rotation: {x: 0, y: 0, z: 0.10118798, w: 0.9948673}
+      rotation: {x: 0, y: 0, z: 0.10118768, w: 0.9948674}
       length: 45.19611
       parentId: 10
       color:
@@ -1910,9 +1910,9 @@ ScriptedImporter:
         rgba: 4278255488
     - name: eye right tweak_5
       guid: ce119ffd81b2e2a4cb32764d713fd749
-      position: {x: 45.196064, y: -0.00001308315, z: 0}
-      rotation: {x: 0, y: 0, z: 0.4313404, w: 0.9021893}
-      length: 56.515976
+      position: {x: 45.196095, y: 0.0000028435825, z: 0}
+      rotation: {x: 0, y: 0, z: 0.4313406, w: 0.9021892}
+      length: 56.515972
       parentId: 7
       color:
         serializedVersion: 2
@@ -1920,8 +1920,8 @@ ScriptedImporter:
     - name: eye right bottom_6
       guid: e36b5878ccdc45c48aa883f322953b86
       position: {x: 72.224846, y: -0.000050817147, z: 0}
-      rotation: {x: 0, y: 0, z: -0.49317822, w: 0.8699283}
-      length: 58.14281
+      rotation: {x: 0, y: 0, z: -0.4931782, w: 0.86992836}
+      length: 58.142826
       parentId: 10
       color:
         serializedVersion: 2
@@ -4372,6 +4372,15 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4294902015
+    - name: head tweak TR
+      guid: 080e507981c6182429d2ce0d289c2137
+      position: {x: 304.07037, y: 36.62876, z: 0}
+      rotation: {x: 0, y: 0, z: 0.9617712, w: 0.27385446}
+      length: 75.576675
+      parentId: 2
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
     spriteOutline: []
     vertices:
     - position: {x: 144.732, y: 0.32899475}
@@ -4765,7 +4774,7 @@ ScriptedImporter:
         boneIndex2: 0
         boneIndex3: 0
     spritePhysicsOutline: []
-    indices: 000000002600000001000000000000001b0000002600000001000000200000000200000001000000250000001f000000010000001f00000020000000010000002600000025000000020000002000000003000000030000002000000004000000040000002000000005000000050000001f000000060000000d000000220000000e0000000d0000001c00000022000000070000001e00000008000000070000001f0000001e000000080000001d00000009000000080000001e0000001d000000090000001d0000000a0000000a0000001c0000000b0000000a0000001d0000001c0000000b0000001c0000000c0000000c0000001c0000000d00000005000000200000001f000000060000001f000000070000000e000000220000000f0000001600000026000000170000001000000022000000110000001000000021000000220000001100000022000000120000001200000023000000130000001200000022000000230000001300000024000000140000001300000023000000240000001400000024000000150000001500000025000000160000001e00000025000000240000000f000000220000002100000016000000250000002600000017000000260000001800000018000000260000001900000019000000260000001a0000001a000000260000001b0000001c00000023000000220000001c0000001d000000230000001d00000024000000230000001d0000001e000000240000001500000024000000250000001e0000001f00000025000000
+    indices: 000000002600000001000000000000001b0000002600000001000000200000000200000001000000250000001f000000010000001f00000020000000010000002600000025000000020000002000000003000000030000002000000004000000040000002000000005000000050000001f0000000600000005000000200000001f000000060000001f00000007000000070000001e00000008000000070000001f0000001e000000080000001d00000009000000080000001e0000001d000000090000001d0000000a0000000a0000001c0000000b0000000a0000001d0000001c0000000b0000001c0000000c0000000c0000001c0000000d0000000d000000220000000e0000000d0000001c000000220000000e000000220000000f0000000f000000220000002100000010000000220000001100000010000000210000002200000011000000220000001200000012000000230000001300000012000000220000002300000013000000240000001400000013000000230000002400000014000000240000001500000015000000250000001600000015000000240000002500000016000000260000001700000016000000250000002600000017000000260000001800000018000000260000001900000019000000260000001a0000001a000000260000001b0000001c00000023000000220000001c0000001d000000230000001d00000024000000230000001d0000001e000000240000001e00000025000000240000001e0000001f00000025000000
     edges:
     - {x: 0, y: 1}
     - {x: 0, y: 27}
@@ -6614,8 +6623,8 @@ ScriptedImporter:
     - name: eye right top
       guid: d347e81e39f389347ba74ec96ec249fc
       position: {x: -19.311018, y: -24.076752, z: 0}
-      rotation: {x: 0, y: -0, z: -0.7777677, w: 0.6285519}
-      length: 72.49007
+      rotation: {x: 0, y: -0, z: -0.77776766, w: 0.6285519}
+      length: 72.49008
       parentId: 17
       color:
         serializedVersion: 2
@@ -6632,8 +6641,8 @@ ScriptedImporter:
     - name: eye right tweak
       guid: 67cb27a9ac1b0014b903235ab5620ebd
       position: {x: 32.44493, y: -122.956924, z: 0}
-      rotation: {x: 0, y: 0, z: 0.101187974, w: 0.9948673}
-      length: 45.1961
+      rotation: {x: 0, y: 0, z: 0.10118767, w: 0.9948674}
+      length: 45.196117
       parentId: 17
       color:
         serializedVersion: 2
@@ -6829,8 +6838,8 @@ ScriptedImporter:
         rgba: 4278190335
     - name: eye right top_4
       guid: 9d0b7a495c35716419c728af552f1b96
-      position: {x: 72.490074, y: 0.00003204245, z: 0}
-      rotation: {x: 0, y: 0, z: 0.61462486, w: 0.78881955}
+      position: {x: 72.490074, y: -0.0000048504453, z: 0}
+      rotation: {x: 0, y: 0, z: 0.6146249, w: 0.78881955}
       length: 62.19923
       parentId: 16
       color:
@@ -6838,8 +6847,8 @@ ScriptedImporter:
         rgba: 4278255615
     - name: eye right tweak_5
       guid: ce119ffd81b2e2a4cb32764d713fd749
-      position: {x: 45.196117, y: -0.000008419536, z: 0}
-      rotation: {x: 0, y: 0, z: 0.43134037, w: 0.9021893}
+      position: {x: 45.19613, y: 0.0000049400232, z: 0}
+      rotation: {x: 0, y: 0, z: 0.43134063, w: 0.9021892}
       length: 56.515984
       parentId: 18
       color:
@@ -6848,7 +6857,7 @@ ScriptedImporter:
     - name: eye right bottom_6
       guid: e36b5878ccdc45c48aa883f322953b86
       position: {x: 72.22483, y: 0.000006022711, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4931783, w: 0.8699283}
+      rotation: {x: 0, y: 0, z: -0.49317822, w: 0.86992836}
       length: 58.14283
       parentId: 17
       color:
@@ -6933,7 +6942,7 @@ ScriptedImporter:
         width: 279
         height: 315
       spriteId: 4252e50aff4be6feeab3be2bd51a1b64
-      bones: 03000000060000000000000005000000
+      bones: 0300000006000000000000000500000001000000
       parentGroup: 0
       order: 0
     - spritePosition:

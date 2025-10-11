@@ -1256,6 +1256,10 @@ PrefabInstance:
       propertyPath: m_AutoRebind
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7699694477588844171, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: mouth
+      objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.08
@@ -1296,9 +1300,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7037627584757114413, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: leftear
+      objectReference: {fileID: 0}
     - target: {fileID: -6891816040458383938, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: m_AutoRebind
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6499420266597102802, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: lefthead
+      objectReference: {fileID: 0}
+    - target: {fileID: -6217198859360707250, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: middlehead
       objectReference: {fileID: 0}
     - target: {fileID: -6025587509784589615, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1312,6 +1328,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: -3366183654371465707, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: lefteye closed
+      objectReference: {fileID: 0}
+    - target: {fileID: -3366183654371465707, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3292608184499857879, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: m_AutoRebind
       value: 1
@@ -1320,18 +1344,38 @@ PrefabInstance:
       propertyPath: m_AutoRebind
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2398180320082315645, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: mouth shocked
+      objectReference: {fileID: 0}
     - target: {fileID: -1830631435611455904, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: -1538598410124020431, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: righthead
+      objectReference: {fileID: 0}
     - target: {fileID: -1203895128304286047, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: -735985239012028135, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: righteye closed
+      objectReference: {fileID: 0}
+    - target: {fileID: -735985239012028135, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -593059669846698419, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: -444027919744448183, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: mouth open
+      objectReference: {fileID: 0}
     - target: {fileID: 138639024053744189, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1356,6 +1400,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: 2061240112842069159, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: nose
+      objectReference: {fileID: 0}
     - target: {fileID: 2913007426971998520, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1368,13 +1416,25 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: 5033132577749531615, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: rightear
+      objectReference: {fileID: 0}
     - target: {fileID: 5116368807220319231, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b3ffb761ea8c2ed9bb41da2a081a24e6, type: 2}
+    - target: {fileID: 5282403609056847185, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: lefteye open
+      objectReference: {fileID: 0}
     - target: {fileID: 6123402060490908765, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: m_AutoRebind
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6329478032882482669, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
+      propertyPath: m_Name
+      value: righteye open
       objectReference: {fileID: 0}
     - target: {fileID: 6814990283798698343, guid: b249869d834ba784596ff35b3cd938d9, type: 3}
       propertyPath: m_AutoRebind

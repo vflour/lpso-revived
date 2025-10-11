@@ -2366,8 +2366,8 @@ ScriptedImporter:
     - name: eye right top
       guid: d347e81e39f389347ba74ec96ec249fc
       position: {x: -19.311018, y: -24.076752, z: 0}
-      rotation: {x: 0, y: -0, z: -0.7777677, w: 0.6285519}
-      length: 72.49007
+      rotation: {x: 0, y: -0, z: -0.77776766, w: 0.6285519}
+      length: 72.49008
       parentId: 17
       color:
         serializedVersion: 2
@@ -2384,8 +2384,8 @@ ScriptedImporter:
     - name: eye right tweak
       guid: 67cb27a9ac1b0014b903235ab5620ebd
       position: {x: 32.44493, y: -122.956924, z: 0}
-      rotation: {x: 0, y: 0, z: 0.101187974, w: 0.9948673}
-      length: 45.1961
+      rotation: {x: 0, y: 0, z: 0.10118767, w: 0.9948674}
+      length: 45.196117
       parentId: 17
       color:
         serializedVersion: 2
@@ -2581,8 +2581,8 @@ ScriptedImporter:
         rgba: 4278190335
     - name: eye right top_4
       guid: 9d0b7a495c35716419c728af552f1b96
-      position: {x: 72.490074, y: 0.00003204245, z: 0}
-      rotation: {x: 0, y: 0, z: 0.61462486, w: 0.78881955}
+      position: {x: 72.490074, y: -0.0000048504453, z: 0}
+      rotation: {x: 0, y: 0, z: 0.6146249, w: 0.78881955}
       length: 62.19923
       parentId: 16
       color:
@@ -2590,8 +2590,8 @@ ScriptedImporter:
         rgba: 4278255615
     - name: eye right tweak_5
       guid: ce119ffd81b2e2a4cb32764d713fd749
-      position: {x: 45.196117, y: -0.000008419536, z: 0}
-      rotation: {x: 0, y: 0, z: 0.43134037, w: 0.9021893}
+      position: {x: 45.19613, y: 0.0000049400232, z: 0}
+      rotation: {x: 0, y: 0, z: 0.43134063, w: 0.9021892}
       length: 56.515984
       parentId: 18
       color:
@@ -2600,7 +2600,7 @@ ScriptedImporter:
     - name: eye right bottom_6
       guid: e36b5878ccdc45c48aa883f322953b86
       position: {x: 72.22483, y: 0.000006022711, z: 0}
-      rotation: {x: 0, y: 0, z: -0.4931783, w: 0.8699283}
+      rotation: {x: 0, y: 0, z: -0.49317822, w: 0.86992836}
       length: 58.14283
       parentId: 17
       color:
