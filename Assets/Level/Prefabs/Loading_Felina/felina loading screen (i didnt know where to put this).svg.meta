@@ -1,0 +1,76 @@
+fileFormatVersion: 2
+guid: 259078e0d9a507451a7bb6e06d6759ba
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: a57477913897c46af95d590f580878bd, type: 3}
+  svgType: 1
+  texturedSpriteMeshType: 0
+  svgPixelsPerUnit: 100
+  gradientResolution: 64
+  alignment: 10
+  customPivot: {x: 0, y: 0}
+  generatePhysicsShape: 1
+  viewportOptions: 0
+  preserveViewport: 0
+  advancedMode: 0
+  predefinedResolutionIndex: 1
+  targetResolution: 1080
+  resolutionMultiplier: 3
+  stepDistance: 10
+  samplingStepDistance: 100
+  maxCordDeviationEnabled: 0
+  maxCordDeviation: 1
+  maxTangentAngleEnabled: 1
+  maxTangentAngle: 5
+  keepTextureAspectRatio: 1
+  textureSize: 256
+  textureWidth: 256
+  textureHeight: 256
+  wrapMode: 0
+  filterMode: 1
+  sampleCount: 4
+  preserveSVGImageAspect: 1
+  useSVGPixelsPerUnit: 1
+  spriteData:
+    TessellationDetail: 0
+    SpriteRect:
+      name: felina loading screen (i didnt know where to put this)Sprite
+      originalName: 
+      pivot: {x: 0.49981576, y: 0.50008094}
+      alignment: 0
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1088
+        height: 637
+      spriteID: 4ad2384f382e2ae55963d7c85251ea14
+    PhysicsOutlines:
+    - Vertices:
+      - {x: 526, y: -245.5}
+      - {x: 526, y: -220.5}
+      - {x: 525, y: -169.5}
+      - {x: 525, y: -104.5}
+      - {x: 525, y: 9.5}
+      - {x: 525, y: 32.5}
+      - {x: 525, y: 42.5}
+      - {x: 525, y: 46.5}
+      - {x: 525, y: 49.5}
+      - {x: 525, y: 56.5}
+      - {x: 525, y: 301.5}
+      - {x: 525, y: 318.5}
+      - {x: -544, y: 318.5}
+      - {x: -542, y: -300.5}
+      - {x: -80, y: -300.5}
+      - {x: -4, y: -300.5}
+      - {x: 84, y: -300.5}
+      - {x: 218, y: -300.5}
+      - {x: 525, y: -299.5}
+      - {x: 525, y: -262.5}

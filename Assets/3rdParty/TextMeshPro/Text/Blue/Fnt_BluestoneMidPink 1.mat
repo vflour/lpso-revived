@@ -37,13 +37,15 @@ Material:
     - _GlowInner: 0.367
     - _GlowOffset: 0.4
     - _GlowOuter: 0.302
-    - _ScaleRatioA: 0.7137759
+    - _OutlineWidth: 0.669
+    - _ScaleRatioA: 0.6235191
     - _ScaleRatioB: 0.27708337
     - _ScaleRatioC: 0.27708337
     - _UnderlayDilate: 0
     - _UnderlayOffsetY: 0
     m_Colors:
     - _GlowColor: {r: 0.972549, g: 0.4392157, b: 0.67058825, a: 0.5}
-    - _OutlineColor: {r: 0, g: 0.07347603, b: 0.254717, a: 1}
+    - _OutlineColor: {r: 0.20060521, g: 0.34773287, b: 0.8679245, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
