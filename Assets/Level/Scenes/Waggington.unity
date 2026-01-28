@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b4125e7de02787cb761a50a0bc7337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1715943497}
+  character: {fileID: 1715943501}
   userCamera: {fileID: 1163061212}
   spawner: {fileID: 1613696553}
   tooltipManager: {fileID: 1163061215}
@@ -51815,7 +51815,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715943498}
-  - component: {fileID: 1715943497}
   - component: {fileID: 1715943496}
   - component: {fileID: 1715943499}
   - component: {fileID: 1715943500}
@@ -51841,38 +51840,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 1.75
   mapMovement: {fileID: 0}
---- !u!114 &1715943497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715943495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91ab56faae7afed8c87651f4f63821aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveable: {fileID: 1715943496}
-  characterModelPrefab: {fileID: 8471878272028999495, guid: 23f33ed8a871a6847bb89766a61aebc3, type: 3}
-  currentCharacterObject: {fileID: 0}
-  animator: {fileID: 0}
-  characterParent: {fileID: 732420139}
-  Spawned:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1715943500}
-        m_TargetAssemblyTypeName: CharacterLoader, Assembly-CSharp
-        m_MethodName: Load
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1715943498
 Transform:
   m_ObjectHideFlags: 0
@@ -51913,7 +51880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b1fdb098adf8279bc8b96eed75c0a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1715943497}
+  character: {fileID: 1715943501}
 --- !u!114 &1715943501
 MonoBehaviour:
   m_ObjectHideFlags: 0
