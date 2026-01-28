@@ -201,7 +201,7 @@ SpriteRenderer:
   m_Size: {x: 8.28, y: 4.84}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &24708765
@@ -51819,6 +51819,7 @@ GameObject:
   - component: {fileID: 1715943496}
   - component: {fileID: 1715943499}
   - component: {fileID: 1715943500}
+  - component: {fileID: 1715943501}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -51913,6 +51914,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1715943497}
+--- !u!114 &1715943501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715943495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137e334fa020b5a93b4915364936c929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveable: {fileID: 1715943496}
+  characterModelPrefab: {fileID: 0}
+  currentCharacterObject: {fileID: 0}
+  animator: {fileID: 0}
+  characterParent: {fileID: 732420139}
+  Spawned:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1715943500}
+        m_TargetAssemblyTypeName: CharacterLoader, Assembly-CSharp
+        m_MethodName: Load
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  database: {fileID: 11400000, guid: e1d6f62565353ec6b9f3e694d5811c11, type: 2}
 --- !u!1839735485 &1755514745 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: -1052044494869938978, guid: 339097ed51ba4eb41a85eeda04f23fc1, type: 3}
