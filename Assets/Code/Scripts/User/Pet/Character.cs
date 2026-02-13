@@ -15,10 +15,15 @@ public class Character : MonoBehaviour
 
     public void Spawn(Vector3Int coordinates) 
     {
-        currentCharacterObject = Instantiate(characterModelPrefab, characterParent);
+        currentCharacterObject = GetCharacterModelPrefab();
         moveable.coordinates = coordinates;
         animator = currentCharacterObject.GetComponent<Animator>();
         Spawned.Invoke();
+    }
+
+    protected virtual GameObject GetCharacterModelPrefab()
+    {
+        return Instantiate(characterModelPrefab, characterParent);
     }
 
     // added here incase, might remove
